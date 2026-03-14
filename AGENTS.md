@@ -1,0 +1,76 @@
+# AGENTS.md
+
+> This file tells any AI agent how to work in this repository.
+
+---
+
+## Project Overview
+
+This is a personal AI/ML knowledge base built in Obsidian, version-controlled with Git, and synced to mobile via Syncthing. Notes follow the Zettelkasten methodology.
+
+**Vault path:** `Vault/` (not the repo root)
+
+---
+
+## Repository Layout
+
+| Path | Purpose |
+|---|---|
+| `Vault/` | All Obsidian content — notes, images, audio |
+| `Vault/Table of Contents.md` | Master index; source of truth for folder structure |
+| `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
+| `generate_podcast.py` | Converts notes → MP3 via edge-tts |
+| `sync_vault.py` | Syncs Vault folders with TOC H1 sections |
+| `requirements.txt` | Python dependencies |
+| `.venv/` | Virtual environment (gitignored) |
+| `.agents/skills/` | AI agent skill definitions |
+| `.agents/workflows/` | AI agent workflows |
+
+---
+
+## Skills (Mandatory Behaviours)
+
+These are located in `.agents/skills/` and define rules you **must** follow.
+
+### `sync_vault_structure`
+**Trigger:** After any modification to `Vault/Table of Contents.md`
+- Sync Vault folders to match TOC H1 sections
+- Normalise `.gitkeep` (add to empty folders, remove from populated ones)
+- Report orphaned folders; never delete
+
+### `generate_obsidian_note`
+**Trigger:** When asked to create a new note
+- Verify folder exists (run `sync_vault_structure` first)
+- Follow Zettelkasten formatting: YAML frontmatter, atomic structure, wikilinks, mandatory footer
+- Add the note's `[[wikilink]]` to `Table of Contents.md`
+
+### `maintain_project_docs`
+**Trigger:** After `pip install`/`pip uninstall`, or after adding/changing/removing a script
+- Regenerate `requirements.txt` via `.venv\Scripts\pip.exe freeze > requirements.txt`
+- Update relevant `## Scripts` section in `README.md`
+
+### `conventional_commits`
+**Trigger:** On every `git commit`
+- Use conventional commit format: `type(scope): description`
+- Valid types: `feat`, `fix`, `docs`, `chore`, `refactor`, `style`, `test`
+- Update `CHANGELOG.md` for `feat` and `fix` commits
+
+---
+
+## Workflows
+
+Located in `.agents/workflows/`.
+
+### `create_new_note`
+End-to-end workflow for adding a note: sync structure → create note → update TOC link → confirm with user.
+
+---
+
+## Rules
+
+1. **Never delete user content** without explicit confirmation.
+2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH.
+3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill.
+4. **The TOC is the single source of truth** for Vault folder structure.
+5. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
+6. **Audio files are gitignored** — they sync via Syncthing, not Git.

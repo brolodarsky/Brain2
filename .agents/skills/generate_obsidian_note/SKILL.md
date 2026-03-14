@@ -6,6 +6,8 @@ description: How to generate and format new Obsidian notes
 
 When asked to generate a new note in the user's Obsidian vault, you must adhere to the following rules to ensure consistency with their existing knowledge base structure.
 
+> Before placing any note, verify the target folder exists. If it does not, apply the `sync_vault_structure` skill first to create it.
+
 ## 1. File Location & Verifying Folder Structure
 *   **CRITICAL RULE:** Do NOT assume folder names. Folder names must exactly match the H1 or H2 sections as defined in `Table of Contents.md`.
 *   If the required folder does not currently match the `Table of Contents.md` structure, you MUST read the index to find the exact current name of the section header to use as the folder name.
@@ -45,7 +47,8 @@ When asked to generate a new note in the user's Obsidian vault, you must adhere 
 
 ## 6. Workflow
 1.  **Analyze Request:** Understand the topic the user wants a note for.
-2.  **Determine Location:** Find the best folder for this topic.
-3.  **Create File:** Create the `.md` file with the exact title.
-4.  **Draft Content:** Write the content following the formatting rules.
-5.  **Review Links:** Ensure the new note is properly linked FROM the relevant index file (e.g., `Table of Contents.md`). If the link doesn't exist there, add it.
+2.  **Verify Folder Structure:** Run the `sync_vault_structure` skill to confirm the target folder exists. If missing, it will create it.
+3.  **Determine Location:** Find the best folder for this topic.
+4.  **Create File:** Create the `.md` file with the exact title.
+5.  **Draft Content:** Write the content following the formatting rules.
+6.  **Review Links:** Ensure the new note is properly linked FROM the relevant index file (e.g., `Table of Contents.md`). If the link doesn't exist there, add it.
