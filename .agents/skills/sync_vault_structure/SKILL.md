@@ -35,7 +35,7 @@ description: Automatically sync Vault folder structure whenever Table of Content
 
 ## Shortcut
 
-Instead of doing this manually, you can run the companion script:
+Instead of doing this manually, you can run the companion script, after asking for user permission:
 ```bash
 python sync_vault.py
 ```

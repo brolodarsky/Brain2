@@ -17,7 +17,7 @@ Usage:
 
 import re
 import sys
-from pathlib import Path
+from pathlib import Path # Interact with file system
 
 # ─── Paths ───────────────────────────────────────────────────────────────────
 REPO_DIR = Path(__file__).parent
@@ -25,7 +25,7 @@ VAULT_DIR = REPO_DIR / "Vault"
 TOC_FILE  = VAULT_DIR / "Table of Contents.md"
 
 # Folders inside Vault that are never "content" folders — always ignored
-IGNORED_FOLDERS = {"Audio", "zImages"}
+IGNORED_FOLDERS = {"Audio", "zImages", ".obsidian", ".stfolder", ".agents"}
 
 # ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -33,7 +33,7 @@ def parse_h1_sections(toc_text: str) -> list[str]:
     """Extract top-level (H1) section names from the TOC, stripping the
     leading '# ' prefix.  YAML front-matter is automatically skipped."""
 
-    # Strip YAML front-matter
+    # Use regex to strip YAML front-matter (text between '---' delimiters) at the start of the file
     toc_text = re.sub(r"^---\n.*?\n---\n", "", toc_text, flags=re.DOTALL)
 
     folders = []

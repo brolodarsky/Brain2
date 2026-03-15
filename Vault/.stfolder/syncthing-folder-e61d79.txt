@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: yurga-eh22r
+created: 2026-03-14T20:30:37-04:00

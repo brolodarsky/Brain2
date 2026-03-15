@@ -9,6 +9,7 @@ Use this workflow whenever you need to add a new note to the Knowledge Base.
 ## Steps
 
 1. Identify the topic and which H1 section in `Vault/Table of Contents.md` it belongs to.
+If a new H1 section is needed, recommend to user and wait for approval.
 
 2. Apply the `sync_vault_structure` skill to confirm the target folder exists. Create it if missing.
 

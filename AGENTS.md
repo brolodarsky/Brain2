@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This is a personal AI/ML knowledge base built in Obsidian, version-controlled with Git, and synced to mobile via Syncthing. Notes follow the Zettelkasten methodology.
+This is a personal "second brain"/knowledge management system that's read/tinkered with in Obsidian and tinkered with in agentic IDEs, version-controlled with Git, and synced to mobile via Syncthing. Notes follow the Zettelkasten methodology. Audio files are frequently generated for on the go listening to "thoughts".
 
 **Vault path:** `Vault/` (not the repo root)
 
