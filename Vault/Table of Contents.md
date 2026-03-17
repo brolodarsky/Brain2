@@ -9,16 +9,15 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 - **Principles & Ethics:** Core values and decision-making frameworks.
 - **The 10-Year Horizon:** Strategic goals for the 30s, 40s, and beyond.
 - **Legacy & Impact:** What do I want to build that lasts?
-## 1.2. Mental Health & Cognitive Resilience
-- **Cognitive Load Management:** Tools for balancing caregiving, technical work, and social life.
-- **Meditation & Mindfulness:** Rituals for grounding and focus.
-## 1.3. Personal Knowledge Management (PKM)
+## 1.2. Personal Knowledge Management (PKM)
 - **Brain 2.0 Meta:** How I tag, link, and maintain this system.
+- **[[Laptop App Update Protocol]]:** Recurring process for maintaining the software inventory.
+- **[[Monthly Hard Drive Backup Protocol]]:** Protocol for running monthly hard drive backups in FreeFileSync as a batch job.
 - **Toolbox:** Documentation for the Pixel 8 Pro, Obsidian/Logseq workflows, and local LLM setups.
-## 1.4. Security & Digital Sovereignty
+## 1.3. Security & Digital Sovereignty
 - **Security Audit:** Password management strategy, 2FA recovery locations, and encryption protocols.
 - **Digital Inheritance:** Instructions for account access in case of emergency.
-## 1.5. Emergency & Survival
+## 1.4. Emergency & Survival
 - **Emergency Contacts:** Medical, family, and local services.
 - **Crisis Protocols:** What to do in medical or financial emergencies.
 - **Vehicle Prep:** Emergency kit inventory for the 2005 Honda Pilot.
@@ -27,22 +26,28 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 - **Cardiovascular Base:** Running/Cycling logs and endurance strategies.
 - **Strength & Mobility:** Long-term joint health and maintenance.
 - **Performance Media:** YouTube playlists for cardio motivation/form tutorials.
-- **The Recipe Vault:** High-protein/low-calorie favorites (Crack Slaw, etc.).    
-- **Feeding Reference:** Bookmarks/Videos on nutrition science and food prep.
-## 2.3. Medical
+## 2.2. Medical
 - **Health Logs:** History of illnesses, injuries, and surgeries.
 - **Lab Work & Biomarkers:** Tracking bloodwork, Vitamin D levels, etc., over years.
 - **Vaccination & Screening:** Long-term preventative maintenance records.
 - **Sleep Hygiene:** Protocols for deep rest and circadian rhythm alignment.
-## 2.4. Psych
+## 2.3. Psych
+- **Cognitive Load Management:** Tools for balancing caregiving, technical work, and social life.
+- **Meditation & Mindfulness:** Rituals for grounding and focus.
 - **Stress Mitigation:** Systems for decompressing after high-output days.
 - **CBT**
 - **ACT**
-# 3. THE FORGE: Technical Mastery
-## 3.1. Projects (The Lab)
-- **[[Project - Feeding Optimizer App]]:** Python logic, UI/UX, and database development.
-- **[[Project - Billing Automation]]:** Scripts for LCSW medical billing efficiency.
-- **[[Project - Domain Portfolio]]:** Management and monetization of SiliSlick.com and others.
+## 2.4. Nutrition
+- **The Recipe Vault:** High-protein/low-calorie favorites (Crack Slaw, etc.).    
+- **Feeding Reference:** Bookmarks/Videos on nutrition science and food prep.
+# 3. FORGE
+Technical Mastery
+## 3.1. Projects 
+The Lab
+- [Brain 2](https://github.com/brolodarsky/Brain2)
+- **[Project Feeder](https://github.com/brolodarsky/Feeder):** Python logic, UI/UX, and database development.
+- **[Project MEM Billing](https://github.com/brolodarsky/MEMBilling):** Billing Automation. Scripts for LCSW medical billing efficiency.
+- **Project - Domain Portfolio:** Management and monetization of SiliSlick.com and others.
 ## 3.2. Library & Learning
 - **Technical Archive:** Engineering-specific YouTube tutorials, GitHub repos, and research papers.
 - **[[AI Agents]] | [[LLMs]] | [[Vector Search]] | [[Robotics]]:** (Original technical deep-dives).
@@ -281,14 +286,16 @@ _Dedicated space for exploration, relationships, and pure interest._
 - [[Jokes]]
 # 6. CAPTURE & ARCHIVE: The Memory Bank
 _High-frequency tracking and unsorted information storage._
-## 6.1. Digital Inventory
-- **App Audit:** Current apps installed on Smartphone (Pixel 8 Pro) and Laptop.
-- **Software Subscriptions:** Tracking costs and renewal dates.
-- **Hardware Inventory:** Serial numbers and warranty info.
-## 6.2. The Content Log (General)
-- **The YouTube "Everything Else" List:** Funny videos, travel vlogs, and miscellaneous likes.
-- **Article & Web Archive:** Random interesting links that don't fit a specific category yet.
-## 6.3. Brain Dump & Inbox
+## 6.1. Brain Dump & Inbox
 - **[[Quick Capture]]:** Temporary scratchpad for thoughts to be sorted later.
 - **Memories Log:** Significant life events, funny moments, and personal milestones.
 - **The Trophy Case:** Screenshots of wins, kind words from others, and completed major projects.
+## 6.2. The Content Log (General)
+- **The YouTube "Everything Else" List:** Funny videos, travel vlogs, and miscellaneous likes.
+- **Article & Web Archive:** Random interesting links that don't fit a specific category yet.
+## 6.3. Digital Inventory
+- **App Audit:** Current apps installed on devices.
+	- Pixel 8 Pro
+	- [[Laptop App List]].
+- **Software Subscriptions:** Tracking costs and renewal dates.
+- **Hardware Inventory:** Serial numbers and warranty info.

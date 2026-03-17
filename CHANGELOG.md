@@ -4,11 +4,14 @@ All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---
+---
 
-## [Unreleased]
+## [1.0.2] - 2026-03-17
 
 ### Added
-- New CSS snippet `headers.css` for custom header styling in Obsidian
+- Monthly Hard Drive Backup Protocol note in section 1.2
+- Protocol for FreeFileSync batch job backups
+
 
 ## [1.0.1] - 2026-03-16
 
@@ -16,6 +19,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - "Middle ground" TOC header structure in section 3.2 (3.2.x numbered, children unnumbered)
 - Top-level files in `Vault/` created to match full TOC structure
 - Added new category files and documentation
+- New CSS snippet `headers.css` for custom header styling in Obsidian
 
 ### Changed
 - Relocated Library & Learning resources from `Vault/` root to `Vault/3. Forge/`
