@@ -7,6 +7,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-03-16
+
+### Added
+- "Middle ground" TOC header structure in section 3.2 (3.2.x numbered, children unnumbered)
+- Top-level files in `Vault/` created to match full TOC structure
+- Added new category files and documentation
+
+### Changed
+- Relocated Library & Learning resources from `Vault/` root to `Vault/3. Forge/`
+
+### Removed
+- `sync_vault.py` — script deleted in favor of direct agentic structure management
+
+## [1.0.0] - 2026-03-14
+
 ### Added
 - `generate_podcast.py` — converts all Vault notes to MP3 via edge-tts
 - `sync_vault.py` — syncs Vault folder structure with Table of Contents H1 sections
