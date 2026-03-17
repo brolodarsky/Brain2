@@ -268,14 +268,14 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 - **The Pivot:** Preparation for AI/Robotics roles (Interview prep, Networking).
 - **Resume & Artifacts:** Version control for your professional bio and CV.
 - **Professional CRM:** Tracking contacts, mentors, and recruiters in the AI/Robotics industry.
-# 5. THE PLAYGROUND: Connection & Joy
-_Dedicated space for exploration, relationships, and pure interest._
+# 5. Playground
+_Dedicated space for exploration, relationships, and pure interest._ Connection & Joy
 ## 5.1. Social Life & Community
 - **Family Data
 - **"People Data":** Things people tell me—birthdays, preferences, and important context.
 - **Gift Ideas:** Running list of potential gifts for friends and family.
 - **Social Club:** Event planning and community building.
-- **The Activities List:** Hobbies, sports, or experiences I want to try.
+- **[[Activities List]]**: Hobbies, sports, or experiences I want to try.
 - **Adventure Log:** Places to visit.    
 ## 5.2. Romance & Partnership
 - **Values Alignment:** What am I looking for in a partner?
