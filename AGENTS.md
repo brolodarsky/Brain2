@@ -64,6 +64,7 @@ End-to-end workflow for adding a note: affirm structure → create note → upda
 1. **Never delete user content** without explicit confirmation.
 2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH.
 3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill.
-4. **The TOC is the single source of truth** for Vault folder structure.
-5. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
-6. **Audio files are gitignored** — they sync via Syncthing, not Git.
+4. **Update `CHANGELOG.md` for all `feat` and `fix` commits.**
+5. **The TOC is the single source of truth** for Vault folder structure.
+6. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
+7. **Audio files are gitignored** — they sync via Syncthing, not Git.

@@ -11,6 +11,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - Monthly Hard Drive Backup Protocol note in section 1.2
 - Protocol for FreeFileSync batch job backups
+- Movie List note and TOC mapping in Section 5.3
 - Numbered sub-subsections to TOC Section 4.2 (4.2.1. Home Improvement, 4.2.2. Family Care, 4.2.3. Auto)
 - "Exterior Repair Game Plan" note for the 2005 Honda Pilot in section 4.2.3
 - Activities List note and corresponding subfolder structure in Section 5.1
