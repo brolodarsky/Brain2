@@ -6,11 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ---
 ---
 
-## [1.0.2] - 2026-03-17
+## [1.0.3] - 2026-03-17
 
 ### Added
-- Monthly Hard Drive Backup Protocol note in section 1.2
-- Protocol for FreeFileSync batch job backups
+- "Exterior Repair Game Plan" note for the 2005 Honda Pilot in section 4.2.3
+- Numbered sub-subsections to TOC Section 4.2 (4.2.1. Home Improvement, 4.2.2. Family Care, 4.2.3. Auto)
+
+### Changed
+- Replaced `sync_vault_structure` skill with `affirm_vault_structure` in `AGENTS.md` and `README.md`
+- Updated documentation to use conventional "Affirm Vault Structure" language
+
+### Removed
+- All active references to `sync_vault.py` from `AGENTS.md` and `README.md`
+
+## [1.0.2] - 2026-03-17
 
 
 ## [1.0.1] - 2026-03-16

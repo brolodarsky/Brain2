@@ -47,7 +47,7 @@ When asked to generate a new note in the user's Obsidian vault, you must adhere 
 
 ## 6. Workflow
 1.  **Analyze Request:** Understand the topic the user wants a note for.
-2.  **Verify Folder Structure:** Run the `sync_vault_structure` skill to confirm the target folder exists. If missing, it will create it.
+2.  **Verify Folder Structure:** Confirm the target folder exists. If missing, create it.
 3.  **Determine Location:** Find the best folder for this topic.
 4.  **Create File:** Create the `.md` file with the exact title.
 5.  **Draft Content:** Write the content following the formatting rules.

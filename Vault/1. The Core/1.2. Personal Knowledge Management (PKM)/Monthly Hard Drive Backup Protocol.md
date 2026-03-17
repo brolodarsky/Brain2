@@ -16,17 +16,18 @@ The backup is managed via **FreeFileSync** using a pre-configured batch file (`.
 - **Software:** [FreeFileSync](https://freefilesync.org/)
 - **Job Type:** Batch Job (automated execution)
 - **Source:** Local Primary Drive
-- **Destination:** External Backup Drive
+- **Destination:** External Backup Drives
 
 ## 3. Execution Procedure
 
 ### Step 1: Connect External Storage
-Ensure the external hard drive is connected to the laptop and recognized by the system.
+Ensure the external hard drive(s) are connected to the laptop and recognized by the system.
 
 ### Step 2: Run the Batch Job
 Locate and run the FreeFileSync batch job file. This is typically configured to run silently or with a summary report at the end.
 
 1.  Open the directory containing your `.ffs_batch` files.
+	1. C Drive to BackupDrive/Backups/CompBackup![[1. The Core/1.2. Personal Knowledge Management (PKM)/BatchRun_CDrive_to_MainBackup.ffs_batch]]
 2.  Double-click the backup batch file (e.g., `MonthlyBackup.ffs_batch`).
 3.  Monitor the progress in the FreeFileSync pop-up (if not running completely silent).
 

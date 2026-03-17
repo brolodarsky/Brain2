@@ -20,7 +20,6 @@ This is a personal "second brain"/knowledge management system that's read/tinker
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
 | `generate_podcast.py` | Converts notes → MP3 via edge-tts |
-| `sync_vault.py` | Syncs Vault folders with TOC H1 sections |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
@@ -32,15 +31,9 @@ This is a personal "second brain"/knowledge management system that's read/tinker
 
 These are located in `.agents/skills/` and define rules you **must** follow.
 
-### `sync_vault_structure`
-**Trigger:** After any modification to `Vault/Table of Contents.md`
-- Sync Vault folders to match TOC H1 sections
-- Normalise `.gitkeep` (add to empty folders, remove from populated ones)
-- Report orphaned folders; never delete
-
 ### `generate_obsidian_note`
 **Trigger:** When asked to create a new note
-- Verify folder exists (run `sync_vault_structure` first)
+- Verify folder exists (Affirm Vault Structure first)
 - Follow Zettelkasten formatting: YAML frontmatter, atomic structure, wikilinks, mandatory footer
 - Add the note's `[[wikilink]]` to `Table of Contents.md`
 
@@ -62,7 +55,7 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 Located in `.agents/workflows/`.
 
 ### `create_new_note`
-End-to-end workflow for adding a note: sync structure → create note → update TOC link → confirm with user.
+End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
 
 ---
 

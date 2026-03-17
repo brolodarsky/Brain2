@@ -40,7 +40,7 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 ## 2.4. Nutrition
 - **The Recipe Vault:** High-protein/low-calorie favorites (Crack Slaw, etc.).    
 - **Feeding Reference:** Bookmarks/Videos on nutrition science and food prep.
-# 3. FORGE
+# 3. Forge
 Technical Mastery
 ## 3.1. Projects 
 The Lab
@@ -241,9 +241,9 @@ The dominant language for AI/ML and Agentic Workflows.
 - **Safety Guardrails:** Securing agentic workflows and prompt injection defense.
 - **Regulation:** Tracking the EU AI Act and global compliance.
 ### 3.2.12. Career
-# 4. OPERATIONS & WEALTH: The Engine
+# 4. Operations & Wealth
 
-_Financial and logistical systems to support a life of freedom._
+_Financial and logistical systems to support a life of freedom._ The "Engine"
 ## 4.1. Wealth & Asset Management
 - [[The Bogle Heads]]
 - **Investment Strategy:** Long-term holdings and risk management.
@@ -251,14 +251,18 @@ _Financial and logistical systems to support a life of freedom._
 - **Insurance:** Policies for health, car (Honda Pilot), and professional liability.
 - **Digital Assets:** Domain portfolio valuation and strategy.
 ## 4.2. Infrastructure & Logistics
-- **Household Ops & Maintenance:** Recurring tasks for the Honda Pilot and living spaces.
-- **Home Improvement & Design:**
-    - **Project Queue:** Renovation ideas, furniture builds, and aesthetic upgrades.
-    - **Tool Library:** Inventory of physical tools (drills, saws, etc.) and maintenance guides.
-    - **Materials & Suppliers:** Local Fort Lee hardware stores and cost tracking.
 - **The Home Lab:** Hardware inventory, server setups, and network security.
+### 4.2.1. Home Improvement & Maintenance
+- **Household Ops:** Recurring tasks for living spaces.
+- **Project Queue:** Renovation ideas, furniture builds, and aesthetic upgrades.
+- **Tool Library:** Inventory of physical tools (drills, saws, etc.) and maintenance guides.
+- **Materials & Suppliers:** Local Fort Lee hardware stores and cost tracking.
+### 4.2.2. Family & Care
 - **Family Estate:** Inventory and liquidation strategy for family assets (Gold/Silver).
 - **Parental Care:** Health records, medical billing history, and local Fort Lee resources.
+### 4.2.3. Auto
+- **[[Exterior Repair Game Plan]]:** Repair strategy for the driver-side rear quarter panel.
+- **Maintenance Log:** Service history and recurring tasks for the Pilot.
 ## 4.3. Career Strategy & Revenue
 - **Professional Portfolio:** Documentation of AI Rating and Billing experience.
 - **The Pivot:** Preparation for AI/Robotics roles (Interview prep, Networking).

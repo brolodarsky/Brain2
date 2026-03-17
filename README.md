@@ -15,7 +15,6 @@ Knowledge Base/
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
 │   │   ├── maintain_project_docs/    # Keep README & requirements.txt in sync
-│   │   └── sync_vault_structure/     # Keep folders in sync with TOC
 │   └── workflows/
 │       └── create_new_note.md        # End-to-end note creation flow
 ├── .venv/                      # Python virtual environment (not committed)
@@ -38,7 +37,6 @@ Knowledge Base/
 ├── AGENTS.md                   # AI agent constitution for the repo
 ├── CHANGELOG.md                # Running log of notable changes
 ├── generate_podcast.py         # Converts notes to MP3 audiobooks
-├── sync_vault.py               # Syncs Vault folders with Table of Contents
 ├── requirements.txt            # Pinned Python dependencies
 └── .gitignore
 ```
@@ -81,17 +79,12 @@ pip install edge-tts
 
 ---
 
-### `sync_vault.py`
-Reads H1 sections from `Vault/Table of Contents.md` and ensures every top-level section has a matching folder in `Vault/`.
+### Vault Maintenance
+Any time `Vault/Table of Contents.md` is modified, the directory structure must be affirmed to match.
 
-- Creates missing folders (with `.gitkeep` so Git tracks them).
-- Normalises `.gitkeep` — adds to empty folders, removes from populated ones.
-- Reports orphaned folders (folders with no matching H1) — never deletes automatically.
-
-**Usage:**
-```bash
-python sync_vault.py
-```
+- Ensure every top-level H1 section has a matching folder in `Vault/`.
+- Handle `.gitkeep` files: add to empty folders, remove from populated ones.
+- Orphaned folders (no matching H1) should be reported, never deleted automatically.
 
 ---
 
@@ -110,6 +103,5 @@ AI agent skills live in `.agents/skills/`. Each skill is a `SKILL.md` file that 
 | Skill | Trigger |
 |---|---|
 | `generate_obsidian_note` | When asked to create a new note |
-| `sync_vault_structure` | **Always**, after any edit to `Table of Contents.md` |
 | `maintain_project_docs` | After `pip install`/`uninstall`, or after adding/changing scripts |
 | `conventional_commits` | On every `git commit` |

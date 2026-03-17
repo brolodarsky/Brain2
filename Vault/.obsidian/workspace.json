@@ -1,20 +1,26 @@
 {
   "main": {
-    "id": "fe74a87c6ace67d9",
+    "id": "2ac94dca1f473ed1",
     "type": "split",
     "children": [
       {
-        "id": "2b0d67e20235b7bf",
+        "id": "d647c625f2bec47a",
         "type": "tabs",
         "children": [
           {
-            "id": "b0bd48afc6d35aab",
+            "id": "78e9213739a0eb23",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Table of Contents.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Table of Contents"
             }
           }
         ]
@@ -23,15 +29,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "5c0641abc2e18852",
+    "id": "614bf95e50b2bc19",
     "type": "split",
     "children": [
       {
-        "id": "08430ce2e1584030",
+        "id": "d1caa50d2d2bd452",
         "type": "tabs",
         "children": [
           {
-            "id": "303e0cd5de521d72",
+            "id": "d4fd293242e78428",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +50,7 @@
             }
           },
           {
-            "id": "ce145314fd5045f5",
+            "id": "65f563bcd1c9e2e0",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,7 +67,7 @@
             }
           },
           {
-            "id": "8e2e00c0ebabdb0c",
+            "id": "ef08beed91a26799",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,19 +83,20 @@
     "width": 300
   },
   "right": {
-    "id": "13a986d5d737c6b3",
+    "id": "13e5845ab2a97dc6",
     "type": "split",
     "children": [
       {
-        "id": "065e30fccbd55cac",
+        "id": "6d2b199faf197737",
         "type": "tabs",
         "children": [
           {
-            "id": "c99846c74fb41119",
+            "id": "17027862f86e6e3a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Table of Contents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,24 +106,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Table of Contents"
             }
           },
           {
-            "id": "d03395f43f8f68d4",
+            "id": "2fee9421bc85b637",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Table of Contents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Table of Contents"
             }
           },
           {
-            "id": "f9ea4784eb63d18e",
+            "id": "f110e3646ec59379",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -131,7 +139,7 @@
             }
           },
           {
-            "id": "25a78bf72eba77a1",
+            "id": "653d38ec9411ad3b",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -145,17 +153,18 @@
             }
           },
           {
-            "id": "bc00e67c3c9f1dc2",
+            "id": "2c1fa5298d76a9ec",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Table of Contents.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Table of Contents"
             }
           }
         ]
@@ -176,9 +185,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "303e0cd5de521d72",
+  "active": "78e9213739a0eb23",
   "lastOpenFiles": [
-    "zImages/Pasted image 20250616152726.png",
-    "1. Foundational Mathematics & Statistics/Calculus Overview.md"
+    "4. Operations & Wealth/Exterior Repair Game Plan.md",
+    "Table of Contents.md",
+    "1. The Core/1.2. Personal Knowledge Management (PKM)/Monthly Hard Drive Backup Protocol.md",
+    "1. The Core/1.2. Personal Knowledge Management (PKM)/BatchRun_CDrive_to_MainBackup.ffs_batch",
+    "BatchRun_CDrive_to_MainBackup.ffs_batch",
+    "6. Capture & Archive/6.1. Brain Dump & Inbox/Quick Capture.md",
+    "6. Capture & Archive/6.1. Brain Dump & Inbox",
+    "6. Capture & Archive/6.3. Digital Inventory/Laptop App List.md",
+    "6. Capture & Archive/6.3. Digital Inventory",
+    "1. The Core/1.2. Personal Knowledge Management (PKM)/Laptop App Update Protocol.md",
+    "1. The Core/1.2. Personal Knowledge Management (PKM)",
+    "1. The Core/1.3. Personal Knowledge Management (PKM)/Laptop App Update Protocol.md",
+    "Investigating Duplicate Laptop Apps.md",
+    "6. Capture & Archive/6.1. Digital Inventory/Laptop App List.md",
+    "1. The Core/1.3. Personal Knowledge Management (PKM)",
+    "6. Capture & Archive/6.1. Digital Inventory/App List.md",
+    "6. Capture & Archive/6.1. Digital Inventory/MyApps.md",
+    "MyApps 1.md",
+    "MyApps.md",
+    "6. Capture & Archive/6.1. Digital Inventory"
   ]
 }

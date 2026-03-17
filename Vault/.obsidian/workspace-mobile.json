@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "3433635913a9ad2f",
+    "id": "b1fb0e38f310933e",
     "type": "split",
     "children": [
       {
-        "id": "600e75e2ee134333",
+        "id": "bb9862d8479da79c",
         "type": "tabs",
         "children": [
           {
-            "id": "a33ad7f21d258cec",
+            "id": "9755537e7924b568",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The Bogle Heads.md",
-                "mode": "source",
+                "file": "Table of Contents.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Bogle Heads"
+              "title": "Table of Contents"
             }
           }
         ]
@@ -27,11 +27,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fe3e2c1764d6280c",
+    "id": "af72c6710680ce69",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "f3ded483691cd80d",
+        "id": "671a97b8f7a1ed70",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -44,7 +44,7 @@
         }
       },
       {
-        "id": "217ae03fc3331ff9",
+        "id": "22074201549c5a24",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -61,7 +61,7 @@
         }
       },
       {
-        "id": "830dbc8009be06cb",
+        "id": "8405551792cdb0e7",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -76,7 +76,7 @@
         }
       },
       {
-        "id": "4f1ce36bb708dfaf",
+        "id": "0e232105b8eb50a8",
         "type": "leaf",
         "state": {
           "type": "all-properties",
@@ -90,7 +90,7 @@
         }
       },
       {
-        "id": "e4a0fbe3ec0cbfe2",
+        "id": "d5c9b0f036bfd335",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -103,16 +103,15 @@
     "currentTab": 0
   },
   "right": {
-    "id": "13fab32e06f27056",
+    "id": "f6e91be417428280",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "cac26008388d08ce",
+        "id": "e95d0b6e194d20ce",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Jokes.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -126,12 +125,11 @@
         }
       },
       {
-        "id": "d4cb6d006f36203d",
+        "id": "a85ae34dbb3a60ee",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Table of Contents.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -140,12 +138,11 @@
         }
       },
       {
-        "id": "bd0bde51cb6d5f26",
+        "id": "dbb5902a9cac7176",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "Table of Contents.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -168,13 +165,6 @@
       "bases:Create new base": false
     }
   },
-  "active": "a33ad7f21d258cec",
-  "lastOpenFiles": [
-    "Table of Contents.md",
-    "The Bogle Heads.md",
-    "Jokes.md",
-    "Quick Capture.md",
-    "NIST e-Handbook of Statistical Methods.pdf",
-    "6. Intelligent Agents & Autonomy/AI Agents.md"
-  ]
+  "active": "9755537e7924b568",
+  "lastOpenFiles": []
 }
