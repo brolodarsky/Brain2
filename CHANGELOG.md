@@ -7,6 +7,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+- New CSS snippet `headers.css` for custom header styling in Obsidian
+
 ## [1.0.1] - 2026-03-16
 
 ### Added
