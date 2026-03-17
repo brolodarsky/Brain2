@@ -263,6 +263,7 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 ### 4.2.3. Auto
 - **[[Exterior Repair Game Plan]]:** Repair strategy for the driver-side rear quarter panel.
 - **Maintenance Log:** Service history and recurring tasks for the Pilot.
+- **[[Blower Motor Noise Fix]]:** Step-by-step guide for resolving HVAC fan noise.
 ## 4.3. Career Strategy & Revenue
 - **Professional Portfolio:** Documentation of AI Rating and Billing experience.
 - **The Pivot:** Preparation for AI/Robotics roles (Interview prep, Networking).
@@ -290,8 +291,8 @@ _Dedicated space for exploration, relationships, and pure interest._ Connection 
 - **Writing**
 ## 5.4. Creativity
 - [[Jokes]]
-# 6. CAPTURE & ARCHIVE: The Memory Bank
-_High-frequency tracking and unsorted information storage._
+# 6. Capture & Archive
+_High-frequency tracking and unsorted information storage. The Memory Bank_
 ## 6.1. Brain Dump & Inbox
 - **[[Quick Capture]]:** Temporary scratchpad for thoughts to be sorted later.
 - **Memories Log:** Significant life events, funny moments, and personal milestones.

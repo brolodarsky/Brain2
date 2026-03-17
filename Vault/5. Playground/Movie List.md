@@ -5,12 +5,12 @@ type: log
 ---
 # Movie List
 
-* ### Drama
+* ## Drama
 
   * Brooklyn (2015)  
   * Cinema Paradiso
 
-* ### Horror
+* ## Horror
 
   * **The Essentials & Early Masterpieces (Pre-1960s)**  
     * Nosferatu (1922)  

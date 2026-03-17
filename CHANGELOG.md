@@ -9,9 +9,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ## [1.0.2] - 2026-03-17
 
 ### Added
+- Blower Motor Noise Fix note for the 2005 Honda Pilot in section 4.2.3
 - Monthly Hard Drive Backup Protocol note in section 1.2
 - Protocol for FreeFileSync batch job backups
 - Movie List note and TOC mapping in Section 5.3
+- Education List note for general studies in Section 5.3
 - Numbered sub-subsections to TOC Section 4.2 (4.2.1. Home Improvement, 4.2.2. Family Care, 4.2.3. Auto)
 - "Exterior Repair Game Plan" note for the 2005 Honda Pilot in section 4.2.3
 - Activities List note and corresponding subfolder structure in Section 5.1
