@@ -16,6 +16,7 @@ Knowledge Base/
 │   │   ├── generate_obsidian_note/   # How to create new notes
 │   │   ├── maintain_project_docs/    # Keep README & requirements.txt in sync
 │   └── workflows/
+│       ├── add_job_requirement.md    # Job requirement extraction workflow
 │       └── create_new_note.md        # End-to-end note creation flow
 ├── .venv/                      # Python virtual environment (not committed)
 ├── Vault/                      # All Obsidian content lives here

@@ -17,6 +17,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Note generation rules enforcing prefixed filenames (`Project -`, `Protocol -`, etc), banning redundant H1 headers, and moving the Table of Contents link to the top of the file
 - Rule 10 in `AGENTS.md` enforcing `.gitkeep` files for empty directories.
 - Folder maintenance scripts: `scripts/create_folders.py`, `scripts/check_folders.py`, and `scripts/add_gitkeeps.py`.
+- Employer Skill Requirements tracking note in Section 4.3 with AI Synthesis feature.
+- `/add_job_requirement` workflow for automated PDF/URL job criteria extraction.
 
 ### Changed
 - Moved all python scripts into the `scripts/` root directory.
