@@ -14,6 +14,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - "Currently Learning" note and tracking in Section 1.1
 - "Maintenance Log" hybrid note linking to Google Sheets in Section 4.2.3
 - "Maintenance Tracker Game Plan" project note outlining the build steps for the automated Google Sheet
+- Note generation rules enforcing prefixed filenames (`Project -`, `Protocol -`, etc), banning redundant H1 headers, and moving the Table of Contents link to the top of the file
 
 ## [1.0.2] - 2026-03-17
 

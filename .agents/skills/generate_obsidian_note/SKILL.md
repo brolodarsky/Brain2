@@ -14,18 +14,20 @@ When asked to generate a new note, OR when moving, formatting, or importing an e
 *   New notes should be placed in the appropriate subdirectory matching that exact header name.
 *   If a link exists in an index file (e.g., `[[Supervised Learning]]`), create the new file in the folder that corresponds to that header.
 
-## 2. File Naming
-*   Use the exact name specified in the wiki-link.
-*   For example, if the link is `[[Overview - Linear Algebra]]`, the file must be named `Overview - Linear Algebra.md`.
+## 2. File Naming & Taxonomy
+*   Use taxonomic prefixes to keep the vault clean. Structure new filenames using prefixes such as `Project - `, `Protocol - `, `Concept - `, `Reference - `, `Log - `, or `Meeting - `.
+*   *Note:* You are explicitly permitted to invent and use a new prefix if the standard list does not adequately describe the note's purpose.
+*   The final filename must be what is specified in the index wiki-link (e.g., `[[Concept - Linear Algebra]]`).
 
 ## 3. Formatting and Structure (Zettelkasten Protocol)
-*   **H1 Header:** Every note must start with an H1 header matching the title of the note.
+*   **No Redundant H1 Header:** Do NOT use an `#` H1 header that perfectly matches the filename. Obsidian natively displays the filename as the document title, making matching H1s redundant and a waste of vertical space. 
+*   **Mandatory Header Link:** directly below the YAML frontmatter block, you MUST place the Table of Contents return link, separated by a horizontal rule, before any body content:
+    ---
+    **Back to:** [[Table of Contents]]
+    ---
 *   **Atomic Notes:** Keep the note focused on a single logical concept. Use H2 (`##`) and H3 (`###`) headers to logically break down the topic.
 *   **Lists:** Use extensive bullet points for readability. The user prefers a highly structured, outline-like format over wall-of-text paragraphs.
 *   **Intra-linking:** Proactively interlink concepts within the body text using Obsidian's `[[Wiki-link]]` syntax.
-*   **Mandatory Footer:** EVERY note you generate must end with the following exact markdown on the last line to ensure it is always tied back to the master index:
-    ---
-    **Back to:** [[Table of Contents]]
 ## 4. Frontmatter (YAML)
 *   Every single note MUST begin with a YAML frontmatter block at the very top of the file.
 *   **`aliases:`** Provide 1-3 synonyms or alternative names (e.g., for `Calculus.md`, an alias might be `Derivatives`). This makes linking much easier.
