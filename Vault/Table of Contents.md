@@ -15,6 +15,7 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 - **[[Protocol - System Maintenance]]**
 - **[[Protocol - Laptop App List Update]]**
 - **[[Protocol - Monthly Hard Drive Backup]]**
+- **[[Protocol - New Note Template]]**
 - **Toolbox:** Documentation for the Pixel 8 Pro, Obsidian/Logseq workflows, and local LLM setups.
 ## 1.3. Security & Digital Sovereignty
 - **Security Audit:** Password management strategy, 2FA recovery locations, and encryption protocols.
@@ -49,7 +50,7 @@ The Lab
 - **[[Project Maturity Checklist]]:** Standardized checklist for enterprise-grade applications.
 - [Brain 2](https://github.com/brolodarsky/Brain2)
 - **[Project Feeder](https://github.com/brolodarsky/Feeder):** Python logic, UI/UX, and database development.
-- **[[Project - MEM Billing]]**: Billing Automation. Scripts for LCSW medical billing efficiency.
+- **[Project MEM Billing](<file:///C:\Users\Willi\Documents\Projects\MEMBilling>):** Billing Automation. Scripts for LCSW medical billing efficiency.
 - **Project - Domain Portfolio:** Management and monetization of SiliSlick.com and others.
 ### 3.1.2. Script Attic
 - Inactive tools, experiments, and one-off Python scripts.
@@ -265,6 +266,7 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 ### 4.2.2. Family & Care
 - **Family Estate:** Inventory and liquidation strategy for family assets (Gold/Silver).
 - **Parental Care:** Health records, medical billing history, and local Fort Lee resources.
+	- [[Plan - Recover & Transition for MEM Practice]]
 ### 4.2.3. Auto
 - **[[Car Info]]:** Persistent vehicle specifications and details.
 - **[[Maintenance Log]]:** Service history and recurring tasks for the Pilot.
