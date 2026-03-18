@@ -1,5 +1,5 @@
 ---
-description: Keep requirements.txt and README.md in sync whenever Python packages or scripts change
+description: Keep requirements.txt and README.md in sync whenever changes warrent it.
 ---
 
 # Maintain Project Docs — Mandatory Trigger

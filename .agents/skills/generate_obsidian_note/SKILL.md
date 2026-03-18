@@ -6,7 +6,7 @@ description: How to generate and format new Obsidian notes
 
 When asked to generate a new note, OR when moving, formatting, or importing an existing markdown file into the user's Obsidian vault (`Vault/`), you must adhere to the following rules to ensure consistency with their existing knowledge base structure.
 
-> Before placing any note, verify the target folder exists. If it does not, apply the `sync_vault_structure` skill first to create it.
+> Before placing any note, verify the target folder exists. If it does not, create it based on the index.
 
 ## 1. File Location & Verifying Folder Structure
 *   **CRITICAL RULE:** Do NOT assume folder names. Folder names must exactly match the H1 or H2 sections as defined in `Table of Contents.md`.
