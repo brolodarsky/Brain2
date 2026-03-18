@@ -8,10 +8,10 @@ type: checklist
 This document serves as a standardized checklist to elevate personal projects into professional, enterprise-grade applications. Apply these practices to any serious program to ensure maintainability, scalability, and collaboration readiness.
 
 ## 1. Documentation & Version Control (Implemented in Feeder)
-- [x] **README.md**: Comprehensive guide detailing the project's purpose, features, tech stack, and step-by-step local setup instructions.
-- [x] **CHANGELOG.md**: A chronologically ordered list of notable changes, adhering to the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format.
-- [x] **Conventional Commits**: Standardized Git commit messages (e.g., `feat:`, `fix:`, `docs:`, `refactor:`) to create readable commit history and automate versioning.
-- [x] **Agent Skills / Enforced Workflows**: Automated rules (like `.agents/skills/enforce-documentation-vcs/SKILL.md`) to remind or force updates to documentation and adherence to commit standards before pushing code.
+- [ ] **README.md**: Comprehensive guide detailing the project's purpose, features, tech stack, and step-by-step local setup instructions.
+- [ ] **CHANGELOG.md**: A chronologically ordered list of notable changes, adhering to the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format.
+- [ ] **Conventional Commits**: Standardized Git commit messages (e.g., `feat:`, `fix:`, `docs:`, `refactor:`) to create readable commit history and automate versioning.
+- [ ] **Agent Skills / Enforced Workflows**: Automated rules (like `.agents/skills/enforce-documentation-vcs/SKILL.md`) to remind or force updates to documentation and adherence to commit standards before pushing code.
 
 ## 2. Environment & Configuration Management
 - [ ] **`.env.example` / `.env.template`**: A template file containing all required environment variables with dummy values, ensuring new developers know exactly what configuration is needed without exposing real secrets.
@@ -40,3 +40,6 @@ This document serves as a standardized checklist to elevate personal projects in
 - [ ] **Error Tracking**: Integration with platforms like Sentry or LogRocket to automatically capture user-facing errors, stack traces, and environment details in production.
 - [ ] **Structured Logging**: Moving beyond `print()` statements to structured, leveled logging (e.g., INFO, WARN, ERROR) that can be easily parsed by log aggregators.
 - [ ] **Health Check Endpoints**: Dedicated routes (e.g., `/api/health`) for orchestration tools (like Kubernetes or load balancers) to verify the application is live and communicating with its database.
+
+---
+**Back to:** [[Table of Contents]]
