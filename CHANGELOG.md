@@ -6,15 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ---
 ---
 
-## [1.0.4] - 2026-03-18
+## [1.0.3] - 2026-03-18
 
 ### Added
 - "Car Info" persistent reference note in Section 4.2.3
 - "Project Ideas" persistent tracking note in Section 4.2.1
-
-## [1.0.3] - 2026-03-18
-
-### Added
 - "Currently Learning" note and tracking in Section 1.1
 
 ## [1.0.2] - 2026-03-17
