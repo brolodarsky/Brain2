@@ -9,7 +9,8 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 - **Principles & Ethics:** Core values and decision-making frameworks.
 - **The 10-Year Horizon:** Strategic goals for the 30s, 40s, and beyond.
 - **Legacy & Impact:** What do I want to build that lasts?
-- **[[Currently Learning]]:** Active focus and active subjects.
+- **[[Current Learning]]:** Active focus and active subjects.
+- **[[Shit To Do]]
 ## 1.2. Personal Knowledge Management (PKM)
 - **Brain 2.0 Meta:** How I tag, link, and maintain this system.
 - **[[Protocol - System Maintenance]]**
