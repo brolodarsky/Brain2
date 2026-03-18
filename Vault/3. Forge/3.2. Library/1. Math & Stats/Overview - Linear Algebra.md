@@ -4,8 +4,8 @@ tags: [math, machine-learning, embeddings]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 [[Linear Algebra]] is a branch of mathematics concerning **vector spaces** and **linear mappings** between such spaces. It is a fundamental tool for AI and Machine Learning, allowing for the modeling and solving of systems of linear equations.

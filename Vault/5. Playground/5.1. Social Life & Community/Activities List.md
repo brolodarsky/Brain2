@@ -4,8 +4,8 @@ tags: [social, life, archive]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 # Priorities

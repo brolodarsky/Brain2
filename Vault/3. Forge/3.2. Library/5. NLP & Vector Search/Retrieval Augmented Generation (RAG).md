@@ -4,8 +4,8 @@ tags: [nlp, generative-ai, llms, vector-database]
 type: architecture
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Retrieval Augmented Generation (RAG) is a technique for enhancing Large Language Models by fetching relevant external data and inserting it into the model's context window before generating a response. It grounds the LLM in specific, up-to-date, or proprietary data that was not present in its original training corpus.

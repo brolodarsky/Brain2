@@ -4,8 +4,8 @@ tags: [ai-agents, llms, api]
 type: concept
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Function calling (or Tool Use) is the mechanism that allows Large Language Models (LLMs) to connect to external tools, APIs, and databases. Instead of just returning text, the model returns a structured JSON object that matches a predefined schema, which your code then uses to execute a classical programming function.

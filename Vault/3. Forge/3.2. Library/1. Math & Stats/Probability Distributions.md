@@ -4,8 +4,8 @@ tags: [math, statistics, generative-ai]
 type: concept
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 A **Probability Distribution** is a mathematical function that provides the probabilities of occurrence of different possible outcomes in an experiment. It is a fundamental concept in statistics and machine learning for modeling uncertainty and understanding data generation processes.

@@ -4,8 +4,8 @@ tags: [math, optimization, machine-learning]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Calculus is the mathematical study of continuous change. In the context of AI and Machine Learning, calculus is the engine that allows models to "learn" by iteratively minimizing error. 

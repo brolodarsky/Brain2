@@ -4,8 +4,8 @@ tags: [machine-learning, concepts]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Supervised learning is a subfield of machine learning where an algorithm learns from a labeled dataset. The model observes pairs of input data (features) and corresponding correct outputs (labels), and learns the mathematical mapping between them. 

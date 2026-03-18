@@ -4,8 +4,8 @@ tags: [python, library, data-science, feature-engineering]
 type: tool
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 **Pandas** is an open-source data manipulation and analysis library built on top of [[NumPy]]. While NumPy excels at crunching uniform mathematical arrays, Pandas excels at handling heterogeneous, tabular data—much like a SQL table or an Excel spreadsheet.

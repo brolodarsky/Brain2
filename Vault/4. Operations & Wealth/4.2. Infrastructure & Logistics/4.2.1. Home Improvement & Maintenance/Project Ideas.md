@@ -4,8 +4,8 @@ tags: [home, project, ideas]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 

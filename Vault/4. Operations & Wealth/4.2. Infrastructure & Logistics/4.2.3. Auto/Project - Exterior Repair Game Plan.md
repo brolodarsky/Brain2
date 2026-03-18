@@ -4,8 +4,8 @@ tags: [maintenance, vehicle, honda-pilot]
 type: plan
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 # 2005 Honda Pilot: Exterior Repair Game Plan

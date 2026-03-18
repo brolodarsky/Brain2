@@ -4,8 +4,8 @@ tags: [machine-learning, algorithm, classification]
 type: algorithm
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Despite its name containing the word "regression," **Logistic Regression** is almost exclusively used for **Classification** tasks in [[Supervised Learning]]. Rather than fitting a continuous straight line like [[Linear Regression]], Logistic Regression fits an "S-shaped" curve to calculate the probability that an observation belongs to a specific category.

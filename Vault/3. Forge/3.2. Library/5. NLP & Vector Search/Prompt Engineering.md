@@ -4,8 +4,8 @@ tags: [nlp, generative-ai, llms]
 type: concept
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Prompt Engineering is the practice of designing, refining, and optimizing text inputs (prompts) to effectively guide generative AI models (like LLMs) toward desired outputs. It bridges the gap between human intent and model comprehension.

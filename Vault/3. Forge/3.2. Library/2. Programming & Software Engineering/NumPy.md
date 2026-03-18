@@ -4,8 +4,8 @@ tags: [python, library, data-science, math]
 type: tool
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 **Numerical Python (NumPy)** is the foundational library for scientific computing in Python. It provides high-performance multidimensional array objects and tools for working with these arrays. Almost all other data science libraries (like [[Pandas]], Scikit-learn, and PyTorch) are built on top of or integrate closely with NumPy.

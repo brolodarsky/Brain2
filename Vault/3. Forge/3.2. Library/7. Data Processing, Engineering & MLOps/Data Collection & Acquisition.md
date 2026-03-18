@@ -4,8 +4,8 @@ tags: [data-engineering, mlops, python]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Data collection is the critical first stage of any Machine Learning project or Agentic Workflow. Without high-quality, relevant, and clean data, even the most advanced Deep Learning models will fail (Garbage In, Garbage Out).

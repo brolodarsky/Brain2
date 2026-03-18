@@ -4,8 +4,8 @@ tags: [nlp, databases, infrastructure]
 type: tool
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 # Vector Databases & Embeddings

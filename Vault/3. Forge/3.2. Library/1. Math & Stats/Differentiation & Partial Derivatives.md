@@ -4,8 +4,8 @@ tags: [math, optimization, deep-learning]
 type: concept
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Differentiation is the mathematical procedure used to find a derivative—the rate of change of a function. The derivative of a function $f(x)$ with respect to $x$ is denoted as $f'(x)$ or $\frac{df}{dx}$.

@@ -4,8 +4,8 @@ tags: [auto, maintenance, repair, honda-pilot]
 type: tool
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 This guide covers the diagnosis and resolution of unusual noises (rattling, squeaking, grinding) coming from the blower motor in a 2005 Honda Pilot.

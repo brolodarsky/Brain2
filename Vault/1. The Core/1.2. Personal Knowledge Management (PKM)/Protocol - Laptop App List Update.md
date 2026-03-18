@@ -4,9 +4,8 @@ tags: [pkm, workflow, automation]
 type: tool
 ---
 
----
 **Back to:** [[Table of Contents]]
----
+
 
 This protocol outlines the process for updating the [[Laptop App List]] to ensure the digital inventory remains current.
 

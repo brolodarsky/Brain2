@@ -4,8 +4,8 @@ tags: [programming-language, software-engineering, ai-stack]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Python is the dominant programming language for Artificial Intelligence, Data Science, and Agentic Workflows. Its rich ecosystem of libraries, readable syntax, and extensive community support make it the standard for building complex software systems interacting with LLMs.

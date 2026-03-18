@@ -4,8 +4,8 @@ tags: [machine-learning, algorithm, regression]
 type: algorithm
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 Linear Regression is arguably the simplest and most widely used algorithm in all of [[Supervised Learning]]. It attempts to model the relationship between a dependent continuous variable and one or more independent variables by fitting a straight line (or an $n$-dimensional plane) to the observed data.

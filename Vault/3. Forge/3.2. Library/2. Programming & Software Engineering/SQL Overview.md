@@ -4,8 +4,8 @@ tags: [data-engineering, databases, programming-language]
 type: overview
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 # SQL (Structured Query Language)

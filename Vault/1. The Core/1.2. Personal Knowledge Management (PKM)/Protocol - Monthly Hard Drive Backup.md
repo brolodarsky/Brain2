@@ -4,8 +4,8 @@ tags: [pkm, backup, workflow, automation]
 type: tool
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 This protocol outlines the process for running a monthly backup of the primary hard drive to an external storage device using FreeFileSync as a batch job.

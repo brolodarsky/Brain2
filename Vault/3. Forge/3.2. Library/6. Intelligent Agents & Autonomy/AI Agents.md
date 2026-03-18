@@ -4,8 +4,8 @@ tags: [ai-agents, llms, architecture]
 type: concept
 ---
 
----
 **Back to:** [[Table of Contents]]
+
 ---
 
 An **AI Agent** is a system powered by a Large Language Model (LLM) that can autonomously reason through a problem, create a plan, and execute actions using external tools to achieve a predefined goal. Unlike standard conversational AI (chatbots), agents are proactive and capable of altering their environment.
