@@ -62,6 +62,9 @@ Located in `.agents/workflows/`.
 ### `create_new_note`
 End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
 
+### `add_job_requirement`
+Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary.
+
 ---
 
 ## Rules

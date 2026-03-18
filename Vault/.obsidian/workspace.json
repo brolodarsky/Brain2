@@ -54,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -216,11 +216,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "3b1f6a3644301afd",
+  "active": "d4fd293242e78428",
   "lastOpenFiles": [
+    "4. Operations & Wealth/4.3. Career Strategy & Revenue/Saved Job Listings/2026 Information Technology Analyst and Associate – New York and Jersey City, Corporate - Jefferies.pdf",
+    "4. Operations & Wealth/4.3. Career Strategy & Revenue/Saved Job Listings",
+    "1. The Core/1.1. Philosophy & Personal North Star/Shit To Do.md",
     "4. Operations & Wealth/4.3. Career Strategy & Revenue/Employer Skill Requirements.md",
     "Table of Contents.md",
-    "1. The Core/1.1. Philosophy & Personal North Star/Shit To Do.md",
     "4. Operations & Wealth/4.2. Infrastructure & Logistics/4.2.2. Family & Care/Plan - Recover & Transition for MEM Practice.md",
     "1. The Core/1.2. Personal Knowledge Management (PKM)/Protocol - New Note Template.md",
     "1. The Core/1.1. Philosophy & Personal North Star/Current Learning.md",
@@ -236,7 +238,6 @@
     "4. Operations & Wealth/4.1. Wealth & Asset Management",
     "2. Health/2.4. Nutrition",
     "2. Health/2.3. Psych",
-    "2. Health/2.2. Medical",
     "3. Forge/3.2. Library/3.2.2. Programming & Software Engineering/Project Maturity Checklist.md",
     "1. The Core/1.2. Personal Knowledge Management (PKM)/Protocol - Monthly Hard Drive Backup.md",
     "3. Forge/3.2. Library/3.2.6. Intelligent Agents & Autonomy/Function Calling & Structured Outputs.md",
@@ -252,7 +253,6 @@
     "3. Forge/3.2. Library/3.2.6. Intelligent Agents & Autonomy/Concept - Model Context Protocol (MCP).md",
     "4. Operations & Wealth/4.2. Infrastructure & Logistics/4.2.3. Auto/Car Info.md",
     "4. Operations & Wealth/4.2. Infrastructure & Logistics/4.2.3. Auto/Maintenance Log.md",
-    "4. Operations & Wealth/4.2. Infrastructure & Logistics/4.2.1. Home Improvement & Maintenance/Project Ideas.md",
-    "4. Operations & Wealth/The Bogle Heads.md"
+    "4. Operations & Wealth/4.2. Infrastructure & Logistics/4.2.1. Home Improvement & Maintenance/Project Ideas.md"
   ]
 }
