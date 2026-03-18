@@ -62,7 +62,7 @@ End-to-end workflow for adding a note: affirm structure → create note → upda
 ## Rules
 
 1. **Never delete user content** without explicit confirmation.
-2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH.
+2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH. Never install dependencies globally. Always use `.venv\Scripts\pip.exe` for installations. If a new requirement is added, immediately trigger the `maintain_project_docs` skill.
 3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill.
 4. **Update `CHANGELOG.md` for all `feat` and `fix` commits.**
 5. **The TOC is the single source of truth** for Vault folder structure.
