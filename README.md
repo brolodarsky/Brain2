@@ -12,11 +12,14 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 
 ```
 Knowledge Base/
-├── .agents/                    # AI agent skills
-│   ├── skills/
+├── .agents/                    # AI agent instructions
+│   ├── skills/                 # Mandatory behaviors
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
 │   │   ├── maintain_project_docs/    # Keep README & requirements.
+│   └── workflows/              # Structured procedures (slash commands)
+│       ├── add_job_requirement.md
+│       └── create_new_note.md
 ├── .venv/                      # Python virtual environment (not committed)
 ├── Vault/                      # All Brain content lives here
 │   ├── .obsidian/              # Obsidian settings
@@ -32,7 +35,7 @@ Knowledge Base/
 │   └── Table of Contents.md   # Master index — source of truth for structure
 ├── AGENTS.md                   # AI agent constitution
 ├── CHANGELOG.md                # Running log of notable changes
-├── tools/                      # Python scripts & agentic tools
+├── tools/                      # Python automation tools
 ├── requirements.txt            # Pinned Python dependencies
 └── .gitignore
 ```

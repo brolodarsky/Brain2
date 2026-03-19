@@ -5,6 +5,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [1.0.6] - 2026-03-19
+
+### Changed
+- Moved Markdown-based agentic workflows back to `.agents/workflows/` from `tools/` to restore agent visibility and slash-command discovery.
+- Kept Python-based automation scripts in the `tools/` directory.
+- Updated `AGENTS.md` and `README.md` to clarify the distinction between "Agentic Workflows" and "Automation Tools."
+
+## [1.0.5] - 2026-03-19
+
+### Added
+- `tools/` directory for unified access to Python scripts.
+
 ## [1.0.4] - 2026-03-19
 
 ### Added

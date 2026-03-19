@@ -19,10 +19,11 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 | `Vault/` | All Obsidian content/second brain "thoughts" — notes, images, audio, pdfs, external links, etc. |
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure/brain structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
-| `tools/` | Python scripts & agentic tools for brain automation |
+| `tools/` | Python scripts for brain automation |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
+| `.agents/workflows/` | AI agent workflows/tools to invoke |
 
 ## Skills (Mandatory Behaviours)
 
@@ -42,7 +43,7 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 
 ## Tools & Workflows
 
-Located in `tools/`.  ("Brain Tools/Functions").
+Python scripts live in `tools/`. Structured AI agent workflows (slash commands) live in `.agents/workflows/`.
 
 ### `create_new_note`
 End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
