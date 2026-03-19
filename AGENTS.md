@@ -43,7 +43,10 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 
 ## Tools & Workflows
 
-Python scripts live in `tools/`. Structured AI agent workflows (slash commands) live in `.agents/workflows/`.
+This brain distinguishes between **Active Procedures** (Workflows) and **Deterministic Capabilities** (Tools).
+
+- **Tools (`tools/`)**: Python scripts for deterministic automation (e.g., MP3 generation, folder sync).
+- **Workflows (`.agents/workflows/`)**: Structured instructions/recipes for the AI agent to follow (e.g., `/create_new_note`).
 
 ### `create_new_note`
 End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.

@@ -56,6 +56,15 @@ pip install -r requirements.txt
 
 ---
 
+## Brain Functions & Automation
+
+This repository distinguishes between two types of "cognitive" capabilities:
+
+1. **Agentic Workflows (`.agents/workflows/`)**: These are **Active Procedures** (Recipes) for the AI agent to follow. They define complex, multi-step logic (like creating notes or parsing job descriptions) and are triggered via slash commands.
+2. **Automation Tools (`tools/`)**: These are **Deterministic Capabilities** (Scripts) written in Python. They perform specific, repetitive tasks (like generating MP3s or maintenance) and are triggered manually via the terminal.
+
+---
+
 ## Tools & Workflows
 
 ### Vault Maintenance Tools
