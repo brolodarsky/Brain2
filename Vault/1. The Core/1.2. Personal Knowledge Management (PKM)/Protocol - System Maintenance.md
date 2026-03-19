@@ -15,6 +15,9 @@ Use this note to track recurring administrative and maintenance tasks for Brain 
 
 ## Monthly Maintenance Checklist
 
+- [ ] **Run `/audit_inbox` Workflow**
+  - Run the `audit_inbox` workflow to process any lingering thoughts or documents in `5.1. Brain Dump & Inbox`.
+  - Approve the agent's routing plan to keep the inbox at zero.
 - [ ] **Run `cleanup_orphans` Agent Skill**
   - Ask an agent to "run the cleanup orphans skill".
   - Review the agent's report.

@@ -19,7 +19,11 @@ Knowledge Base/
 │   │   ├── maintain_project_docs/    # Keep README & requirements.
 │   └── workflows/              # Structured procedures (slash commands)
 │       ├── add_job_requirement.md
-│       └── create_new_note.md
+│       ├── audit_inbox.md
+│       ├── create_new_note.md
+│       ├── create_project.md
+│       ├── distill_learning.md
+│       └── plan_activity.md
 ├── .venv/                      # Python virtual environment (not committed)
 ├── Vault/                      # All Brain content lives here
 │   ├── .obsidian/              # Obsidian settings

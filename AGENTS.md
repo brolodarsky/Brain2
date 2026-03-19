@@ -49,10 +49,22 @@ This brain distinguishes between **Active Procedures** (Workflows) and **Determi
 - **Workflows (`.agents/workflows/`)**: Structured instructions/recipes for the AI agent to follow (e.g., `/create_new_note`).
 
 ### `create_new_note`
-End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
+Agentic tool. End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
 
 ### `add_job_requirement`
-Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary for Career Strategy (section 3.3).
+Agentic tool. Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary for Career Strategy.
+
+### `audit_inbox`
+Agentic tool for reading and sorting raw notes and bullet points from the Brain Dump & Inbox into the main Zettelkasten structure.
+
+### `create_project`
+Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials appended to the bottom of the plan.
+
+### `distill_learning`
+Synthesizes complex technical articles or PDFs into atomic, interlinked notes within the `Library & Learning` section or global Zettelkasten.
+
+### `plan_activity`
+Cross-references `Activities List`, `Date Ideas`, and `People Data` notes to generate a structured markdown itinerary.
 
 ## Rules
 
