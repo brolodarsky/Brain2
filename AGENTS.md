@@ -8,7 +8,7 @@ This is a personal "second brain"/knowledge management system that stores/uses m
 
 It's read and tinkered with in Obsidian and tinkered with in agentic IDEs, version-controlled with Git, and synced to mobile via Syncthing. 
 
-Notes follow the Zettelkasten methodology. Vault folder structure is defined in `Table of Contents.md`. Audio files are frequently generated for on the go listening to "thoughts". Several scripts are available to help with "brain automation".
+Notes follow the Zettelkasten methodology. Vault folder structure is defined in `Table of Contents.md`. Audio files are frequently generated for on the go listening to "thoughts". Several tools are available to help with "brain automation".
 
 **Vault path:** `Vault/` (not the repo root)
 
@@ -19,11 +19,10 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 | `Vault/` | All Obsidian content/second brain "thoughts" — notes, images, audio, pdfs, external links, etc. |
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure/brain structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
-| `scripts/` | Python scripts for brain automation |
+| `tools/` | Python scripts & agentic tools for brain automation |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
-| `.agents/workflows/` | AI agent workflows |
 
 ## Skills (Mandatory Behaviours)
 
@@ -33,7 +32,7 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 **Trigger:** When asked to create, move, format, or import a note into the Vault
 
 ### `maintain_project_docs`
-**Trigger:** After `pip install`/`pip uninstall`, after adding/changing/removing scripts, agentic workflows, skills or rules.
+**Trigger:** After `pip install`/`pip uninstall`, after adding/changing/removing tools, skills or rules.
 
 ### `conventional_commits`
 **Trigger:** On every `git commit`
@@ -41,15 +40,15 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 ### `cleanup_orphans`
 **Trigger:** When asked to "clean the vault", "find orphans", or perform Zettelkasten maintenance
 
-## Workflows
+## Tools & Workflows
 
-Located in `.agents/workflows/`.
+Located in `tools/`.  ("Brain Tools/Functions").
 
 ### `create_new_note`
 End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
 
 ### `add_job_requirement`
-Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary.
+Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary for Career Strategy (section 3.3).
 
 ## Rules
 

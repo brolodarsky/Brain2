@@ -9,11 +9,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 - `Vault/Sensitive/` folder for sensitive notes/files gitignored
+- `tools/` directory for unified access to Python scripts and "Agentic Tools" (formerly workflows).
 
 ### Changed
+- Renamed `scripts/` to `tools/`.
+- Moved all workflows from `.agents/workflows/` to `tools/`.
+- Updated `AGENTS.md` and `README.md` to reflect the new unified "Tools & Workflows" structure.
 - Updated `conventional_commits` skill and `AGENTS.md` to require TOC section references for Vault changes in git commit messages.
-- Updated `maintain_project_docs` skill and `AGENTS.md` to require README, CHANGELOG and AGENTS.md updates when needed & to maintain README's vault structure diagram
-- Put secton 3.Forge at the end of the TOC b/c it's so big
+- Updated `maintain_project_docs` skill and `AGENTS.md` to require README, CHANGELOG and AGENTS.md updates when needed & to maintain README's vault structure diagram.
+- Put section 3.Forge at the end of the TOC b/c it's so big. Changed TOC & folder structure.
 
 ### Removed
 - Section 3.2.12 - "Career" - moved to section 4.3
