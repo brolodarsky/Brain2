@@ -1,5 +1,5 @@
 ---
-description: Keep requirements.txt and README.md in sync whenever changes warrent it.
+description: Keep requirements.txt and README.md and CHANGELOG.md in sync whenever changes warrent it.
 ---
 
 # Maintain Project Docs — Mandatory Trigger
@@ -17,12 +17,14 @@ Then commit `requirements.txt` along with whatever other changes prompted the in
 
 ---
 
-## Trigger 2: After adding, removing, or significantly changing a script
+## Trigger 2: After adding, removing, or significantly changing project
 
 **ALWAYS check whether `README.md` needs updating** when:
 - A new `.py` script is added to the repo root
 - An existing script's purpose, usage, or flags change
 - A script is deleted
+- An agentic skill or workflow is added, removed, or significantly changed.
+- `/Vault` folder structure is changed.
 
 Update the relevant section in `README.md` under `## Scripts`. Each script entry should include:
 - **What it does** (one sentence)

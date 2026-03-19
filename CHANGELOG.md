@@ -8,6 +8,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [1.0.4] - 2026-03-19
 
+### Added
+- "Home Purchase Application" note for parents in section 4.2.2
+- `Vault/Sensitive/` folder for sensitive notes/files gitignored
+- "Breaking Up - Dialectic with LLM" note in section 2.3 linked to Sensitive folder
+- "Professional Profile & Economic Strategy" note in section 4.3
+- "Life Chronology" note in section 2.3 linked to Sensitive folder
+- "Neuro-Sensory Profile & Maintenance" note in section 2.3 linked to Sensitive folder
+
 ### Changed
 - Updated `conventional_commits` skill and `AGENTS.md` to require TOC section references for Vault changes in git commit messages.
 

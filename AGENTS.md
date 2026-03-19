@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This is a personal "second brain"/knowledge management system that's read/tinkered with in Obsidian and tinkered with in agentic IDEs, version-controlled with Git, and synced to mobile via Syncthing. Notes follow the Zettelkasten methodology. Audio files are frequently generated for on the go listening to "thoughts".
+This is a personal "second brain"/knowledge management system that's read and tinkered with in Obsidian and tinkered with in agentic IDEs, version-controlled with Git, and synced to mobile via Syncthing. Notes follow the Zettelkasten methodology. Audio files are frequently generated for on the go listening to "thoughts".
 
 **Vault path:** `Vault/` (not the repo root)
 
@@ -19,7 +19,7 @@ This is a personal "second brain"/knowledge management system that's read/tinker
 | `Vault/` | All Obsidian content — notes, images, audio |
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
-| `scripts/generate_podcast.py` | Converts notes → MP3 via edge-tts |
+| `scripts/` | Python scripts for brain automation |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
@@ -73,10 +73,10 @@ Automates extracting skills from a job description (PDF/URL), appending it to `E
 1. **Never delete user content** without explicit confirmation.
 2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH. Never install dependencies globally. Always use `.venv\Scripts\pip.exe` for installations. If a new requirement is added, immediately trigger the `maintain_project_docs` skill.
 3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill. For Vault changes, always include a TOC section reference.
-4. **Update `CHANGELOG.md` for all `feat` and `fix` commits.**
-5. **The TOC is the single source of truth** for Vault folder structure.
+4. **Update `CHANGELOG.md` for all `feat` and `fix` commits, or when you think appropriate. If there is a significant change, update the version number. If there is a minor change, update the patch number. If there is a documentation change, update the patch number. If there's an existing version on the same day, only create a new version if the change is significant, otherwise update the existing version.**
+5. **The TOC is the single source of truth** for Vault folder structure and the concept of this entire project.
 6. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
 7. **Audio files are gitignored** — they sync via Syncthing, not Git.
-8. **Batch your commits.** Group related changes into single logical commits. Do not `git push` after every minor file edit or documentation fix. Only `git push` at the very end of a task or session to reduce user interruptions.
+8. **Batch your commits.** Group related changes into single logical commits. Do not `git push` after every minor file edit or documentation fix. Only `git push` at the very end of a task/session or if it's a significant change, to reduce user interruptions.
 9. **Keep AGENTS.md updated.** If you create, modify, or delete a skill or workflow, you must update the `## Skills` or `## Workflows` section in this file to reflect the change.
 10. **Add `.gitkeep` to empty folders.** Whenever creating a new empty directory in the Vault, always create an empty `.gitkeep` file inside it so it can be tracked by Git.

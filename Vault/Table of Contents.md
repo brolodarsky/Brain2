@@ -10,7 +10,7 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 - **The 10-Year Horizon:** Strategic goals for the 30s, 40s, and beyond.
 - **Legacy & Impact:** What do I want to build that lasts?
 - **[[Current Learning]]:** Active focus and active subjects.
-- **[[Shit To Do]]
+- **[[Shit To Do]]**
 ## 1.2. Personal Knowledge Management (PKM)
 - **Brain 2.0 Meta:** How I tag, link, and maintain this system.
 - **[[Protocol - System Maintenance]]**
@@ -21,6 +21,7 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 ## 1.3. Security & Digital Sovereignty
 - **Security Audit:** Password management strategy, 2FA recovery locations, and encryption protocols.
 - **Digital Inheritance:** Instructions for account access in case of emergency.
+	- Todo: Research best practices & implement.
 ## 1.4. Emergency & Survival
 - **Emergency Contacts:** Medical, family, and local services.
 - **Crisis Protocols:** What to do in medical or financial emergencies.
@@ -37,6 +38,10 @@ _Systemic foundations for mental clarity, resilience, and long-term vision._
 - **Sleep Hygiene:** Protocols for deep rest and circadian rhythm alignment.
 ## 2.3. Psych
 - **Cognitive Load Management:** Tools for balancing caregiving, technical work, and social life.
+	- [[Breaking Up - Dialectic with LLM]]
+	- [[Life Chronology]]
+	- [[Professional Profile & Strat]]
+	- [[Neuro-Sensory Profile & Maintenance]]
 - **Meditation & Mindfulness:** Rituals for grounding and focus.
 - **Stress Mitigation:** Systems for decompressing after high-output days.
 - **CBT**
@@ -255,6 +260,7 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 - [[The Bogle Heads]]
 - **Investment Strategy:** Long-term holdings and risk management.
 - **Banking & Credit:** Tracking credit scores, loan statuses, and account maintenance.
+- **[[Recurring Payments]]**: Centralized tracking for subscriptions, memberships, and automated bills.
 - **Insurance:** Policies for health, car (Honda Pilot), and professional liability.
 - **Digital Assets:** Domain portfolio valuation and strategy.
 ## 4.2. Infrastructure & Logistics
@@ -266,6 +272,8 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 - **Materials & Suppliers:** Local Fort Lee hardware stores and cost tracking.
 ### 4.2.2. Family & Care
 - **Family Estate:** Inventory and liquidation strategy for family assets (Gold/Silver).
+- **Home**
+	- [[Parents Home Purchase Application.pdf|Doc - Parents Home Purchase Application]]
 - **Parental Care:** Health records, medical billing history, and local Fort Lee resources.
 	- [[Plan - Recover & Transition for MEM Practice]]
 ### 4.2.3. Auto
@@ -315,5 +323,6 @@ _High-frequency tracking and unsorted information storage. The Memory Bank_
 - **App Audit:** Current apps installed on devices.
 	- Pixel 8 Pro
 	- [[Laptop App List]].
-- **Software Subscriptions:** Tracking costs and renewal dates.
+- **Software Subscriptions:** (See [[Recurring Payments]])
+
 - **Hardware Inventory:** Serial numbers and warranty info.

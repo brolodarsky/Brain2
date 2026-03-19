@@ -1,6 +1,12 @@
 ---
-aliases: [Skill Requirements, Employer Skills Tracker]
-tags: [career, research, skills]
+aliases:
+  - Skill Requirements
+  - Employer Skills Tracker
+  - Expected Qualifications
+tags:
+  - career
+  - research
+  - skills
 type: research
 ---
 **Back to:** [[Table of Contents]]
@@ -20,6 +26,10 @@ type: research
 - **Domain Knowledge:** Financial and Accounting fundamentals.
 
 *Updated based on 1 role(s). Add roles to the section below and run the `/add_job_requirement` workflow to refresh this summary.*
+
+---
+# Unlisted Job Postings
+
 
 ---
 

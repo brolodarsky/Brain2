@@ -29,7 +29,8 @@ Ensure the external hard drive(s) are connected to the laptop and recognized by 
 Locate and run the FreeFileSync batch job file. This is typically configured to run silently or with a summary report at the end.
 
 1.  Open the directory containing your `.ffs_batch` files.
-	1. C Drive to BackupDrive/Backups/CompBackup![[1. The Core/1.2. Personal Knowledge Management (PKM)/BatchRun_CDrive_to_MainBackup.ffs_batch]]
+	1. C Drive to 4TB: BackupDrive/Backups/CompBackup![[1. The Core/1.2. Personal Knowledge Management (PKM)/BatchRun_CDrive_to_MainBackup.ffs_batch]]
+	2. 4TB to 6TB:
 2.  Double-click the backup batch file (e.g., `MonthlyBackup.ffs_batch`).
 3.  Monitor the progress in the FreeFileSync pop-up (if not running completely silent).
 

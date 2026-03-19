@@ -8,6 +8,7 @@ type: overview
 ---
 
 * [[Plan - Recover & Transition for MEM Practice]]
+* Start studying & creating projects around [[Employer Skill Requirements|Skill Requirements]]
 
 ---
 *Last updated: 2026-03-18*
