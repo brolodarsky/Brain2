@@ -51,6 +51,11 @@ Use a short word describing the area affected:
 3. **Imperative mood** — write "add feature" not "added feature".
 4. **One logical change per commit** — don't bundle unrelated changes.
 
+## Batching Commits (`git commit`)
+
+**Do NOT run `git commit` after every single minor file edit or individual tool execution.**
+Batch logical changes into single commits. For example, if adding a job requirement involves 3 file edits (note, summary, changelog), commit all 3 together at the end of the task.
+
 ## Pushing Changes (`git push`)
 
 **Do NOT run `git push` after every single minor file edit or documentation fix.** 

@@ -75,6 +75,6 @@ Cross-references `Activities List`, `Date Ideas`, and `People Data` notes to gen
 5. **The TOC is the single source of truth** for Vault folder structure and the concept of this entire project.
 6. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
 7. **Audio files are gitignored** — they sync via Syncthing, not Git.
-8. **Batch your commits.** Group related changes into single logical commits. Do not `git push` after every minor file edit or documentation fix. Only `git push` at the very end of a task/session or if it's a significant change, to reduce user interruptions.
+8. **Batch your commits and pushes.** Group related changes into single logical blocks. Do not `git commit` or `git push` after every minor file edit or individual tool execution. Aim to commit once per task/session unless the changes are exceptionally large or represent distinct, independent features. No micro-commits.
 9. **Keep AGENTS.md updated.** If you create, modify, or delete a skill or workflow, you must update the `## Skills` or `## Workflows` section in this file to reflect the change.
 10. **Add `.gitkeep` to empty folders.** Whenever creating a new empty directory in the Vault, always create an empty `.gitkeep` file inside it so it can be tracked by Git.
