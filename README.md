@@ -82,6 +82,22 @@ This repository distinguishes between two types of "cognitive" capabilities:
 - `tools/create_folders.py`: Parses the TOC for numbered headers and creates missing folders.
 - `tools/check_folders.py`: Dry-run version of folder creation to print missing paths.
 - `tools/add_gitkeeps.py`: Scans the Vault for empty directories and adds `.gitkeep` files.
+- `tools/backup_vault.py`: Creates a timestamped local backup of the Vault and tools to an external destination.
+
+---
+
+## Security & Encryption
+
+This repository uses **`git-crypt`** to transparently encrypt all personal content before it is pushed to GitHub. 
+
+- **What is encrypted:** Everything inside the `Vault/` directory (except structural `.gitkeep` files).
+- **What is visible:** Folder names and file names remain visible on GitHub, but the actual file contents are scrambled.
+- **Master Key:** The symmetric key (`brain-key.key`) is required to unlock the repository on a new machine. It is strictly ignored by `.gitignore` and must be backed up securely off-site (e.g., in a password manager).
+
+To unlock the repository on a new machine after cloning:
+```bash
+git-crypt unlock /path/to/your/brain-key.key
+```
 
 ### `tools/generate_podcast.py`
 Converts every Markdown note in the Vault into an MP3 using Microsoft's neural TTS voices via [`edge-tts`](https://github.com/rany2/edge-tts).
