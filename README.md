@@ -14,6 +14,7 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 Knowledge Base/
 ├── .agents/                    # AI agent instructions
 │   ├── skills/                 # Mandatory behaviors
+│   │   ├── cleanup_orphans/          # Zettelkasten maintenance (links/folders)
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
 │   │   ├── maintain_project_docs/    # Keep README & requirements.
@@ -28,12 +29,12 @@ Knowledge Base/
 ├── Vault/                      # All Brain content lives here
 │   ├── .obsidian/              # Obsidian settings
 │   ├── .stfolder/              # Syncthing folder
-│   ├── 1. The Core/
-│   ├── 2. Health/
-│   ├── 3. Operations & Wealth/
-│   ├── 4. Playground/
-│   ├── 5. Capture & Archive/
-│   ├── 6. Forge/
+│   ├── 1. The Core/                # Identity, governance, and foundations
+│   ├── 2. Health/                  # Physical and mental well-being
+│   ├── 3. Operations & Wealth/     # Financial and logistical systems
+│   ├── 4. Playground/              # Social, culture, and creativity
+│   ├── 5. Capture & Archive/       # Inbox and memory bank
+│   ├── 6. Forge/                   # Technical projects and learning
 │   ├── Audio/                  # Gitignored
 │   └── Table of Contents.md   # Master index — source of truth for structure
 ├── AGENTS.md                   # AI agent constitution
@@ -144,3 +145,4 @@ AI agent tools & instructions live in `.agents/`. Each skill is a `SKILL.md` fil
 | `generate_obsidian_note` | When asked to create a new note |
 | `maintain_project_docs` | After `pip install`/`uninstall`, or after adding/changing tools |
 | `conventional_commits` | On every `git commit` |
+| `cleanup_orphans` | When asked to "clean the vault" or perform maintenance |

@@ -4,7 +4,7 @@ description: Agentic tool for working in `Employer Skill Requirements.md` note. 
 
 # Workflow: Add Job Requirement (`/add_job_requirement`)
 
-This workflow automates the process of extracting job requirements from a source (URL, PDF, or raw text, etc) and adding them to the centralized tracking note.
+This workflow automates the process of extracting job requirements from a source (URL, PDF, or raw text, etc) and adding them to the centralized tracking note. The main goal is to find the most relevant job qualifications across the industry and keep track of important postings.
 
 ## Trigger
 When asked to "review this job", "add this job requirement", when explicitly invoking `/add_job_requirement [source]`, or some similar language.
@@ -12,7 +12,7 @@ When asked to "review this job", "add this job requirement", when explicitly inv
 ## Steps
 
 1. **Extract Information:**
-   - Read the provided source (PDF using `view_file` or `read_url_content`, etc.).
+   - Read the provided source.
    - Extract the following fields: Role Name, Company, Core Requirements, Preferred Background, and any compensation/bonus information.
 
 2. **Format the Entry:**
@@ -32,5 +32,5 @@ When asked to "review this job", "add this job requirement", when explicitly inv
 
 4. **Regenerate the AI Summary:**
    - Read the entirety of the `# 📋 Roles & Requirements` section.
-   - Synthesize the common themes, required degrees, prominent languages/frameworks, and domain knowledge. Sort by importance.
+   - Synthesize the common themes, required degrees, prominent languages/frameworks, and domain knowledge. Sort by importance, ALWAYS NOTE MOST IMPORTANT SKILLS!!!
    - Replace the contents of the `# 🤖 AI Summary` section with the newly generated synthesis.
