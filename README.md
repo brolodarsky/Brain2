@@ -11,7 +11,7 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 ## Repository Structure
 
 ```
-Knowledge Base/
+Brain 2/
 ├── .agents/                    # AI agent instructions
 │   ├── skills/                 # Mandatory behaviors
 │   │   ├── cleanup_orphans/          # Zettelkasten maintenance (links/folders)
@@ -24,7 +24,8 @@ Knowledge Base/
 │       ├── create_new_note.md
 │       ├── create_project.md
 │       ├── distill_learning.md
-│       └── plan_activity.md
+│       ├── plan_activity.md
+│       └── render_resume.md
 ├── .venv/                      # Python virtual environment (not committed)
 ├── Vault/                      # All Brain content lives here
 │   ├── .obsidian/              # Obsidian settings
@@ -39,7 +40,8 @@ Knowledge Base/
 │   └── Table of Contents.md   # Master index — source of truth for structure
 ├── AGENTS.md                   # AI agent constitution
 ├── CHANGELOG.md                # Running log of notable changes
-├── tools/                      # Python automation tools
+├── tools/                      # Automation tools
+│   └── resume_engine/          # Premium PDF rendering system
 ├── requirements.txt            # Pinned Python dependencies
 └── .gitignore
 ```
@@ -77,12 +79,14 @@ This repository distinguishes between two types of "cognitive" capabilities:
 - `/create_project`: Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials.
 - `/distill_learning`: Synthesizes complex technical articles or PDFs into atomic, interlinked notes.
 - `/plan_activity`: Cross-references Activities List, Date Ideas, and People Data notes to generate a structured markdown itinerary.
+- `/render_resume`: Renders the Master Markdown Resume into a premium, professionally-styled PDF.
 
 ### Vault Maintenance Tools
 - `tools/create_folders.py`: Parses the TOC for numbered headers and creates missing folders.
 - `tools/check_folders.py`: Dry-run version of folder creation to print missing paths.
 - `tools/add_gitkeeps.py`: Scans the Vault for empty directories and adds `.gitkeep` files.
 - `tools/backup_vault.py`: Creates a timestamped local backup of the Vault and tools to an external destination.
+- `tools/resume_engine/`: Premium PDF rendering system using Playwright and CSS.
 
 ---
 

@@ -66,6 +66,9 @@ Synthesizes complex technical articles or PDFs into atomic, interlinked notes wi
 ### `plan_activity`
 Cross-references `Activities List`, `Date Ideas`, and `People Data` notes to generate a structured markdown itinerary.
 
+### `render_resume`
+Renders the Master Markdown Resume into a premium, professionally-styled PDF using the Resume Engine and Playwright.
+
 ## Rules
 
 1. **Never delete user content** without explicit confirmation.
