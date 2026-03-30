@@ -5,6 +5,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [1.4.0] - 2026-03-30
+
+### Added
+- Added `analyze_health` agentic skill to enforce reading Section 2 of the TOC and performing comprehensive context checks before analyzing user health issues.
+- Updated `AGENTS.md` to register `analyze_health` as a mandatory behavior skill.
+
 ## [1.3.0] - 2026-03-21
 
 ### Added

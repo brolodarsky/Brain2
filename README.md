@@ -14,6 +14,7 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 Brain 2/
 ├── .agents/                    # AI agent instructions
 │   ├── skills/                 # Mandatory behaviors
+│   │   ├── analyze_health/           # Health diagnostics & context check
 │   │   ├── cleanup_orphans/          # Zettelkasten maintenance (links/folders)
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
@@ -170,6 +171,7 @@ AI agent tools & instructions live in `.agents/`. Each skill is a `SKILL.md` fil
 
 | Skill | Trigger |
 |---|---|
+| `analyze_health` | When asked about symptoms, medical conditions, or health advice |
 | `generate_obsidian_note` | When asked to create a new note |
 | `maintain_project_docs` | After `pip install`/`uninstall`, or after adding/changing tools |
 | `conventional_commits` | On every `git commit` |

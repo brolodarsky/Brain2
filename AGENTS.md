@@ -41,6 +41,9 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 ### `cleanup_orphans`
 **Trigger:** When asked to "clean the vault", "find orphans", or perform Zettelkasten maintenance
 
+### `analyze_health`
+**Trigger:** When asked to diagnose a problem, act as a doctor, suggest treatments, or analyze a health issue.
+
 ## Tools & Workflows
 
 This brain distinguishes between **Active Procedures** (Workflows) and **Deterministic Capabilities** (Tools).
@@ -75,7 +78,7 @@ Renders the Master Markdown Resume into a premium, professionally-styled PDF usi
 2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH. Never install dependencies globally. Always use `.venv\Scripts\pip.exe` for installations. If a new requirement is added, immediately trigger the `maintain_project_docs` skill.
 3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill. 
 4. **Git is solely for the Engine and Vault structure**: prioritize committing changes to tools, skills, workflows, project docs, and Vault structure (e.g., new sections in `Table of Contents.md`, addition to `.gitkeep`). Individual notes/thoguhts are encrypted and backed up locally, so avoid micro-commits for note edits, additions or subtractions.
-5. **Update `CHANGELOG.md` for all `feat` and `fix` commits, or when you think appropriate. If there is a significant change, update the version number. If there is a minor change, update the patch number. If there is a documentation change, update the patch number. If there's an existing version on the same day, only create a new version if the change is significant, otherwise update the existing version.**
+5. **Update `CHANGELOG.md` for all `feat` and `fix` commits to the Brain Engine.** If there is a significant change to a tool, skill, or workflow, update the version number. If there is a documentation change to the *Project* docs (README, AGENTS.md), update the patch number. **Individual notes/thoughts in the `Vault/` (except Structure/TOC) do NOT require CHANGELOG.md entries.** If there's an existing version on the same day, update the existing version unless the change is significant.
 6. **The TOC is the single source of truth** for Vault folder structure and the concept of this entire project.
 7. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
 8. **Audio files are gitignored** — they sync via Syncthing, not Git.
