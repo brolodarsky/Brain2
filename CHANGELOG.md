@@ -5,6 +5,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [1.5.0] - 2026-03-31
+
+### Added
+- Added `analyze_psych` agentic skill to provide science-based, non-sycophantic psychological support and cognitive architecture analysis.
+- Mandatory context check of Section 2.3 ("Psych") in the TOC before providing emotional or mental health support.
+- Updated `AGENTS.md`, `README.md`, and `Workshop - Agentic Instructions.md` to register the new skill.
+
 ## [1.4.0] - 2026-03-30
 
 ### Added

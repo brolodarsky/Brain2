@@ -44,6 +44,9 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 ### `analyze_health`
 **Trigger:** When asked to diagnose a problem, act as a doctor, suggest treatments, or analyze a health issue.
 
+### `analyze_psych`
+**Trigger:** Whenever the user mentions depression,anxiety, decision fatigue, context switching, or any emotional processing. Provide science-based, non-sycophantic psychological support and cognitive architecture analysis.
+
 ## Tools & Workflows
 
 This brain distinguishes between **Active Procedures** (Workflows) and **Deterministic Capabilities** (Tools).

@@ -57,3 +57,27 @@ When asked to generate, move, format, or import a note/thought into the user's O
 4.  **Create File:** Create the `.md` file with the exact title.
 5.  **Draft Content:** Write the content following the formatting rules.
 6.  **Review Links:** Ensure the new note is properly linked FROM the relevant index file (e.g., `Table of Contents.md`). If the link doesn't exist there, add it.
+7.  **To Do List Registration:** If the new note uses the `Protocol -` or `Project -` prefix, follow the rules in **Section 7** below.
+
+## 7. To Do List Registration
+
+When creating a note with the `Protocol -` or `Project -` prefix, you MUST also register it in `Vault/1. The Core/1.1. Philosophy & Personal North Star/To Do List.md`.
+
+### Protocol Registration
+1.  **Read** `To Do List.md` and locate the `## Recurring Protocols` section.
+2.  **Determine cadence:** Ask the user what cadence the protocol should run on (Weekly, Monthly, or Quarterly), or infer it from the protocol's content if the cadence is obvious.
+3.  **Add a checkbox entry** under the correct `### Weekly`, `### Monthly`, or `### Quarterly` heading:
+    ```markdown
+    - [ ] [[Protocol - Example Name]] — Brief one-line description of what this protocol does.
+    ```
+
+### Project Registration
+1.  **Read** `To Do List.md` and locate the `## Active Projects` section.
+2.  **Add a list entry** with a wiki-link and brief description:
+    ```markdown
+    - **[[Project - Example Name]]:** Brief one-line description of what this project does.
+    ```
+
+### Final Step
+*  **Update the date** at the bottom of `To Do List.md` to reflect the current date.
+

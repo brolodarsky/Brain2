@@ -15,6 +15,7 @@ Brain 2/
 ├── .agents/                    # AI agent instructions
 │   ├── skills/                 # Mandatory behaviors
 │   │   ├── analyze_health/           # Health diagnostics & context check
+│   │   ├── analyze_psych/            # Psych support & cognitive architecture
 │   │   ├── cleanup_orphans/          # Zettelkasten maintenance (links/folders)
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
@@ -44,7 +45,11 @@ Brain 2/
 │   ├── 3. Operations & Wealth/     # Financial and logistical systems
 │   │   ├── 3.1. Wealth & Asset Management/           # Investment strategy and recurring payments
 │   │   ├── 3.2. Infrastructure & Logistics/          # Home lab, family estate, and auto maintenance
+│   │   │   ├── 3.2.1. Home Improvement & Maintenance/
+│   │   │   ├── 3.2.2. Family & Care/
+│   │   │   └── 3.2.3. Auto/
 │   │   └── 3.3. Career Strategy & Revenue/           # Job hunt, professional profile, and portfolio
+│   │       └── 3.3.1. Market Research & Future of Work/
 │   ├── 4. Playground/              # Social, culture, and creativity
 │   │   ├── 4.1. Social Life & Community/             # People data, social club, and adventures
 │   │   ├── 4.2. Romance & Partnership/               # Relationship maintenance and date ideas
@@ -172,6 +177,7 @@ AI agent tools & instructions live in `.agents/`. Each skill is a `SKILL.md` fil
 | Skill | Trigger |
 |---|---|
 | `analyze_health` | When asked about symptoms, medical conditions, or health advice |
+| `analyze_psych` | When asked about OCD, anxiety, decision fatigue, or emotional processing |
 | `generate_obsidian_note` | When asked to create a new note |
 | `maintain_project_docs` | After `pip install`/`uninstall`, or after adding/changing tools |
 | `conventional_commits` | On every `git commit` |
