@@ -30,5 +30,8 @@ When asked to "create a project plan for [topic]", "turn this note into a projec
 
 5. **Link and Finalize:**
    - Insert a `[[wiki-link]]` to the new project note in the appropriate section of `Vault/Table of Contents.md` (e.g., under `6.1. Projects`).
+
+6. **Register in To Do List:**
+   - Add the new project to the "Active Projects" section of `Vault/1. The Core/1.1. Philosophy & Personal North Star/To Do List.md`.
    - Request user confirmation that the note looks correct.
    - Delete the original source note if it was a temporary scratchpad item from `5.1. Brain Dump & Inbox`.

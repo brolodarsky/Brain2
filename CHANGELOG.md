@@ -11,6 +11,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Added `analyze_psych` agentic skill to provide science-based, non-sycophantic psychological support and cognitive architecture analysis.
 - Mandatory context check of Section 2.3 ("Psych") in the TOC before providing emotional or mental health support.
 - Updated `AGENTS.md`, `README.md`, and `Workshop - Agentic Instructions.md` to register the new skill.
+- New Vault subsections under `2.2. Medical/`: `Health Logs/` (doctor visit notes) and `Lab Work/` (bloodwork results).
+- New Vault subsections under `3.3. Career Strategy & Revenue/`: `3.3.2` through `3.3.6` (Interview Prep, Portfolio, Networking CRM, Income Streams, Compensation).
+- Updated `README.md` directory tree to reflect all new subsections.
+- Updated `Table of Contents.md` with wiki-links for all new Health Logs and Lab Work notes.
+
+### Fixed
+- Fixed stale references in `audit_inbox.md`, `add_job_requirement.md`, and `create_project.md`.
+- Updated `create_project.md` to include mandatory registration in the `To Do List`.
+- Updated `distill_learning.md` to optionally update `Current Learning.md` with new study materials.
+- Significant improvements to `AGENTS.md`: fixed Rule 4 typo, added deterministic Tools documentation (Python scripts and Resume Engine), and added Rule 11 for mandatory `To Do List` registration for projects/protocols.
 
 ## [1.4.0] - 2026-03-30
 

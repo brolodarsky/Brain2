@@ -33,3 +33,6 @@ When asked to "distill this article", "summarize this paper into the vault", or 
 6. **Review and Execute:**
    - Present a concise summary to the user: "I will create `Concept A.md` in `6.2.1` and `Concept B.md` in `6.2.3`. Is this correct?"
    - Await execution approval. Upon approval, create the physical files and update the `Table of Contents.md`.
+
+7. **(Optional) Update Current Learning:**
+   - If the distilled material represents an active area of study, add or update an entry in `Vault/1. The Core/1.1. Philosophy & Personal North Star/Current Learning.md` linking to the new notes.

@@ -2,9 +2,9 @@
 
 This is a personal "second brain"/knowledge management system that stores/uses markdown notes, images, pdfs and other files in a Vault as thoughts & memories.
 
-It's read and tinkered with in Obsidian and tinkered with in agentic IDEs, version-controlled with Git, and synced to mobile via Syncthing. 
+It's read and tinkered with in Obsidian, tinkered with in agentic IDEs, version-controlled with Git, and synced to mobile via Syncthing.
 
-Notes follow the Zettelkasten methodology. Vault folder structure is defined in `Table of Contents.md`. Audio files are frequently generated for on the go listening to "thoughts". Several tools are available to help with "brain automation".
+Notes follow the Zettelkasten methodology. Vault folder structure is defined in `Table of Contents.md`. Several "brain engine" tools are available to help with automation.
 
 ---
 
@@ -40,6 +40,8 @@ Brain 2/
 │   ├── 2. Health/                  # Physical and mental well-being
 │   │   ├── 2.1. Fitness/                             # Training logs and performance tracking
 │   │   ├── 2.2. Medical/                             # Health history, lab work, and sleep hygiene
+│   │   │   ├── Health Logs/                          # Doctor visit notes (PCP, ENT, Pulmonology, etc.)
+│   │   │   └── Lab Work/                             # Bloodwork results (BMP, CBC, Thyroid, etc.)
 │   │   ├── 2.3. Psych/                               # Cognitive load and mindfulness rituals
 │   │   └── 2.4. Nutrition/                           # Recipe vault and nutrition science
 │   ├── 3. Operations & Wealth/     # Financial and logistical systems
@@ -49,7 +51,12 @@ Brain 2/
 │   │   │   ├── 3.2.2. Family & Care/
 │   │   │   └── 3.2.3. Auto/
 │   │   └── 3.3. Career Strategy & Revenue/           # Job hunt, professional profile, and portfolio
-│   │       └── 3.3.1. Market Research & Future of Work/
+│   │       ├── 3.3.1. Market Research & Future of Work/
+│   │       ├── 3.3.2. Interview Prep & Technical Depth/
+│   │       ├── 3.3.3. Professional Portfolio & Evidence/
+│   │       ├── 3.3.4. Networking & Professional CRM/
+│   │       ├── 3.3.5. Income Streams & Side Revenue/
+│   │       └── 3.3.6. Compensation & Negotiation/
 │   ├── 4. Playground/              # Social, culture, and creativity
 │   │   ├── 4.1. Social Life & Community/             # People data, social club, and adventures
 │   │   ├── 4.2. Romance & Partnership/               # Relationship maintenance and date ideas
@@ -92,18 +99,27 @@ pip install -r requirements.txt
 
 ---
 
-## Brain Functions & Automation
+## The Engine (Skills, Workflows & Tools)
 
-This repository distinguishes between two types of "cognitive" capabilities:
+This repository distinguishes between three types of "cognitive" capabilities that define how the Brain automation works:
 
-1. **Agentic Tools (`.agents/workflows/`)**: These are **Active Procedures** (Recipes) for the AI agent to follow. They define complex, multi-step logic (like creating notes or parsing job descriptions) and are triggered via slash commands.
-2. **Automation Tools (`tools/`)**: These are **Deterministic Capabilities** (Scripts) written in Python. They perform specific, repetitive tasks (like generating MP3s or maintenance) and are triggered manually via the terminal.
+1. **Skills (`.agents/skills/`)**: **Mandatory Behaviors**. These are instructions the AI Agent *must* follow whenever a specific trigger occurs (e.g., formatting a note or updating the changelog).
+2. **Workflows (`.agents/workflows/`)**: **Active Procedures**. These are multi-step "recipes" (Slash Commands) for the agent to follow to achieve complex outcomes (like sorting an inbox or planning a project).
+3. **Tools (`tools/`)**: **Deterministic Capabilities**. These are Python scripts for repetitive, heavy-lifting tasks (like MP3 generation or folder maintenance) that are triggered manually via terminal.
 
----
+### Agent Skills (Mandatory Behaviors)
 
-## Tools & Workflows
+| Skill | Trigger |
+|---|---|
+| `analyze_health` | When asked about symptoms, medical conditions, or health advice |
+| `analyze_psych` | When asked about emotional processing |
+| `generate_obsidian_note` | When asked to create a new note or integrate new notes/thoughts into the vault |
+| `maintain_project_docs` | Keep README.md, AGENTS.md, CHANGELOG.md and requirements.txt up to date |
+| `conventional_commits` | On every `git commit` |
+| `cleanup_orphans` | When asked to "clean the vault" or perform maintenance |
 
-### Agentic Tools
+### Agentic Workflows (Slash Commands)
+
 - `/add_job_requirement`: Automates extracting skills from a job description (PDF/URL).
 - `/audit_inbox`: Sorts raw notes and bullet points from the Brain Dump & Inbox into the main Zettelkasten structure.
 - `/create_project`: Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials.
@@ -111,12 +127,16 @@ This repository distinguishes between two types of "cognitive" capabilities:
 - `/plan_activity`: Cross-references Activities List, Date Ideas, and People Data notes to generate a structured markdown itinerary.
 - `/render_resume`: Renders the Master Markdown Resume into a premium, professionally-styled PDF.
 
-### Vault Maintenance Tools
-- `tools/create_folders.py`: Parses the TOC for numbered headers and creates missing folders.
-- `tools/check_folders.py`: Dry-run version of folder creation to print missing paths.
-- `tools/add_gitkeeps.py`: Scans the Vault for empty directories and adds `.gitkeep` files.
-- `tools/backup_vault.py`: Creates a timestamped local backup of the Vault and tools to an external destination.
-- `tools/resume_engine/`: Premium PDF rendering system using Playwright and CSS.
+### Deterministic Tools (Scripts)
+
+| Tool | Purpose | Usage |
+|---|---|---|
+| `generate_podcast.py` | Converts Vault notes to MP3 via edge-tts. | `python tools/generate_podcast.py` |
+| `create_folders.py` | Idempotently creates the folder structure from TOC. | `python tools/create_folders.py` |
+| `check_folders.py` | Validates Vault structure against TOC (dry-run). | `python tools/check_folders.py` |
+| `add_gitkeeps.py` | Adds `.gitkeep` to all empty folders for Git tracking. | `python tools/add_gitkeeps.py` |
+| `backup_vault.py` | Creates a timestamped local backup of the `Vault/`. | `python tools/backup_vault.py` |
+| `resume_engine/` | PDF rendering system for the Master Resume. | (See `tools/resume_engine/`) |
 
 ---
 
@@ -133,32 +153,13 @@ To unlock the repository on a new machine after cloning:
 git-crypt unlock /path/to/your/brain-key.key
 ```
 
-### `tools/generate_podcast.py`
-Converts every Markdown note in the Vault into an MP3 using Microsoft's neural TTS voices via [`edge-tts`](https://github.com/rany2/edge-tts).
-
-- Only regenerates notes that are **new or modified** since the last run.
-- Output goes to `Vault/Audio/` — excluded from Git, synced via Syncthing.
-- Voice can be changed by editing `VOICE` at the top of the script.
-
-**Usage** (from repo root, with `.venv` active or not):
-```bash
-python tools/generate_podcast.py
-```
-
-**Setup** (first time only):
-```bash
-.venv\Scripts\Activate.ps1      # Windows PowerShell
-pip install edge-tts
-```
-
 ---
 
-### Vault Maintenance
-Any time `Vault/Table of Contents.md` is modified, the directory structure must be affirmed to match.
+## Vault Maintenance
+Whenever the `Table of Contents.md` is modified, run `tools/create_folders.py` to ensure the folder structure matches the plan.
 
-- Ensure every numbered section has a matching folder in `Vault/`.
 - Handle `.gitkeep` files: add to empty folders, remove from populated ones.
-- Orphaned folders (no matching H1) should be reported, never deleted automatically.
+- Orphaned folders (no matching TOC entry) should be reported, never deleted automatically.
 
 ---
 
@@ -167,18 +168,3 @@ Any time `Vault/Table of Contents.md` is modified, the directory structure must 
 Point Obsidian at the **`Vault/`** subfolder, not the repo root.
 
 > Settings → About → Vault path → `…/Brain 2/Vault`
-
----
-
-## Agent Skills, Workflows & Rules
-
-AI agent tools & instructions live in `.agents/`. Each skill is a `SKILL.md` file that instructs the agent how to behave for a specific task:
-
-| Skill | Trigger |
-|---|---|
-| `analyze_health` | When asked about symptoms, medical conditions, or health advice |
-| `analyze_psych` | When asked about OCD, anxiety, decision fatigue, or emotional processing |
-| `generate_obsidian_note` | When asked to create a new note |
-| `maintain_project_docs` | After `pip install`/`uninstall`, or after adding/changing tools |
-| `conventional_commits` | On every `git commit` |
-| `cleanup_orphans` | When asked to "clean the vault" or perform maintenance |

@@ -54,7 +54,22 @@ This brain distinguishes between **Active Procedures** (Workflows) and **Determi
 - **Tools (`tools/`)**: Python scripts for deterministic automation (e.g., MP3 generation, folder sync).
 - **Workflows (`.agents/workflows/`)**: Structured instructions/recipes for the AI agent to follow (e.g., `/create_new_note`).
 
-### `create_new_note`
+### Tools
+
+Deterministic scripts for vault and engine maintenance.
+
+| Tool | Purpose |
+|------|---------|
+| `generate_podcast.py` | Converts markdown notes into MP3 files via edge-tts. |
+| `check_folders.py` | Validates that the current Vault structure matches `Table of Contents.md`. |
+| `create_folders.py` | Idempotently creates the directory structure defined in the TOC. |
+| `add_gitkeeps.py` | Adds `.gitkeep` to all empty folders to ensure tracking (Rule 10). |
+| `backup_vault.py` | Creates a timestamped local backup of the `Vault/` directory. |
+| `resume_engine/` | Node.js project for rendering the Markdown resume into a premium PDF. |
+
+### Workflows
+
+Agentic protocols for complex knowledge management tasks.
 Agentic tool. End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
 
 ### `add_job_requirement`
@@ -80,10 +95,11 @@ Renders the Master Markdown Resume into a premium, professionally-styled PDF usi
 1. **Never delete user content** without explicit confirmation.
 2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH. Never install dependencies globally. Always use `.venv\Scripts\pip.exe` for installations. If a new requirement is added, immediately trigger the `maintain_project_docs` skill.
 3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill. 
-4. **Git is solely for the Engine and Vault structure**: prioritize committing changes to tools, skills, workflows, project docs, and Vault structure (e.g., new sections in `Table of Contents.md`, addition to `.gitkeep`). Individual notes/thoguhts are encrypted and backed up locally, so avoid micro-commits for note edits, additions or subtractions.
+4. **Git is solely for the Engine and Vault structure**: prioritize committing changes to tools, skills, workflows, project docs, and Vault structure (e.g., new sections in `Table of Contents.md`, addition to `.gitkeep`). Individual notes/thoughts are encrypted and backed up locally, so avoid micro-commits for note edits, additions or subtractions.
 5. **Update `CHANGELOG.md` for all `feat` and `fix` commits to the Brain Engine.** If there is a significant change to a tool, skill, or workflow, update the version number. If there is a documentation change to the *Project* docs (README, AGENTS.md), update the patch number. **Individual notes/thoughts in the `Vault/` (except Structure/TOC) do NOT require CHANGELOG.md entries.** If there's an existing version on the same day, update the existing version unless the change is significant.
 6. **The TOC is the single source of truth** for Vault folder structure and the concept of this entire project.
 7. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
 8. **Audio files are gitignored** — they sync via Syncthing, not Git.
 9. **Keep AGENTS.md AND README.md updated.** If you make fundamental changes to the project/brain functionality, update these files to reflect the changes.
 10. **Add `.gitkeep` to empty folders.** Whenever creating a new empty directory in the Vault, always create an empty `.gitkeep` file inside it so it can be tracked by Git.
+11. **All `Project -` and `Protocol -` notes must be registered in `To Do List.md`.** Ensure new projects are added to the Active Projects section of `Vault/1. The Core/1.1. Philosophy & Personal North Star/To Do List.md`.

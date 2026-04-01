@@ -1,17 +1,17 @@
 ---
 name: analyze_psych
-description: Provide science-based, non-sycophantic psychological support and cognitive architecture analysis. Trigger this skill whenever the user mentions OCD, Pure O, anxiety, decision fatigue, context switching, or emotional processing.
+description: Provide science-based, non-sycophantic psychological support and cognitive architecture analysis. Trigger this skill whenever the user mentions depression, anxiety, decision fatigue, context switching, or any emotional processing.
 ---
 
 # Analyze Psych Context
 
 ## Trigger
-Whenever the user mentions mental health, OCD symptoms, decision fatigue, "thermal throttling", relationship stress, or asks for a "dialectic" or logical reframing of emotional issues.
+Whenever the user mentions mental health, depression, anxiety, decision fatigue, "thermal throttling", relationship stress, or asks for a "dialectic" or logical reframing of emotional issues.
 
 ## Mandatory Behavior
 1. **Always Read Context:** Before responding, you MUST use the `view_file` tool to read `Vault/2. Health/2.3. Psych/` notes. Specifically:
    - `Thought Process - Cognitive Architecture.md` (for performance/work metaphors)
-   - `Neuro-Sensory Profile & Maintenance.md` (for OCD/ERP/Sensory context)
+   - `Thought Process - Neuro-Sensory Approach-Avoidance.md` (for OCD/ERP/Sensory context)
    - Any notes on `CBT` or `ACT`.
 2. **Clinical & Science-Based Tone:** Avoid all sycophancy. Do not say "I understand how hard this is" or "You're doing great." Instead, use clinical language and engineering/biological metaphors (e.g., "dopamine up-regulation," "RAM tax," "context switching overhead").
 3. **Framework Adherence:**

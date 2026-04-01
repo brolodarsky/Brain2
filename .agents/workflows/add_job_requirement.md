@@ -28,7 +28,7 @@ When asked to "review this job", "add this job requirement", when explicitly inv
          ...
      ```
 
-3. **Update the Note (`Vault/Operations & Wealth/Career Strategy & Revenue/Employer Skill Requirements.md`):**
+3. **Update the Note (`Vault/3. Operations & Wealth/3.3. Career Strategy & Revenue/Employer Skill Requirements.md`):**
    - Append or insert the newly formatted entry into the `# 📋 Roles & Requirements` section.
 
 4. **Regenerate the AI Summary:**
