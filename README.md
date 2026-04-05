@@ -1,6 +1,6 @@
 # Brain 2
 
-This is a personal "second brain"/knowledge management system that stores/uses markdown notes, images, pdfs and other files in a Vault as thoughts & memories.
+This is a personal "second brain"/knowledge management system that stores/uses markdown notes, images, pdfs and other files in a Vault as thoughts, memories, plans, learning materials, and much more.
 
 It's read and tinkered with in Obsidian, tinkered with in agentic IDEs, version-controlled with Git, and synced to mobile via Syncthing.
 
@@ -101,10 +101,10 @@ pip install -r requirements.txt
 
 ## The Engine (Skills, Workflows & Tools)
 
-This repository distinguishes between three types of "cognitive" capabilities that define how the Brain automation works:
+This repository distinguishes between three types of "cognitive" capabilities that define how the Brain automation works. It is critical to understand the distinction between the "Laws of Physics" (Skills) and the "Recipes" (Workflows):
 
-1. **Skills (`.agents/skills/`)**: **Mandatory Behaviors**. These are instructions the AI Agent *must* follow whenever a specific trigger occurs (e.g., formatting a note or updating the changelog).
-2. **Workflows (`.agents/workflows/`)**: **Active Procedures**. These are multi-step "recipes" (Slash Commands) for the agent to follow to achieve complex outcomes (like sorting an inbox or planning a project).
+1. **Skills (`.agents/skills/`)**: **Mandatory Behaviors (The Laws of Physics)**. These are the fundamental rules that an AI Agent *must* follow whenever a specific trigger occurs (e.g., how to format YAML for *any* note, or when to update the changelog). They run automatically in the background.
+2. **Workflows (`.agents/workflows/`)**: **Active Procedures (The Recipes)**. These are explicit, multi-step slash commands (e.g., `/create_new_note` vs `/capture_content`) that the user calls to achieve complex outcomes. **Workflows rely on Skills.** (For example, both the `/create_new_note` and `/capture_content` workflows invoke the exact same underlying `generate_obsidian_note` skill when they need to save a file).
 3. **Tools (`tools/`)**: **Deterministic Capabilities**. These are Python scripts for repetitive, heavy-lifting tasks (like MP3 generation or folder maintenance) that are triggered manually via terminal.
 
 ### Agent Skills (Mandatory Behaviors)
@@ -120,7 +120,8 @@ This repository distinguishes between three types of "cognitive" capabilities th
 
 ### Agentic Workflows (Slash Commands)
 
-- `/add_job_requirement`: Automates extracting skills from a job description (PDF/URL).
+- `/capture_content`: Format, move, or clean up a raw capture note to serve as an inbox item for future knowledge synthesis.
+- `/add_job_requirement`: Automates extracting skills from a job description (PDF, URL, Markdown, etc.).
 - `/audit_inbox`: Sorts raw notes and bullet points from the Brain Dump & Inbox into the main Zettelkasten structure.
 - `/create_project`: Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials.
 - `/distill_learning`: Synthesizes complex technical articles or PDFs into atomic, interlinked notes.
@@ -131,6 +132,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 
 | Tool | Purpose | Usage |
 |---|---|---|
+| `youtube_transcript.py` | Downloads YouTube transcripts to text files. | `python tools/youtube_transcript.py <url>` |
 | `generate_podcast.py` | Converts Vault notes to MP3 via edge-tts. | `python tools/generate_podcast.py` |
 | `create_folders.py` | Idempotently creates the folder structure from TOC. | `python tools/create_folders.py` |
 | `check_folders.py` | Validates Vault structure against TOC (dry-run). | `python tools/check_folders.py` |

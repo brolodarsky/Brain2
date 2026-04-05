@@ -60,6 +60,7 @@ Deterministic scripts for vault and engine maintenance.
 
 | Tool | Purpose |
 |------|---------|
+| `youtube_transcript.py` | Downloads transcripts from YouTube videos to text files. |
 | `generate_podcast.py` | Converts markdown notes into MP3 files via edge-tts. |
 | `check_folders.py` | Validates that the current Vault structure matches `Table of Contents.md`. |
 | `create_folders.py` | Idempotently creates the directory structure defined in the TOC. |
@@ -71,6 +72,9 @@ Deterministic scripts for vault and engine maintenance.
 
 Agentic protocols for complex knowledge management tasks.
 Agentic tool. End-to-end workflow for adding a note: affirm structure → create note → update TOC link → confirm with user.
+
+### `capture_content`
+Format, move, or clean up a raw capture note to serve as an inbox item for future knowledge synthesis.
 
 ### `add_job_requirement`
 Agentic tool. Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary for Career Strategy.
@@ -97,7 +101,7 @@ Renders the Master Markdown Resume into a premium, professionally-styled PDF usi
 3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill. 
 4. **Git is solely for the Engine and Vault structure**: prioritize committing changes to tools, skills, workflows, project docs, and Vault structure (e.g., new sections in `Table of Contents.md`, addition to `.gitkeep`). Individual notes/thoughts are encrypted and backed up locally, so avoid micro-commits for note edits, additions or subtractions.
 5. **Update `CHANGELOG.md` for all `feat` and `fix` commits to the Brain Engine.** If there is a significant change to a tool, skill, or workflow, update the version number. If there is a documentation change to the *Project* docs (README, AGENTS.md), update the patch number. **Individual notes/thoughts in the `Vault/` (except Structure/TOC) do NOT require CHANGELOG.md entries.** If there's an existing version on the same day, update the existing version unless the change is significant.
-6. **The TOC is the single source of truth** for Vault folder structure and the concept of this entire project.
+6. **The TOC is the single source of truth** for Vault folder structure and the high-level concept of this entire project. Do not clutter the TOC with individual granular notes (e.g. single medical visits, individual articles, daily logs). Those should be linked and organized inside specialized "Hub" or "Map of Content" (MOC) notes (e.g., `Health Summary`, `Auto Knowledge Base`).
 7. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
 8. **Audio files are gitignored** — they sync via Syncthing, not Git.
 9. **Keep AGENTS.md AND README.md updated.** If you make fundamental changes to the project/brain functionality, update these files to reflect the changes.

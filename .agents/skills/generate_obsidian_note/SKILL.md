@@ -15,7 +15,7 @@ When asked to generate, move, format, or import a note/thought into the user's O
 *   If a link exists in an index file (e.g., `[[Supervised Learning]]`), create the new file in the folder that corresponds to that header.
 
 ## 2. File Naming & Taxonomy
-*   **Selective Prefixes:** Use taxonomic prefixes *only* when a note is a specific instance of a broader category (e.g., `Project - Blower Motor Noise Fix`, `Protocol - Monthly Backup`, `Log - Maintenance`, `Workshop - Tailoring Resumes`).
+*   **Selective Prefixes:** Use taxonomic prefixes *only* when a note is a specific instance of a broader category (e.g., `Project - Blower Motor Noise Fix`, `Protocol - Monthly Backup`, `Log - Maintenance`, `Workshop - Tailoring Resumes`, `Capture - YouTube Interview`).
 *   **Natural Names:** Broad concepts, standalone entities, or general reference lists should keep their natural names without prefixes (e.g., `Linear Algebra`, `Python`, `Car Info`, `Project Ideas`).
 *   *Note:* You are explicitly permitted to invent and use a new prefix if needed, but err on the side of natural names for general concepts.
 *   The final filename must be what is specified in the index wiki-link.
@@ -35,7 +35,7 @@ When asked to generate, move, format, or import a note/thought into the user's O
 *   Every single note MUST begin with a YAML frontmatter block at the very top of the file.
 *   **`aliases:`** Provide 1-3 synonyms or alternative names (e.g., for `Calculus.md`, an alias might be `Derivatives`). This makes linking much easier.
 *   **`tags:`** Provide 2-4 highly relevant, broad category tags (e.g., `#machine-learning`, `#pkm`, `#math`, `#python`, `#health`, `#work`, `#projects`, `#ideas`, `#archive`).
-*   **`type:`** Categorize the note as one of the following: `concept`, `algorithm`, `tool`, or `overview`.
+*   **`type:`** Categorize the note as one of the following (or a new idea you have): `concept`, `algorithm`, `tool`, `overview`, or `capture`.
 *   Example:
     ```yaml
     ---
@@ -50,14 +50,16 @@ When asked to generate, move, format, or import a note/thought into the user's O
 *   Focus on definitions, core concepts, algorithms, and applications.
 *   Include relevant external resources or links to specific learning materials (like Khan Academy, Coursera, books) if applicable to the topic.
 
-## 6. Workflow
+## 6. Workflow & Verification
 1.  **Analyze Request:** Understand the topic the user wants a note for.
 2.  **Verify Folder Structure:** Confirm the target folder exists. If missing, create it.
 3.  **Determine Location:** Find the best folder for this topic.
 4.  **Create File:** Create the `.md` file with the exact title.
 5.  **Draft Content:** Write the content following the formatting rules.
-6.  **Review Links:** Ensure the new note is properly linked FROM the relevant index file (e.g., `Table of Contents.md`). If the link doesn't exist there, add it.
-7.  **To Do List Registration:** If the new note uses the `Protocol -` or `Project -` prefix, follow the rules in **Section 7** below.
+6.  **Update Related Notes:** If this note was spawned from an existing "Project", "Protocol", or "Map of Content" note, you MUST open that parent note and insert a link to your newly created file.
+7.  **Table of Contents Integration:** You MUST link the new note FROM `Table of Contents.md`. Find the exact matching header in the index and add a bullet point for your new file.
+8.  **To Do List Registration:** If the new note uses the `Protocol -` or `Project -` prefix, follow the rules in **Section 7** below.
+9.  **Agent Affirmation:** When summarizing your work to the user at the end of your turn, you MUST explicitly list the file paths of all index/parent notes you modified to establish these inbound links. If you did not establish inbound links, you have failed this task.
 
 ## 7. To Do List Registration
 

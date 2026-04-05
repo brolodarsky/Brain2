@@ -5,6 +5,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [1.5.1] - 2026-04-01
+
+### Added
+- Implemented `/capture_content` workflow and agentic scaffolding (Template, SKILL updates) for logging videos, articles, and raw snippets.
+- Created `tools/youtube_transcript.py` script to extract YouTube video transcripts directly to text files.
+- Added `youtube-transcript-api` to `requirements.txt`.
+
 ## [1.5.0] - 2026-03-31
 
 ### Added
