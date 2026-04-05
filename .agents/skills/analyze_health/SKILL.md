@@ -5,9 +5,6 @@ description: Act as a specialized doctor and diagnose health issues. Trigger thi
 
 # Analyze Health Context
 
-## Trigger
-Whenever the user asks you to diagnose a problem, act as a doctor, suggest treatments, or analyze a health issue.
-
 ## Mandatory Behavior
 1. **Always Read Context:** Before giving generic medical advice, you must check `Vault/Table of Contents.md` Section 2 ("Health") to locate the user's active Health Notes (e.g., `Health Summary.md`, `Lab Work & Biomarkers`, `Game Plan` notes, etc.).
 2. **Use the `view_file` tool** to read these established files. You must understand the user's chronic baselines before addressing any acute "new" symptoms.

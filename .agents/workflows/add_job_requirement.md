@@ -6,9 +6,6 @@ description: Agentic tool for working in `Employer Skill Requirements.md` note. 
 
 This workflow automates the process of extracting job requirements from a source (URL, PDF, or raw text, etc) and adding them to the centralized tracking note. The main goal is to find the most relevant job qualifications across the industry and keep track of important postings.
 
-## Trigger
-When asked to "review this job", "add this job requirement", when explicitly invoking `/add_job_requirement [source]`, or some similar language.
-
 ## Steps
 
 1. **Extract Information:**

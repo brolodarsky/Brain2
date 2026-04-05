@@ -1,13 +1,10 @@
 ---
-description: Synthesizes complex technical articles or PDFs into atomic, interlinked notes within the Zettelkasten.
+description: Breaks down a dense external source (article, paper, PDF, URL) into multiple atomic, interlinked notes filed into the Library & Learning section of the Zettelkasten. Use this when you want to deeply integrate knowledge — not just save it. For lightweight saving of raw content, use /capture_content instead.
 ---
 
 # Workflow: Distill Learning (`/distill_learning`)
 
 This workflow mitigates the friction of adding dense, complex information (like research papers or deep technical tutorials) into the knowledge base by breaking them down into atomic, linked notes.
-
-## Trigger
-When asked to "distill this article", "summarize this paper into the vault", or when invoking `/distill_learning [URL or PDF path]`.
 
 ## Steps
 

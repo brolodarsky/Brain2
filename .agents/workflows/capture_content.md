@@ -1,5 +1,5 @@
 ---
-description: Format, move, or clean up a raw capture note to serve as an inbox item for future knowledge synthesis
+description: Saves raw external content (YouTube videos, articles, podcast summaries, Twitter threads, web pages) as a lightly-structured inbox note in the Content Log. Use this when you want to capture something for later — not process it now. For deep synthesis into atomic notes, use /distill_learning. For original internal notes, use /create_new_note.
 ---
 
 # Capture Content

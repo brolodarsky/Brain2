@@ -47,6 +47,12 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 ### `analyze_psych`
 **Trigger:** Whenever the user mentions depression,anxiety, decision fatigue, context switching, or any emotional processing. Provide science-based, non-sycophantic psychological support and cognitive architecture analysis.
 
+### `skill_creator`
+**Trigger:** When asked to create a new skill from scratch, edit or optimize an existing skill, run evals to test a skill, benchmark skill performance, or improve a skill's triggering description.
+
+### `workflow_creator`
+**Trigger:** When asked to create a new slash-command workflow, edit or improve an existing workflow's steps or description, or review a set of workflows for consistency.
+
 ## Tools & Workflows
 
 This brain distinguishes between **Active Procedures** (Workflows) and **Deterministic Capabilities** (Tools).

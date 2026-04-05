@@ -1,5 +1,5 @@
 ---
-description: End-to-end workflow for creating, moving, formatting, or importing an Obsidian note in the Knowledge Base
+description: End-to-end workflow for creating, moving, formatting, or importing an original note or internal thought into the Knowledge Base. Use this for notes you are writing yourself — not for saving external articles or URLs (use /capture_content) and not for breaking down a source into atomic notes (use /distill_learning).
 ---
 # Create, Move, or Import Note
 

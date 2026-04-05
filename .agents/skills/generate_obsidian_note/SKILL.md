@@ -1,5 +1,6 @@
 ---
-description: How to generate, move, format, or import Obsidian notes
+name: generate_obsidian_note
+description: How to generate, move, format, or import Obsidian notes into the Vault. Always use this skill whenever saving any content to Vault/ — whether creating a new note, reformatting an existing one, moving a file to a new location, or importing external content. If you are about to write a .md file into the Vault, this skill applies.
 ---
 
 # Generating, Moving, or Importing Obsidian Notes

@@ -6,9 +6,6 @@ description: Cross-references Activities List, Date Ideas, and People Data to ge
 
 This workflow reduces the cognitive load of social planning by dynamically building itineraries based on your stored ideas and the preferences of the people involved.
 
-## Trigger
-When asked to "plan a date", "suggest an activity for this weekend", or when explicitly invoking `/plan_activity [Parameters]`.
-
 ## Steps
 
 1. **Understand Parameters:**

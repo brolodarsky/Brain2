@@ -6,9 +6,6 @@ description: Consolidates project ideas into a structured project note, complete
 
 This workflow takes rough notes or project ideas, structures them into an actionable project plan, and extracts a clear task list for execution.
 
-## Trigger
-When asked to "create a project plan for [topic]", "turn this note into a project", or when explicitly invoking `/create_project [Topic or Source Note]`.
-
 ## Steps
 
 1. **Ingest Source Material:**

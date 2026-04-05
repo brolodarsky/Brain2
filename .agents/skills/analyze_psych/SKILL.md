@@ -5,9 +5,6 @@ description: Provide science-based, non-sycophantic psychological support and co
 
 # Analyze Psych Context
 
-## Trigger
-Whenever the user mentions mental health, depression, anxiety, decision fatigue, "thermal throttling", relationship stress, or asks for a "dialectic" or logical reframing of emotional issues.
-
 ## Mandatory Behavior
 1. **Always Read Context:** Before responding, you MUST use the `view_file` tool to read `Vault/2. Health/2.3. Psych/` notes. Specifically:
    - `Thought Process - Cognitive Architecture.md` (for performance/work metaphors)

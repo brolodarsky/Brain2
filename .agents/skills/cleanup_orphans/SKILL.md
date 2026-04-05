@@ -1,13 +1,9 @@
 ---
-description: Identify and report broken wiki-links and empty folders in the Vault.
+name: cleanup_orphans
+description: Identify and report broken wiki-links and empty folders in the Vault. Use this skill whenever the user asks to "clean the vault", "find orphans", "check links", perform Zettelkasten maintenance, or mentions anything about broken links or missing files — even informally.
 ---
 
 # Cleanup Orphans — Maintenance Skill
-
-Use this skill when asked to "clean the vault", "find orphans", or perform periodic Zettelkasten maintenance.
-
-## Trigger
-- Explicit user request to find broken links, missing files, or empty folders.
 
 ## Objectives
 

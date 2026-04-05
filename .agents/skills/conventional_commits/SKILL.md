@@ -1,5 +1,6 @@
 ---
-description: Enforce Conventional Commits format on every git commit
+name: conventional_commits
+description: Enforce Conventional Commits format on every git commit. Always use this skill before running any `git commit` command — even small ones. If you are about to commit, stop and apply this format first.
 ---
 
 # Conventional Commits — Mandatory Trigger

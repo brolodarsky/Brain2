@@ -5,6 +5,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ---
 
+## [1.6.0] - 2026-04-05
+
+### Added
+- New meta-skill `skill_creator` — moved from `Vault/SKILL.md` into `.agents/skills/skill_creator/SKILL.md`. Covers full skill anatomy, progressive disclosure, writing patterns, and eval guidance.
+- New meta-skill `workflow_creator` — `.agents/skills/workflow_creator/SKILL.md`. Covers workflow anatomy, format rules, overlap resolution, sharp descriptions, and registration checklist. Mirrors `skill_creator` for the workflow domain.
+- Both new skills registered in `AGENTS.md`, `README.md`, and `List - Agentic Instructions.md`.
+
+### Changed
+- Standardized all 6 existing skills against the `skill_creator` spec:
+  - Added missing `name:` frontmatter field to `cleanup_orphans`, `conventional_commits`, `generate_obsidian_note`, `maintain_project_docs`.
+  - Upgraded all weak descriptions to "pushy" triggering language (explicit context cues and imperative phrasing).
+  - Fixed typo in `maintain_project_docs` description ("warrent" → "warrant").
+  - Removed redundant `## Trigger` body sections from `analyze_health` and `analyze_psych` — trigger logic consolidated into `description:` only.
+- Standardized all 8 workflows:
+  - Removed redundant `## Trigger` body sections from `add_job_requirement`, `audit_inbox`, `create_project`, `distill_learning`, `plan_activity`, `render_resume`.
+  - Sharpened overlapping descriptions on `capture_content`, `distill_learning`, and `create_new_note` — each now explicitly cross-references the other two to prevent agent confusion.
+
 ## [1.5.1] - 2026-04-01
 
 ### Added

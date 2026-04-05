@@ -20,6 +20,8 @@ Brain 2/
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
 │   │   ├── maintain_project_docs/    # Keep README & requirements.
+│   │   ├── skill_creator/            # Create & improve agent skills
+│   │   └── workflow_creator/         # Create & improve agent workflows
 │   └── workflows/              # Structured procedures (slash commands)
 │       ├── add_job_requirement.md    # Job criteria extraction
 │       ├── audit_inbox.md            # Zettelkasten inbox sorting
@@ -117,6 +119,8 @@ This repository distinguishes between three types of "cognitive" capabilities th
 | `maintain_project_docs` | Keep README.md, AGENTS.md, CHANGELOG.md and requirements.txt up to date |
 | `conventional_commits` | On every `git commit` |
 | `cleanup_orphans` | When asked to "clean the vault" or perform maintenance |
+| `skill_creator` | When asked to create, edit, evaluate, or optimize a skill |
+| `workflow_creator` | When asked to create, edit, or improve a workflow |
 
 ### Agentic Workflows (Slash Commands)
 

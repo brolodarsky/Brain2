@@ -6,9 +6,6 @@ description: Agentic tool for reading and sorting raw notes and bullet points fr
 
 This workflow automates the process of processing, structuring, and filing raw thoughts and clipped documents from the Inbox into the main Vault.
 
-## Trigger
-When asked to "audit my inbox", "run weekly review", "sort my quick capture", something similar, or when explicitly invoking `/audit_inbox`.
-
 ## Steps
 
 1. **Analyze Inbox Content:**

@@ -6,9 +6,6 @@ description: Renders the Master Markdown Resume into a premium, professionally-s
 
 This workflow takes the content from the `Resume - Master.md` file and uses the Resume Engine to generate a high-end PDF.
 
-## Trigger
-When asked to "generate my resume", "update the pdf", or explicitly invoking `/render_resume`.
-
 ## Steps
 
 1. **Verify Master Resume:**
