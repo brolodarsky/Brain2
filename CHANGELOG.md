@@ -3,14 +3,12 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
-## [1.8.2] - 2026-04-12
+## [1.8.2] - 2026-04-13
 
 ### Changed
-- Refactored **Rules 4 & 5** in `AGENTS.md` into a single unified **Git & Changelog Policy** with a structured decision table to eliminate model ambiguity at rule execution time. Previously, two prose rules with overlapping scope caused false-positive commits for routine note/TOC-link additions.
-- Implemented **Compiled Portability Architecture** across core skills:
-  - Added strict Compiler Rules to `maintain_project_docs` to force verbatim YAML transcription into `AGENTS.md` to prevent context drift.
-  - Refactored `skill_creator` and `workflow_creator` to delegate `AGENTS.md` updates to `maintain_project_docs`.
-  - Wrapped `AGENTS.md` lists in strict `<!-- AUTO-COMPILED -->` warnings to preserve system portability.
+- Promoted **Career Strategy & Revenue** from `3.3` to `3.1` to align with priority and daily usage.
+- Re-ordered Section 3 (Operations & Wealth) folders: Wealth & Asset Management shifted to `3.2`, Infrastructure & Logistics shifted to `3.3`.
+- Updated `Table of Contents.md` and `README.md` to map to the new hierarchy.
 
 ---
 
@@ -19,6 +17,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - In `generate_obsidian_note` skill (Formatting and Structure section), mandated the use of synchronized horizontal navigation bars for "tight clusters" of notes (e.g., Auto, Health, Career) to allow lateral movement between related Map of Content (MOC) notes.
 
+### Changed
+- Refactored **Rules 4 & 5** in `AGENTS.md` into a single unified **Git & Changelog Policy** with a structured decision table to eliminate model ambiguity at rule execution time. Previously, two prose rules with overlapping scope caused false-positive commits for routine note/TOC-link additions.
+- Implemented **Compiled Portability Architecture** across core skills:
+  - Added strict Compiler Rules to `maintain_project_docs` to force verbatim YAML transcription into `AGENTS.md` to prevent context drift.
+  - Refactored `skill_creator` and `workflow_creator` to delegate `AGENTS.md` updates to `maintain_project_docs`.
+  - Wrapped `AGENTS.md` lists in strict `<!-- AUTO-COMPILED -->` warnings to preserve system portability.
+  
 ---
 
 ## [1.8.0] - 2026-04-11

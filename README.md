@@ -52,18 +52,18 @@ Brain 2/
 │   │   ├── 2.4. Nutrition/                           # Recipe vault and nutrition science
 │   │   └── 2.5. Mom's Health Tracking/               # Caregiving logs, symptoms, and medical records for Mom
 │   ├── 3. Operations & Wealth/     # Financial and logistical systems
-│   │   ├── 3.1. Wealth & Asset Management/           # Investment strategy and recurring payments
-│   │   ├── 3.2. Infrastructure & Logistics/          # Home lab, family estate, and auto maintenance
-│   │   │   ├── 3.2.1. Home Improvement & Maintenance/
-│   │   │   ├── 3.2.2. Family & Care/
-│   │   │   └── 3.2.3. Auto/
-│   │   └── 3.3. Career Strategy & Revenue/           # Job hunt, professional profile, and portfolio
-│   │       ├── 3.3.1. Market Research & Future of Work/
-│   │       ├── 3.3.2. Interview Prep & Technical Depth/
-│   │       ├── 3.3.3. Professional Portfolio & Evidence/
-│   │       ├── 3.3.4. Networking & Professional CRM/
-│   │       ├── 3.3.5. Income Streams & Side Revenue/
-│   │       └── 3.3.6. Compensation & Negotiation/
+│   │   ├── 3.1. Career Strategy & Revenue/           # Job hunt, professional profile, and portfolio
+│   │   │   ├── 3.1.1. Market Research & Future of Work/
+│   │   │   ├── 3.1.2. Interview Prep & Technical Depth/
+│   │   │   ├── 3.1.3. Professional Portfolio & Evidence/
+│   │   │   ├── 3.1.4. Networking & Professional CRM/
+│   │   │   ├── 3.1.5. Income Streams & Side Revenue/
+│   │   │   └── 3.1.6. Compensation & Negotiation/
+│   │   ├── 3.2. Wealth & Asset Management/           # Investment strategy and recurring payments
+│   │   └── 3.3. Infrastructure & Logistics/          # Home lab, family estate, and auto maintenance
+│   │       ├── 3.3.1. Home Improvement & Maintenance/
+│   │       ├── 3.3.2. Family & Care/
+│   │       └── 3.3.3. Auto/
 │   ├── 4. Playground/              # Social, culture, and creativity
 │   │   ├── 4.1. Social Life & Community/             # People data, social club, and adventures
 │   │   ├── 4.2. Romance & Partnership/               # Relationship maintenance and date ideas
