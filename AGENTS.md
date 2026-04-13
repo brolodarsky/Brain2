@@ -109,11 +109,21 @@ Renders the Master Markdown Resume into a premium, professionally-styled PDF usi
 1. **Never delete user content** without explicit confirmation.
 2. **Always use the `.venv`** — resolve Python tools from `.venv/Scripts/`, not system PATH. Never install dependencies globally. Always use `.venv\Scripts\pip.exe` for installations. If a new requirement is added, immediately trigger the `maintain_project_docs` skill.
 3. **Commit messages must follow Conventional Commits** — see `conventional_commits` skill. 
-4. **Git is solely for the Engine and Vault structure**: prioritize committing changes to tools, skills, workflows, project docs, and Vault structure (e.g., new sections in `Table of Contents.md`, addition to `.gitkeep`). Individual notes/thoughts are encrypted and backed up locally, so avoid micro-commits for note edits, additions or subtractions.
-5. **Update `CHANGELOG.md` for all `feat` and `fix` commits to the Brain Engine.** If there is a significant change to a tool, skill, or workflow, update the version number. If there is a documentation change to the *Project* docs (README, AGENTS.md), update the patch number. **Individual notes/thoughts in the `Vault/` (even if linked in the TOC) do NOT require CHANGELOG.md entries.** Only structural changes to the *Engine* (e.g., adding a new H1 section to the TOC, changing the global organizational paradigm, or adding new system capabilities) require a changelog entry and version bump. If there's an existing version on the same day, update the existing version unless the change is significant.
-6. **The TOC is the single source of truth** for Vault folder structure and the high-level concept of this entire project. Do not clutter the TOC with individual granular notes (e.g. single medical visits, individual articles, daily logs). Those should be linked and organized inside specialized "Hub" or "Map of Content" (MOC) notes (e.g., `Health Summary`, `Auto Knowledge Base`).
-7. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
-8. **Audio files are gitignored** — they sync via Syncthing, not Git.
-9. **Keep AGENTS.md AND README.md updated.** If you make fundamental changes to the project/brain functionality, update these files to reflect the changes.
-10. **Add `.gitkeep` to empty folders.** Whenever creating a new empty directory in the Vault, always create an empty `.gitkeep` file inside it so it can be tracked by Git.
-11. **All `Project -` and `Protocol -` notes must be registered in `To Do List.md`.** Ensure new projects are added to the Active Projects section of `Vault/1. The Core/1.1. Philosophy & Personal North Star/To Do List.md`.
+4. **Git & Changelog Policy.** Use this table to determine whether a change requires a `git commit` and/or a `CHANGELOG.md` entry:
+
+| What changed? | Commit? | Changelog? | Version bump |
+|---|---|---|---|
+| Tool, skill, or workflow code | ✅ | ✅ | Minor or patch |
+| New H1/H2 *section* in TOC / global structural paradigm change | ✅ | ✅ | Minor or patch |
+| Project docs (AGENTS.md, README.md) | ✅ | ✅ | Patch |
+| `.gitkeep` additions for new empty folders | ✅ | ❌ | — |
+| Note wiki-links added to existing TOC sections | ❌ | ❌ | — |
+| Individual note creation, edits, or deletions in `Vault/` | ❌ | ❌ | — |
+
+- **Key principles:** Git is solely for the **Engine** (tools, skills, workflows, project docs) and **Vault structure** (new sections — not individual notes). Individual notes/thoughts are encrypted and backed up locally — avoid micro-commits. If there's an existing changelog version on the same day, update the existing version unless the change is significant.
+5. **The TOC is the single source of truth** for Vault folder structure and the high-level concept of this entire project. Do not clutter the TOC with individual granular notes (e.g. single medical visits, individual articles, daily logs). Those should be linked and organized inside specialized "Hub" or "Map of Content" (MOC) notes (e.g., `Health Summary`, `Auto Knowledge Base`).
+6. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
+7. **Audio files are gitignored** — they sync via Syncthing, not Git.
+8. **Keep AGENTS.md AND README.md updated.** If you make fundamental changes to the project/brain functionality, update these files to reflect the changes.
+9. **Add `.gitkeep` to empty folders.** Whenever creating a new empty directory in the Vault, always create an empty `.gitkeep` file inside it so it can be tracked by Git.
+10. **All `Project -` and `Protocol -` notes must be registered in `To Do List.md`.** Ensure new projects are added to the Active Projects section of `Vault/1. The Core/1.1. Philosophy & Personal North Star/To Do List.md`.

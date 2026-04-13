@@ -3,6 +3,13 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.8.2] - 2026-04-12
+
+### Changed
+- Refactored **Rules 4 & 5** in `AGENTS.md` into a single unified **Git & Changelog Policy** with a structured decision table to eliminate model ambiguity at rule execution time. Previously, two prose rules with overlapping scope caused false-positive commits for routine note/TOC-link additions.
+
+---
+
 ## [1.8.1] - 2026-04-12
 
 ### Added
