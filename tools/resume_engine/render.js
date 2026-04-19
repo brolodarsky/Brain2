@@ -4,9 +4,9 @@ const { chromium } = require('playwright');
 const { marked } = require('marked');
 
 async function renderResume() {
-    const resumePath = path.resolve(__dirname, '../../Vault/3. Operations & Wealth/3.3. Career Strategy & Revenue/Resume - Master.md');
+    const resumePath = path.resolve(__dirname, '../../Vault/3. Operations & Wealth/3.1. Career Strategy & Revenue/Resume - Master.md');
     const cssPath = path.resolve(__dirname, 'style.css');
-    const outputPath = path.resolve(__dirname, '../../Vault/3. Operations & Wealth/3.3. Career Strategy & Revenue/Resume - William Volodarsky.pdf');
+    const outputPath = path.resolve(__dirname, '../../Vault/3. Operations & Wealth/3.1. Career Strategy & Revenue/Resume - William Volodarsky.pdf');
 
     if (!fs.existsSync(resumePath)) {
         console.error('Master resume not found at:', resumePath);
