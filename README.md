@@ -30,6 +30,7 @@ Brain 2/
 │       ├── distill_learning.md       # Atomic note synthesis
 │       ├── ingest_medical_record.md  # Parse raw medical data
 │       ├── plan_activity.md          # Itinerary generation
+│       ├── ask_brain.md              # Semantic vault search
 │       └── render_resume.md          # PDF resume rendering
 ├── .venv/                      # Python virtual environment (not committed)
 ├── Vault/                      # All Brain content lives here
@@ -97,6 +98,9 @@ Brain 2/
 │   └── Table of Contents.md   # Master index — source of truth for structure
 ├── AGENTS.md                   # AI agent constitution
 ├── CHANGELOG.md                # Running log of notable changes
+├── engine/                      # RAG engine (semantic search)
+│   ├── ask_brain.py             # Query agent
+│   └── ingest_vault.py          # Vector store indexer
 ├── tools/                      # Automation tools
 │   └── resume_engine/          # Premium PDF rendering system
 ├── requirements.txt            # Pinned Python dependencies
@@ -149,6 +153,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 - `/distill_learning`: Synthesizes complex technical articles or PDFs into atomic, interlinked notes.
 - `/ingest_medical_record`: Parse and ingest raw medical records (PDF, XML, Images) into the Vault.
 - `/plan_activity`: Cross-references Activities List, Date Ideas, and People Data notes to generate a structured markdown itinerary.
+- `/ask_brain`: Semantic vault search. Queries the ChromaDB index and returns grounded answers with source citations.
 - `/render_resume`: Renders the Master Markdown Resume into a premium, professionally-styled PDF.
 
 ### Deterministic Tools (Scripts)
@@ -162,6 +167,8 @@ This repository distinguishes between three types of "cognitive" capabilities th
 | `add_gitkeeps.py` | Adds `.gitkeep` to all empty folders for Git tracking. | `python tools/add_gitkeeps.py` |
 | `backup_vault.py` | Creates a timestamped local backup of the `Vault/`. | `python tools/backup_vault.py` |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files to structured Markdown. | `python tools/medical_xml_parser.py <path> <output_dir>` |
+| `engine/ingest_vault.py` | Indexes Vault files into ChromaDB for semantic search. | `python engine/ingest_vault.py` |
+| `engine/ask_brain.py` | RAG query agent for answering questions from context. | `python engine/ask_brain.py "<question>"` |
 | `resume_engine/` | PDF rendering system for the Master Resume. | (See `tools/resume_engine/`) |
 
 ---

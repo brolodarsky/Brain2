@@ -20,6 +20,7 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure/brain structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
 | `tools/` | Python scripts for brain automation |
+| `engine/` | RAG agent scripts (`ask_brain.py`, `ingest_vault.py`) |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
@@ -76,6 +77,8 @@ Deterministic scripts for vault and engine maintenance.
 | `backup_vault.py` | Creates a timestamped local backup of the `Vault/` directory. |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files into structured Markdown. |
 | `resume_engine/` | Node.js project for rendering the Markdown resume into a premium PDF. |
+| `engine/ingest_vault.py` | Indexes all vault `.md` files into a local ChromaDB vector store for semantic search. Re-run after adding new notes. |
+| `engine/ask_brain.py` | RAG query agent — answers natural language questions grounded in vault context. Requires ChromaDB index to exist first. |
 
 ### Workflows
 
@@ -96,16 +99,19 @@ Agentic tool for reading and sorting raw notes and bullet points from the Brain 
 Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials appended to the bottom of the plan.
 
 ### `distill_learning`
-Synthesizes complex technical articles or PDFs into atomic, interlinked notes within the `Library & Learning` section or global Zettelkasten.
+Breaks down a dense external source (article, paper, PDF, URL) into multiple atomic, interlinked notes filed into the Library & Learning section of the Zettelkasten. Use this when you want to deeply integrate knowledge — not just save it. For lightweight saving of raw content, use /capture_content instead.
 
 ### `ingest_medical_record`
 Parse and ingest raw medical records (PDF, XML, Images) into the Vault following chronological conventions.
 
 ### `plan_activity`
-Cross-references `Activities List`, `Date Ideas`, and `People Data` notes to generate a structured markdown itinerary.
+Cross-references Activities List, Date Ideas, and People Data to generate a markdown itinerary.
 
 ### `render_resume`
 Renders the Master Markdown Resume into a premium, professionally-styled PDF using the Resume Engine and Playwright.
+
+### `ask_brain`
+Semantic vault search. Queries the ChromaDB index and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually or to supplement your own knowledge. Requires `engine/ingest_vault.py` to be run first.
 
 ## Rules
 

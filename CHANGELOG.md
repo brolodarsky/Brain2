@@ -3,6 +3,16 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.9.0] - 2026-04-21
+
+### Added
+- **RAG Engine Integration:** Implemented a Retrieval-Augmented Generation (RAG) system for semantic search across the entire Vault.
+  - Added `engine/ingest_vault.py` for indexing markdown notes into a local ChromaDB vector store.
+  - Added `engine/ask_brain.py` as a RAG query agent to provide grounded answers with citations.
+  - Added `/ask_brain` agentic workflow to allow natural language vault queries via slash command.
+
+---
+
 ## [1.8.4] - 2026-04-16
 
 ### Added
