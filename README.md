@@ -16,6 +16,7 @@ Brain 2/
 │   ├── skills/                 # Mandatory behaviors
 │   │   ├── analyze_health/           # Health diagnostics & context check
 │   │   ├── analyze_psych/            # Psych support & cognitive architecture
+│   │   ├── career_counselor/         # Career architecture & strategic advice
 │   │   ├── cleanup_orphans/          # Zettelkasten maintenance (links/folders)
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
@@ -137,6 +138,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 |---|---|
 | `analyze_health` | When asked about symptoms, medical conditions, or health advice |
 | `analyze_psych` | When asked about emotional processing |
+| `career_counselor` | When asked for career advice, job hunt strategy, or professional optimization |
 | `generate_obsidian_note` | When asked to create a new note or integrate new notes/thoughts into the vault |
 | `maintain_project_docs` | Keep README.md, AGENTS.md, CHANGELOG.md and requirements.txt up to date |
 | `conventional_commits` | On every `git commit` |

@@ -3,6 +3,16 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.10.0] - 2026-04-22
+
+### Added
+- **Career Counselor Skill:** Implemented `career_counselor` agentic skill to act as a high-stakes career architect.
+  - Mandates synthesis of three pillars: Career Strategy (3.1), Technical Evidence (6.1), and Cognitive Architecture (2.3).
+  - Integrated `search_web` for real-time market alignment and compensation benchmarking.
+  - Enforces non-sycophantic, analytical advice grounded in the "AI Superagency" and "Proof of Work" frameworks.
+
+---
+
 ## [1.9.0] - 2026-04-21
 
 ### Added
