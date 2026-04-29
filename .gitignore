@@ -3,16 +3,25 @@
 # Python virtual environment
 .venv/
 
-# Generated audio files — too large for Git, sync via Syncthing instead
-Vault/Audio/
+# ─────────────────────────────────────────────────
+# Vault Content — local only, never pushed to GitHub
+# ─────────────────────────────────────────────────
+# Ignore ALL files inside Vault/ (notes, binaries, configs, mirrors, etc.)
+# Then whitelist only the structural files that should remain tracked.
+Vault/**
 
-# Podcast script cache
-Vault/Audio/podcast_history.json
+# Un-ignore directories so Git can traverse them for .gitkeep files
+!Vault/**/
 
-# Sensitive documents (sync via Syncthing only)
-# (Depcreated: Git-crypt handles sensitivity now)
+# Keep the folder skeleton tracked (empty-folder markers)
+!Vault/**/.gitkeep
 
+# Keep the Table of Contents — the public cognitive map
+!Vault/Table of Contents.md
+
+# ─────────────────────────────────────────────────
 # Secrets and Credentials
+# ─────────────────────────────────────────────────
 .env
 *.pem
 *.key
