@@ -4,6 +4,19 @@ All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 
+## [1.11.0] - 2026-04-28
+
+### Changed
+- Executed **Radical Transparency Public Release Strategy**:
+  - Restructured `.gitignore` to use a robust wildcard approach (`Vault/**`) to untrack all vault content files while retaining folder structure and `.gitkeep` files.
+  - Added `.gitattributes` rule to explicitly exempt `Vault/Table of Contents.md` from `git-crypt` encryption, establishing it as the public-facing cognitive map.
+  - Untracked 200+ personal vault files from the repository via `git rm --cached` while preserving local copies.
+  - Rewrote `README.md` to articulate the "Human Context Statement" and document architectural methods (Engine/Vault separation, Agentic Config mirror).
+  - Verified `AGENTS.md` as public-facing agentic constitution.
+  - Formally licensed the repository under AGPL-3.0.
+
+---
+
 ## [1.10.2] - 2026-04-27
 
 ### Added
