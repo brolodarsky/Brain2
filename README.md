@@ -17,6 +17,17 @@ You will see that the Agent Skills (`.agents/skills/`) and instructions (`AGENTS
 
 The `Vault/Table of Contents.md` is intentionally tracked and public. It demonstrates the *scope* of what a personal cognitive OS can manage—ranging from health and fitness to system design learning, caregiving, and professional networking—without exposing the content itself. It serves as both a structural map if you want to fork this, and a proof-of-concept for recruiters reviewing my work.
 
+## How It Operates & Roadmap
+
+This system currently follows a "best tool for the job" architecture:
+- **The Content UI (Obsidian):** The daily interaction with notes, thoughts, and the knowledge graph happens entirely within Obsidian. It is the best tool for visualizing links, reading, and writing markdown.
+- **The Engine UI (Agentic IDEs):** The automation, RAG queries, and agentic workflows are currently executed using Agentic IDEs (like Cursor, Windsurf, or specialized agents) acting as the orchestration layer for the `.agents/` instructions.
+
+**Future Evolution:**
+While the current setup relies on Obsidian for viewing and an IDE for executing agents, the roadmap points toward a fully unified, standalone application. Future iterations will include:
+1. A **Standalone Autonomous Orchestrator** to run the agentic engine without relying on a third-party IDE.
+2. A **Custom Content UI** to replace Obsidian, allowing tight, native integration between the knowledge graph and the agentic tools.
+
 ---
 
 ## Repository Structure
