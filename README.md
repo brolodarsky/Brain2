@@ -6,7 +6,7 @@ This is my personal "second brain" and knowledge management system. It acts as a
 
 This repository is **not** a generic, blank-slate template. It is a live, production system that runs my actual life. I have chosen a strategy of **Radical Transparency** and made this repository public to demonstrate real-world agentic orchestration on a complex, live system. 
 
-You will see that the Agent Skills (`.agents/skills/`) and instructions (`AGENTS.md`) explicitly reference my personal context—like my health tracking, career goals, or specific personal protocols. This is intentional. The personal specificity is the proof that this system manages real human complexity. It's a portfolio piece demonstrating senior-level AI orchestration and systems thinking.
+You will see that the Agent Skills (`.agents/skills/`) and instructions (`AGENTS.md`) explicitly reference my personal context—like my health tracking, career goals, or specific personal protocols. This is intentional. The personal specificity is the proof that this system manages real human complexity.
 
 **What's included in this public repo:**
 - **The Engine Layer:** All the tools, agent skills, and workflows I use to automate my life.
@@ -21,10 +21,10 @@ The `Vault/Table of Contents.md` is intentionally tracked and public. It demonst
 
 This system currently follows a "best tool for the job" architecture:
 - **The Content UI (Obsidian):** The daily interaction with notes, thoughts, and the knowledge graph happens entirely within Obsidian. It is the best tool for visualizing links, reading, and writing markdown.
-- **The Engine UI (Agentic IDEs):** The automation, RAG queries, and agentic workflows are currently executed using Agentic IDEs (like Cursor, Windsurf, or specialized agents) acting as the orchestration layer for the `.agents/` instructions.
+- **The Engine UI (CLI & Agentic IDEs):** Deterministic tools and RAG queries can be executed directly via terminal. Complex agentic workflows (slash commands) are currently orchestrated using Agentic IDEs (like Cursor, Windsurf, or specialized agents) to follow the `.agents/` instructions.
 
 **Future Evolution:**
-While the current setup relies on Obsidian for viewing and an IDE for executing agents, the roadmap points toward a fully unified, standalone application. Future iterations will include:
+While the current setup relies on Obsidian for viewing and an IDE for orchestrating agentic workflows, the roadmap points toward a fully unified, standalone application. Future iterations will include:
 1. A **Standalone Autonomous Orchestrator** to run the agentic engine without relying on a third-party IDE.
 2. A **Custom Content UI** to replace Obsidian, allowing tight, native integration between the knowledge graph and the agentic tools.
 

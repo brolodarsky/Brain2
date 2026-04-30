@@ -32,14 +32,13 @@ _Systemic foundations for mental clarity, resilience, long-term vision, and dail
 - **Projects**
 	- **[[Project - Brain 2 Obsidian Functionality Upgrades]]:** Prioritized roadmap for system improvements.
 		- 1. **[[Workshop - Dashboard Option 1 Gameplan]]**
-	- **[[Project - Public Release Strategy & Radical Transparency]]**
 	- **[[#6.1.2. Agentic R&D|Project - Brain 2 Agentic Engine]]:** Multi-agent LangGraph orchestration for vault intelligence.
 - **[[Template - New Note or Thought]]**
 - **[[Template - Capture]]** Used for capturing raw content (YouTube transcripts, podcasts, articles, etc.)
 - **[[Protocol - Brain Maintenance]]**
 - **[[List - Brain 2 Agentic Instructions]]**
 - **Toolbox:** Documentation for the Pixel 8 Pro, Obsidian/Logseq workflows, and local LLM setups.
-
+- **📁 [Archive](obsidian://search?vault=Vault&query=path%3A"1.2.%20Personal%20Knowledge%20Management%20(PKM)/Archive")**
 
 ## 1.3. Security & Digital Sovereignty
 - **Security Audit:** Password management strategy, 2FA recovery locations, and encryption protocols.
@@ -86,10 +85,11 @@ _Systemic foundations for mental clarity, resilience, long-term vision, and dail
 	- **[[Protocol - Social Approach & Rehearsal]]**
 	- **[[Protocol - Nightly System Shutdown]]**
 	- **[[Protocol - Reduce Phone Use]]**
-	- **[[Thought Process - Breaking Up - Dialectic with LLM]]**
 	- **[[Life Chronology]]**
 - **Meditation & Mindfulness:** Rituals for grounding and focus.
 - **Stress Mitigation:** Systems for decompressing after high-output days.
+- **📁 [Articles](obsidian://search?vault=Vault&query=path%3A"2.%20Health/2.3.%20Psych/Articles"):** Research and reference material for psychological health.
+- **📁 [Archive](obsidian://search?vault=Vault&query=path%3A"2.%20Health/2.3.%20Psych/Archive")**
 - **ACT**
 
 
@@ -127,6 +127,8 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 - **[[Portfolio Hub]]:** Project pitches and evidence locker.
 - **[[Resume - Master|Resume - Master - Markdown]]:** The source-of-truth CV.
 	- **[[Resume - William Volodarsky.pdf|Resume - Master - PDF]]:** Exported PDF output.
+- **[[Doc - Fordham University eDiploma.pdf]]**
+- **[[Doc - Fordham University Transcript.pdf]]**
 
 ### 3.1.4. Networking & Professional CRM
 - **[[Professional CRM]]:** Contacts, recruiters, mentors, and warm intro tracking.
@@ -190,9 +192,9 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 	- **[[Project - Pilot Maintenance Tracker]]:** Project outline for building an automated car maintenance tracker.
 	- **[[Project - Pilot Exterior Repair]]:** Repair strategy for the driver-side rear quarter panel.
 	- **[[Project - Pilot Blower Motor Noise Fix]]:** Step-by-step guide for resolving HVAC fan noise.
+- **[[Pilot Manual.pdf|Honda Pilot Manual]]**
 - **📁 Pilot Diagrams**
 - **📁 Archive**
-
 
 
 # 4. Playground
@@ -255,12 +257,13 @@ _The Content Log & Reference_
 ### 6.1.1. Flagship Applications
 - **[Project Feeder Github](https://github.com/brolodarsky/Feeder):** Python logic, UI/UX, and database development.
 - **[Project MEM Billing](<file:///C:\Users\Willi\Documents\Projects\MEMBilling>):** Billing Automation. Scripts for LCSW medical billing efficiency.
+- **[[Project - Personal Portfolio Website]]**
 - **[Brain 2 Github](https://github.com/brolodarsky/Brain2)**
 
 ### 6.1.2. Agentic R&D
 - **[[List - Brain 2 Agentic Instructions]]**
 - **[[Workshop - Agentic Skill - add_job_requirement]]**
-- **📁[[Project - Brain 2 Agentic Engine]]:** Master roadmap for LangGraph agents (/ask_brain, doctor panel, routing).
+- **📁[[Old Version - Project - Brain 2 Agentic Engine]]:** Master roadmap for LangGraph agents (/ask_brain, doctor panel, routing).
 	- 1. **[[Project - Vault RAG Agent (ask_brain)]]**
 - **[[Project - Inventory Replenishment Agent]]:** Agentic workflow to check and automate recommended inventory replenishment for Amazon and Walmart.
 - **📁 Agentic Config:** Mirror of the project's core agentic configuration (AGENTS.md, skills, and workflows).
