@@ -20,7 +20,7 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure/brain structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
 | `tools/` | Python scripts for brain automation |
-| `engine/` | RAG agent scripts (`ask_brain.py`, `ingest_vault.py`) |
+| `engine/` | RAG agent engine — modular architecture (`main.py`, `core/`, `tools/`, `agents/`) |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
@@ -82,9 +82,10 @@ Deterministic scripts for vault and engine maintenance.
 | `add_gitkeeps.py` | Adds `.gitkeep` to all empty folders to ensure tracking (Rule 10). |
 | `backup_vault.py` | Creates a timestamped local backup of the `Vault/` directory. |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files into structured Markdown. |
-| `resume_engine/` | Node.js project for rendering the Markdown resume into a premium PDF and DOCX. |
-| `engine/ingest_vault.py` | Indexes all vault `.md` files into a local ChromaDB vector store for semantic search. Re-run after adding new notes. |
-| `engine/ask_brain.py` | RAG query agent — answers natural language questions grounded in vault context. Requires ChromaDB index to exist first. |
+| `resume_engine/` | Node.js (Playwright) for PDF rendering + Python (`python-docx`) for DOCX generation of the Master Resume. |
+| `engine/main.py` | Universal entry point & dispatcher for the Agentic Engine. |
+| `engine/ingest_vault.py` | Indexes all vault `.md` files into a local ChromaDB vector store. |
+| `engine/ask_brain.py` | CLI wrapper for the RAG query agent. |
 
 ### Workflows
 
@@ -114,7 +115,7 @@ Parse and ingest raw medical records (PDF, XML, Images) into the Vault following
 Cross-references Activities List, Date Ideas, and People Data to generate a markdown itinerary.
 
 ### `render_resume`
-Renders the Master Markdown Resume into a premium, professionally-styled PDF using the Resume Engine and Playwright.
+Renders the Master Markdown Resume into a premium, professionally-styled PDF and DOCX.
 
 ### `ask_brain`
 Semantic vault search. Queries the ChromaDB index and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually or to supplement your own knowledge. Requires `engine/ingest_vault.py` to be run first.

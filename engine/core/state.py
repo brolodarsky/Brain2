@@ -1,0 +1,10 @@
+from typing import TypedDict, Annotated
+from langgraph.graph.message import add_messages
+
+class AgentState(TypedDict):
+    """
+    The data structure that travels through every node of the graph.
+    """
+    messages: Annotated[list, add_messages]
+    context: list[str]
+    sources: list[str]
