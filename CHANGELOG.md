@@ -7,7 +7,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ## [1.11.3] - 2026-05-06
 
 ### Added
-- **Voice-first RAG Query:** Implemented `engine/brain_voice.py` to capture microphone input, transcribe it via OpenAI Whisper, and pipe it into the RAG LangGraph for hands-free queries. Registered `brain-voice` global PowerShell alias.
+- **Telegram Bot Integration:** Created `engine/brain_telegram.py` to provide a remote, smartphone-friendly interface to the RAG Agent.
+- **Voice-first RAG Query:** Implemented `engine/brain_voice.py` to capture microphone input via OpenAI Whisper.
+
+### Changed
+- **Architectural Refactor:** Extracted core LangGraph execution into `execute_rag_query` in `engine/main.py` to unify the RAG pipeline across CLI, Voice, and Telegram interfaces.
+- **Telegram UX Refinement:** Removed source citations from Telegram responses to optimize for mobile display and avoid broken `obsidian://` deep links on mobile clients.
+- **Voice Note Support:** Added secure `.ogg` voice note transcription for the Telegram bot, bridging the Phase 6A Whisper logic to mobile.
 
 ## [1.11.2] - 2026-05-05
 

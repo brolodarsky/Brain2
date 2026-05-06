@@ -87,6 +87,7 @@ Deterministic scripts for vault and engine maintenance.
 | `engine/ingest_vault.py` | Indexes all vault `.md` files into a local ChromaDB vector store. |
 | `engine/ask_brain.py` | CLI wrapper for the RAG query agent. |
 | `engine/brain_voice.py` | Voice-first CLI wrapper using PyAudio and Whisper transcription. |
+| `engine/brain_telegram.py` | Telegram Bot listener for smartphone and AFK access to the RAG agent. |
 
 ### Workflows
 

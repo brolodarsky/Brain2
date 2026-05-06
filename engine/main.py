@@ -7,21 +7,31 @@ from agents.rag.graph import build_rag_graph
 # Force UTF-8 output
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-def run_ask_brain(query: str):
+def execute_rag_query(query: str, thread_id: str = None) -> dict:
     """
-    Executes the RAG agent for a given query.
+    Core function to execute the RAG LangGraph agent and return the final state.
     """
-    print(f"\n[Brain 2] Query: {query}\n")
-    
     app = build_rag_graph()
     
+    config = {}
+    if thread_id:
+        config["configurable"] = {"thread_id": thread_id}
+        
     initial_state = {
         "messages": [HumanMessage(content=query)],
         "context": [],
         "sources": [],
     }
     
-    final_state = app.invoke(initial_state)
+    return app.invoke(initial_state, config=config)
+
+def run_ask_brain(query: str):
+    """
+    CLI Wrapper: Executes the RAG agent and prints the output to stdout.
+    """
+    print(f"\n[Brain 2] Query: {query}\n")
+    
+    final_state = execute_rag_query(query)
     answer = final_state["messages"][-1].content
     
     print("=" * 60)
