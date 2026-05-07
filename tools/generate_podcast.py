@@ -100,58 +100,58 @@ def generate_mp3(text, output_path):
         return False
 
 def main():
-    print("🎙️  Scanning Knowledge Base for notes to format as podcast...")
+    if len(sys.argv) < 2:
+        print("Usage: python tools/generate_podcast.py <path_to_markdown_file> [--force]")
+        sys.exit(1)
+
+    input_path = Path(sys.argv[1]).resolve()
+    force = "--force" in sys.argv
+
+    if not input_path.exists() or not input_path.is_file():
+        print(f"Error: File not found at {input_path}")
+        sys.exit(1)
+
+    if input_path.suffix != ".md":
+        print(f"Error: File {input_path} is not a markdown file.")
+        sys.exit(1)
+
     init_audio_dir()
     history = load_history()
     
-    generated_count = 0
-    failed = False
+    try:
+        with open(input_path, "r", encoding="utf-8") as f:
+            content = f.read()
+    except Exception as e:
+        print(f"Could not read {input_path.name}: {e}")
+        sys.exit(1)
+
+    mtime = os.path.getmtime(input_path)
     
-    for root, dirs, files in os.walk(KB_DIR):
-        # Skip hidden directories and non-content folders
-        dirs[:] = [d for d in dirs if not d.startswith(".") and d not in ["zImages", "Audio", ".venv"]]
+    # Try to get relative path if inside Vault, otherwise use absolute
+    try:
+        file_id = str(input_path.relative_to(KB_DIR)).replace("\\", "/")
+    except ValueError:
+        file_id = str(input_path).replace("\\", "/")
+
+    if force or file_id not in history or history[file_id] < mtime:
+        print(f"Generating audio for: {input_path.name} ... ", end="", flush=True)
         
-        for file in files:
-            if file.endswith(".md"):
-                filepath = Path(root) / file
-                
-                try:
-                    with open(filepath, "r", encoding="utf-8") as f:
-                        content = f.read()
-                except Exception as e:
-                    print(f"Could not read {file}: {e}")
-                    continue
-                
-                mtime = os.path.getmtime(filepath)
-                # Use a stable relative path string as the key in history
-                file_id = str(filepath.relative_to(KB_DIR)).replace("\\", "/")
-                
-                if file_id not in history or history[file_id] < mtime:
-                    print(f"🎧 Generating audio for: {file} ... ", end="", flush=True)
-                    
-                    clean_text = clean_markdown_for_tts(content)
-                    # Gently announce the title at the beginning
-                    final_text = f"Reading Note: {filepath.stem}.\n\n" + clean_text
-                    
-                    output_mp3 = AUDIO_DIR / f"{filepath.stem}.mp3"
-                    
-                    if generate_mp3(final_text, output_mp3):
-                        history[file_id] = mtime
-                        save_history(history)
-                        generated_count += 1
-                        print("Done!")
-                    else:
-                        failed = True
-                        break
-                            
-        if failed:
-            break
-            
-    if not failed:
-        if generated_count == 0:
-            print("✨ All podcasts are up to date! No new/modified notes found.")
+        clean_text = clean_markdown_for_tts(content)
+        # Gently announce the title at the beginning
+        final_text = f"Reading Note: {input_path.stem}.\n\n" + clean_text
+        
+        output_mp3 = AUDIO_DIR / f"{input_path.stem}.mp3"
+        
+        if generate_mp3(final_text, output_mp3):
+            history[file_id] = mtime
+            save_history(history)
+            print("Done!")
+            print(f"Podcast generated: {output_mp3}")
         else:
-            print(f"✨ Finished generating {generated_count} new podcast(s). They are in the 'Audio' folder.")
+            sys.exit(1)
+    else:
+        print(f"Audio for {input_path.name} is already up to date. Use --force to regenerate.")
 
 if __name__ == "__main__":
     main()
+

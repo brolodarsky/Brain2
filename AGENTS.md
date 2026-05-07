@@ -76,7 +76,7 @@ Deterministic scripts for vault and engine maintenance.
 | Tool | Purpose |
 |------|---------|
 | `youtube_transcript.py` | Downloads transcripts from YouTube videos to text files. |
-| `generate_podcast.py` | Converts markdown notes into MP3 files via edge-tts. |
+| `generate_podcast.py` | Converts a specific markdown note into an MP3 file via edge-tts. |
 | `check_folders.py` | Validates that the current Vault structure matches `Table of Contents.md`. |
 | `create_folders.py` | Idempotently creates the directory structure defined in the TOC. |
 | `add_gitkeeps.py` | Adds `.gitkeep` to all empty folders to ensure tracking (Rule 10). |

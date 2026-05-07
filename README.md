@@ -185,7 +185,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 | Tool | Purpose | Usage |
 |---|---|---|
 | `youtube_transcript.py` | Downloads YouTube transcripts to text files. | `python tools/youtube_transcript.py <url>` |
-| `generate_podcast.py` | Converts Vault notes to MP3 via edge-tts. | `python tools/generate_podcast.py` |
+| `generate_podcast.py` | Converts a specific markdown note to MP3 via edge-tts. | `python tools/generate_podcast.py <path> [--force]` |
 | `create_folders.py` | Idempotently creates the folder structure from TOC. | `python tools/create_folders.py` |
 | `check_folders.py` | Validates Vault structure against TOC (dry-run). | `python tools/check_folders.py` |
 | `add_gitkeeps.py` | Adds `.gitkeep` to all empty folders for Git tracking. | `python tools/add_gitkeeps.py` |

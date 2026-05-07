@@ -13,6 +13,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ### Changed
 - **Architectural Refactor:** Extracted core LangGraph execution into `execute_rag_query` in `engine/main.py` to unify the RAG pipeline across CLI, Voice, and Telegram interfaces.
+- **Podcast Generation Tool:** Refactored `tools/generate_podcast.py` to process a single markdown file specified via command-line argument instead of scanning the entire Vault. Added a `--force` flag to bypass modification time checks.
 - **Telegram UX Refinement:** Removed source citations from Telegram responses to optimize for mobile display and avoid broken `obsidian://` deep links on mobile clients.
 - **Voice Note Support:** Added secure `.ogg` voice note transcription for the Telegram bot, bridging the Phase 6A Whisper logic to mobile.
 - **RAG Retrieval Quality Enhancements (Phase 7):**
@@ -20,6 +21,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
   - **Similarity Threshold:** Added a cosine distance filter (`SIMILARITY_THRESHOLD = 0.7`) to drop low-quality retrieval chunks before they pollute the context window.
   - **HyDE (Hypothetical Document Embedding):** Modified the `retrieve` node in `engine/agents/rag/nodes.py` to generate a hypothetical perfect answer using GPT-4o before vector search, bridging the vocabulary gap between short user queries and dense markdown notes.
   - **LLM Re-Ranking:** Added an LLM-based re-ranker step to score and sort the top retrieved chunks from ChromaDB, drastically improving the signal-to-noise ratio.
+
 
 ## [1.11.2] - 2026-05-05
 
