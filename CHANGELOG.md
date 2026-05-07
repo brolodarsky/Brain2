@@ -9,6 +9,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - **Telegram Bot Integration:** Created `engine/brain_telegram.py` to provide a remote, smartphone-friendly interface to the RAG Agent.
 - **Voice-first RAG Query:** Implemented `engine/brain_voice.py` to capture microphone input via OpenAI Whisper.
+- **Enhanced YouTube Transcripts:** Updated `tools/youtube_transcript.py` to save Obsidian-ready markdown notes directly to `Vault/Inbox` with YAML frontmatter and video title fetching.
 
 ### Changed
 - **Architectural Refactor:** Extracted core LangGraph execution into `execute_rag_query` in `engine/main.py` to unify the RAG pipeline across CLI, Voice, and Telegram interfaces.
