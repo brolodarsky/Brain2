@@ -174,7 +174,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 - `/add_job_requirement`: Automates extracting skills from a job description (PDF, URL, Markdown, etc.).
 - `/audit_inbox`: Sorts raw notes and bullet points from the Brain Dump & Inbox into the main Zettelkasten structure.
 - `/create_project`: Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials.
-- `/distill_learning`: Synthesizes complex technical articles or PDFs into atomic, interlinked notes.
+- `/distill_learning`: Breaks down a dense external source (article, paper, PDF, URL) into atomic, interlinked notes. Prioritizes augmenting existing Vault notes over creating duplicates to ensure knowledge synthesis.
 - `/ingest_medical_record`: Parse and ingest raw medical records (PDF, XML, Images) into the Vault.
 - `/plan_activity`: Cross-references Activities List, Date Ideas, and People Data notes to generate a structured markdown itinerary.
 - `/ask_brain`: Semantic vault search. Queries the ChromaDB index and returns grounded answers with source citations.

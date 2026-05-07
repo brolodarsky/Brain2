@@ -4,6 +4,17 @@ All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 
+## [1.11.4] - 2026-05-06
+
+### Added
+- **Domain-specific Sources Architecture:** Created `Sources/` subfolders in all 14 subsections of `6.2. Library & Learning` to separate raw captures from synthesized concept notes.
+
+### Changed
+- **Library Organization:** Relocated technical articles (IBM Granite, VALID Framework, TRIBE v2) from domain roots into specialized `Sources/` subfolders.
+- **TOC Refinement:** Standardized the Table of Contents with `📁 Sources` headers for all technical domains.
+
+---
+
 ## [1.11.3] - 2026-05-06
 
 ### Added

@@ -268,9 +268,8 @@ _The Content Log & Reference_
 ### 6.1.2. Agentic R&D
 - **[[List - Brain 2 Agentic Instructions]]**
 - **[[Workshop - Agentic Skill - add_job_requirement]]**
-- **📁[[Old Version - Project - Brain 2 Agentic Engine]]:** 
 - Master roadmap for LangGraph agents (/ask_brain, doctor panel, routing).
-- **[[Project - Brain 2 Agentic Engine|Brain 2 Agentic Engine]]**
+- **📁 [[Project - Brain 2 Agentic Engine|Brain 2 Agentic Engine]]**
 	- 1. **[[Project - Vault RAG Agent (ask_brain)]]**
 - **[[Project - Inventory Replenishment Agent]]:** Agentic workflow to check and automate recommended inventory replenishment for Amazon and Walmart.
 - **📁 Agentic Config:** Mirror of the project's core agentic configuration (AGENTS.md, skills, and workflows).
@@ -310,6 +309,8 @@ _The Content Log & Reference_
 - [Essence of Linear Algebra (YouTube - 3Blue1Brown)](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) - Highly intuitive visual explanations.
 - [Khan Academy: Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
 - [Mathematics for Machine Learning Specialization (Coursera)](https://www.coursera.org/specializations/mathematics-machine-learning)
+- 📁 **Sources**
+
 #### Probability & Statistics
 **Core Concepts:**
 - TODO
@@ -367,6 +368,8 @@ The dominant language for AI/ML and Agentic Workflows.
 - Version Control (Git) and CI/CD (GitHub Actions)
 - Testing: `pytest`, mocking API calls (crucial for testing LLM outputs).
 - API Design: RESTful principles, GraphQL, OpenAPI/Swagger specifications (how LLMs read APIs).
+- 📁 **Sources**
+
 
 ### 6.2.3. Algorithms & Data Structures
 #### Core Data Structures
@@ -383,6 +386,8 @@ The dominant language for AI/ML and Agentic Workflows.
 #### Complexity Analysis
 - Big-O, Big-Ω, Big-Θ notation.
 - Time vs. Space tradeoffs.
+- 📁 **Sources**
+
 
 ### 6.2.4. System Design & Distributed Systems
 #### Fundamentals
@@ -396,10 +401,10 @@ The dominant language for AI/ML and Agentic Workflows.
 #### Interview-Oriented Design
 - Designing scalable systems (URL shortener, chat app, news feed).
 - Capacity estimation and bottleneck analysis.
+- 📁 **Sources**
+
 
 ### 6.2.5. Data Processing, Engineering & MLOps
-- **[[Article - IBM Granite-Docling Document Understanding VLM]]:** 258M-param VLM for layout-preserving document-to-structured-text conversion; ideal for RAG pipelines.
-- **[[Article - VALID Framework LLM EHR Data Validation]]:** Flatiron Health's 3-pillar framework for validating LLM-extracted EHR data quality in oncology research.
 #### Data Collection & Pipelines
 - **Web scraping** (BeautifulSoup, Scrapy), API ingestion.
 - **Data Storage:** SQL vs NoSQL, Data Lakes, Data Warehouses.
@@ -409,6 +414,9 @@ The dominant language for AI/ML and Agentic Workflows.
 - **Containerization:** Docker, Kubernetes.
 - **Cloud AI:** AWS Bedrock, GCP Vertex AI, Azure OpenAI. [Google Vertex AI](https://docs.cloud.google.com/vertex-ai/docs/start/introduction-unified-platform)
 - **Monitoring:** Tracking token usage, latency, and LLM hallucinations (LangSmith, Helicone).
+- 📁 **Sources**
+	- **[[Article - IBM Granite-Docling Document Understanding VLM]]**
+	- **[[Article - VALID Framework LLM EHR Data Validation]]**
 
 ### 6.2.6. Machine Learning
 [Machine Learning Glossary]([Supervised Learning](https://developers.google.com/machine-learning/glossary#supervised-learning))
@@ -425,6 +433,8 @@ The dominant language for AI/ML and Agentic Workflows.
 - Linear & Logistic Regression
 - Tree-Based Models: Decision Trees, Random Forests, Gradient Boosting (XGBoost).
 - SVMs, K-Nearest Neighbors (KNN).
+- 📁 **Sources**
+
 
 ### 6.2.7. Deep Learning
 #### Neural Network Fundamentals
@@ -440,6 +450,8 @@ The dominant language for AI/ML and Agentic Workflows.
 - **Large Language Models (LLMs):** Pre-training vs. Instruction Fine-Tuning vs. RLHF.
 - **Diffusion Models:** Image and video generation (Stable Diffusion, Midjourney, Sora).
 - **Multi-Modal Models:** Vision-Language Models (VLMs) like GPT-4o, Claude 3.5 Sonnet.
+- 📁 **Sources**
+
 
 ### 6.2.8. NLP & Vector Search
 #### Core NLP & Embeddings
@@ -460,6 +472,8 @@ The dominant language for AI/ML and Agentic Workflows.
 - **GraphRAG:** Combining knowledge graphs with retrieval-augmented generation for multi-hop reasoning.
 - Graph Neural Networks (GNNs): Node classification, link prediction.
 - Tools: Neo4j, Amazon Neptune.
+- 📁 **Sources**
+
 
 ### 6.2.9. Computer Vision
 **Core Concepts**
@@ -468,6 +482,8 @@ The dominant language for AI/ML and Agentic Workflows.
 - **Image Segmentation:** Semantic vs. Instance.
 - **3D Computer Vision:** Point clouds, SLAM (Visual localization).
 - **Vision Transformers (ViT)** and cross-modal implementations.
+- 📁 **Sources**
+
 
 ### 6.2.10. Reinforcement Learning
 **Core Concepts**
@@ -475,6 +491,8 @@ The dominant language for AI/ML and Agentic Workflows.
 - **Algorithms:** Q-Learning, Policy Gradients, PPO (Proximal Policy Optimization).
 - **Deep Reinforcement Learning (DRL)**
 - **RLHF** (Reinforcement Learning from Human Feedback) & **RLAIF** (from AI Feedback).
+- 📁 **Sources**
+
 
 ### 6.2.11. Intelligent Agents & Autonomy
 
@@ -487,6 +505,7 @@ The dominant language for AI/ML and Agentic Workflows.
 #### Agent Tool Use & Integration (The "Hands")
 - **[[Function Calling & Structured Outputs]]:** The foundational bridge between LLMs and code execution (JSON schema enforcement).
 - **Tool Protocols:** **[[Concept - Model Context Protocol (MCP)]]:** Universal open standard for providing models with secure data context and tool access.
+	- **[[Concept - CLI vs MCP for AI Agents]]**
 - **Environment Control:** Sandboxed CLI execution and dynamic workspace management.
 - **Web & Computer Use:** Browser automation (Playwright) moving toward native visual Computer Use APIs for direct GUI operation.
 #### Frameworks & Multi-Agent Swarms
@@ -503,9 +522,13 @@ The dominant language for AI/ML and Agentic Workflows.
 - **Benchmarking:** SWE-bench (software engineering mastery), WebArena (browser automation).
 - **Safety:** Defending against adversarial payloads, prompt injections, and infinite resource loops.
 
+- 📁 **Sources**
+
 ### 6.2.12. AI for Science & Healthcare
 #### Articles & Research
-- **[[Article - TRIBE v2 Brain Predictive Foundation Model]]:** Meta's fMRI foundation model predicting brain activity from any sight, sound, or language — neuroscience meets AI.
+- 📁 **Sources**
+	- **[[Article - TRIBE v2 Brain Predictive Foundation Model]]**
+
 #### Structural Biology & Bioinformatics
 - **AlphaFold 3 & Protein Folding:** Predicting protein structures and molecular interactions.
 - **Drug Discovery:** Generative AI for small molecule design.
@@ -525,9 +548,13 @@ The dominant language for AI/ML and Agentic Workflows.
 - Cameras, LiDAR, IMUs. Motor controllers.
 - Robot Operating System ([ROS 2](https://docs.ros.org/en/rolling/)). Nodes, Topics, Messages.
 - **Simulation:** Gazebo, NVIDIA Isaac Sim, MuJoCo.
+- 📁 **Sources**
+
 
 ### 6.2.14. AI Ethics, Safety & Governance
 - **Explainable AI (XAI):** Interpretability tools (LIME, SHAP).
 - **Safety Guardrails:** Securing agentic workflows and prompt injection defense.
 - **Regulation:** Tracking the EU AI Act and global compliance.
+- 📁 **Sources**
+
 

@@ -108,7 +108,7 @@ Agentic tool for reading and sorting raw notes and bullet points from the Brain 
 Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials appended to the bottom of the plan.
 
 ### `distill_learning`
-Breaks down a dense external source (article, paper, PDF, URL) into multiple atomic, interlinked notes filed into the Library & Learning section of the Zettelkasten. Use this when you want to deeply integrate knowledge — not just save it. For lightweight saving of raw content, use /capture_content instead.
+Breaks down a dense external source (article, paper, PDF, URL) into atomic, interlinked notes. Prioritizes augmenting existing Vault notes over creating duplicates to ensure knowledge synthesis. For lightweight saving, use /capture_content instead.
 
 ### `ingest_medical_record`
 Parse and ingest raw medical records (PDF, XML, Images) into the Vault following chronological conventions.
