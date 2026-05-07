@@ -172,7 +172,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 
 - `/capture_content`: Format, move, or clean up a raw capture note to serve as an inbox item for future knowledge synthesis.
 - `/add_job_requirement`: Automates extracting skills from a job description (PDF, URL, Markdown, etc.).
-- `/audit_inbox`: Sorts raw notes and bullet points from the Brain Dump & Inbox into the main Zettelkasten structure.
+- `/audit_inbox`: Sorts raw notes and bullet points from the Brain Inbox and Quick Capture into the main Zettelkasten structure.
 - `/create_project`: Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials.
 - `/distill_learning`: Breaks down a dense external source (article, paper, PDF, URL) into atomic, interlinked notes. Prioritizes augmenting existing Vault notes over creating duplicates to ensure knowledge synthesis.
 - `/ingest_medical_record`: Parse and ingest raw medical records (PDF, XML, Images) into the Vault.

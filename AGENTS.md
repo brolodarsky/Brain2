@@ -102,7 +102,7 @@ Format, move, or clean up a raw capture note to serve as an inbox item for futur
 Agentic tool. Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary for Career Strategy.
 
 ### `audit_inbox`
-Agentic tool for reading and sorting raw notes and bullet points from the Brain Dump & Inbox into the main Zettelkasten structure.
+Agentic tool for reading and sorting raw notes and bullet points from the Brain Inbox and Quick Capture into the main Zettelkasten structure.
 
 ### `create_project`
 Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials appended to the bottom of the plan.

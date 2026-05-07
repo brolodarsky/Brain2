@@ -3,7 +3,6 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
-
 ## [1.11.4] - 2026-05-06
 
 ### Added
@@ -12,6 +11,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ### Changed
 - **Library Organization:** Relocated technical articles (IBM Granite, VALID Framework, TRIBE v2) from domain roots into specialized `Sources/` subfolders.
 - **TOC Refinement:** Standardized the Table of Contents with `📁 Sources` headers for all technical domains.
+- **Workflow Refinement:** Updated `/audit_inbox` to avoid adding granular inbox items directly to the Table of Contents and to use existing hubs, MOCs, project notes, logs, or folders for routine filing.
+- **Documentation Sync:** Refreshed `/audit_inbox` descriptions in `AGENTS.md` and `README.md` to reference the current Brain Inbox and Quick Capture paths.
 
 ---
 
