@@ -5,8 +5,8 @@ import os
 import tempfile
 import threading
 from dotenv import load_dotenv
-from openai import OpenAI
 from agents.rag.agent import run_ask_brain
+from core.audio import transcribe_audio
 
 # Load env variables (for OPENAI_API_KEY)
 load_dotenv()
@@ -68,20 +68,10 @@ def main():
         return
 
     print("⏳ Transcribing with Whisper...")
-    client = OpenAI()
-    try:
-        with open(audio_path, "rb") as audio_file:
-            transcription = client.audio.transcriptions.create(
-                model="whisper-1",
-                file=audio_file
-            )
-        query = transcription.text
-    except Exception as e:
-        print(f"Transcription failed: {e}")
-        return
-    finally:
-        if os.path.exists(audio_path):
-            os.remove(audio_path)
+    query = transcribe_audio(audio_path)
+    
+    if os.path.exists(audio_path):
+        os.remove(audio_path)
             
     if not query or query.strip() == "":
         print("No speech detected.")

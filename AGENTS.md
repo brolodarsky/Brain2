@@ -83,7 +83,7 @@ Deterministic scripts for vault and engine maintenance.
 | `backup_vault.py` | Creates a timestamped local backup of the `Vault/` directory. |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files into structured Markdown. |
 | `resume_engine/` | Node.js (Playwright) for PDF rendering + Python (`python-docx`) for DOCX generation of the Master Resume. |
-| `engine/main.py` | Universal entry point & dispatcher for the Agentic Engine. Handles CLI, Voice, Telegram, and Ingestion via flags. |
+| `engine/main.py` | Universal entry point & coordinator for the Agentic Engine. Features a persistent mission control menu with background Telegram bot support. |
 | `engine/agents/rag/agent.py` | Core RAG execution logic (LangGraph). |
 | `engine/agents/rag/ingest_vault.py` | Indexes vault `.md` files into ChromaDB with incremental indexing. |
 | `engine/interfaces/cli.py` | CLI interface implementation. |

@@ -8,8 +8,8 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from telegram.constants import ParseMode
 from telegram.error import BadRequest
-from openai import OpenAI
 from agents.rag.agent import execute_rag_query
+from core.audio import transcribe_audio
 
 # Load environment variables
 load_dotenv()
@@ -63,14 +63,7 @@ async def handle_voice(update: Update, context: ContextTypes.DEFAULT_TYPE):
             
         await voice_file.download_to_drive(temp_path)
         
-        client = OpenAI()
-        with open(temp_path, "rb") as audio_file:
-            transcription = client.audio.transcriptions.create(
-                model="whisper-1",
-                file=audio_file
-            )
-            
-        query = transcription.text
+        query = transcribe_audio(temp_path)
         os.remove(temp_path)
         
         if not query or query.strip() == "":

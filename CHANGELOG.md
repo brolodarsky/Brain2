@@ -3,6 +3,18 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.13.0] - 2026-05-07
+
+### Added
+- **Engine Coordinator Mode:** Upgraded `engine/main.py` from a one-off dispatcher to a persistent "Mission Control" coordinator.
+  - Launches the Telegram Bot in a background thread by default for "always-on" remote access.
+  - Implements an interactive CLI menu with numbered options for Text Query, Voice Query, Ingestion, and Maintenance.
+- **Shared Audio Utility:** Created `engine/core/audio.py` to centralize Whisper transcription logic.
+
+### Changed
+- **Interface Refactor:** Updated `engine/interfaces/voice.py` (Local) and `engine/interfaces/telegram.py` (Remote) to use the new shared `transcribe_audio` service, eliminating redundant transcription code.
+- **Improved CLI UX:** Suppressed verbose library logs (`httpx`, `telegram`) to keep the Mission Control interface clean and focused.
+
 ## [1.12.1] - 2026-05-07
 
 ### Added
