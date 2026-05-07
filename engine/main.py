@@ -45,7 +45,7 @@ def run_ask_brain(query: str):
             encoded = urllib.parse.quote(src.replace("\\", "/"))
             obsidian_link = f"obsidian://open?vault={vault_name}&file={encoded}"
             print(f"  - {src}")
-            print(f"    {obsidian_link}")
+            # print(f"    {obsidian_link}")
 
 def main():
     if len(sys.argv) < 2:

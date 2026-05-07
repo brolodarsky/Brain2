@@ -7,7 +7,7 @@ from tools.chroma_tool import get_collection
 def _generate_hyde(query: str, llm: ChatOpenAI) -> str:
     """Generate a hypothetical document to improve retrieval."""
     system_prompt = SystemMessage(content=(
-        "You are a knowledgeable assistant. Given a user's question, write a "
+        "You are a memory augmentation assistant. Given a user's question, write a "
         "short, factual, hypothetical document that answers the question. "
         "Do not worry about whether the facts are perfectly accurate, just provide "
         "the structure and terminology that a relevant document would have."
@@ -55,6 +55,9 @@ def retrieve(state: AgentState) -> AgentState:
     )
     
     hypothetical_doc = _generate_hyde(query, llm)
+    # print(f"DEBUG: Query: {query}")
+    # print(f"DEBUG: Hypothetical document: {hypothetical_doc}")
+    
     search_query = f"{query}\n\n{hypothetical_doc}"
 
     results = collection.query(
@@ -72,7 +75,7 @@ def retrieve(state: AgentState) -> AgentState:
     filtered_distances = []
     
     for doc, meta, dist in zip(raw_docs, raw_metadatas, raw_distances):
-        print(f"DEBUG: Retrieved source {meta.get('source')} with distance {dist}")
+        # print(f"DEBUG: Retrieved source {meta.get('source')} with distance {dist}")
         if dist <= SIMILARITY_THRESHOLD:
             filtered_docs.append(doc)
             filtered_sources.append(meta.get("source", "Unknown"))

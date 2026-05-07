@@ -101,6 +101,7 @@ _Systemic foundations for mental clarity, resilience, long-term vision, and dail
 
 ## 2.5. Mom's Health Tracking
 - **[[Mom's Health Summary]]**: Master dashboard for tracking symptoms, lab work, medications, and visits for Mom.
+- **[[Mom's Insurance Cards]]**
 - **📁 [Mom's Health Logs](obsidian://search?vault=Vault&query=path%3AMom_Health_Logs)**
 - **📁 [Mom's Lab Work](obsidian://search?vault=Vault&query=path%3AMom_Lab_Work)**
 
@@ -122,6 +123,7 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 
 ### 3.1.2. Interview Prep & Technical Depth
 - **[[Interview Prep Hub]]**
+- **[[Interview Question Bank]]:** Pre-written application responses and narratives.
 - **[[My Skills]]:** Master inventory of competencies.
 - **[[Summary - How To Stand Out To Employers Regardless of Experience]]:** Fordham Foundry panel on startup job hunting, networking, and creative outreach.
 

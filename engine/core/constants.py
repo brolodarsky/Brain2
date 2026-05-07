@@ -15,12 +15,12 @@ CHROMA_PATH = PROJECT_ROOT / ".chroma_db"
 COLLECTION_NAME = "brain2_vault"
 EMBED_MODEL = "text-embedding-3-small"
 TOP_K = 5
-SIMILARITY_THRESHOLD = 0.7  # Filter out chunks with cosine distance > 0.7 (similarity < 0.3)
+SIMILARITY_THRESHOLD = 0.7
 RE_RANK_TOP_K = 5
 
 # AI Config
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-AI_MODEL = "gpt-4o" # Updated fromnano for stability in refactor
+AI_MODEL = "gpt-5.4-mini"
 
 # Ingestion Config
 MAX_TOKENS = 8000
