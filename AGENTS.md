@@ -20,7 +20,7 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure/brain structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
 | `tools/` | Python scripts for brain automation |
-| `engine/` | RAG agent engine — modular architecture (`main.py`, `core/`, `tools/`, `agents/`) |
+| `engine/` | RAG agent engine — modular architecture (`main.py`, `core/`, `interfaces/`, `agents/`) |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
@@ -83,11 +83,12 @@ Deterministic scripts for vault and engine maintenance.
 | `backup_vault.py` | Creates a timestamped local backup of the `Vault/` directory. |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files into structured Markdown. |
 | `resume_engine/` | Node.js (Playwright) for PDF rendering + Python (`python-docx`) for DOCX generation of the Master Resume. |
-| `engine/main.py` | Universal entry point & dispatcher for the Agentic Engine. Supports `--domain`, `--tag`, `--type` metadata filters. |
-| `engine/agents/rag/ingest_vault.py` | Indexes vault `.md` files into ChromaDB with incremental indexing (skips unchanged files), orphan cleanup (purges stale entries), and frontmatter metadata extraction. Use `--force` for full re-index. |
-| `engine/ask_brain.py` | CLI wrapper for the RAG query agent. |
-| `engine/brain_voice.py` | Voice-first CLI wrapper using PyAudio and Whisper transcription. |
-| `engine/brain_telegram.py` | Telegram Bot listener for smartphone and AFK access to the RAG agent. |
+| `engine/main.py` | Universal entry point & dispatcher for the Agentic Engine. Handles CLI, Voice, Telegram, and Ingestion via flags. |
+| `engine/agents/rag/agent.py` | Core RAG execution logic (LangGraph). |
+| `engine/agents/rag/ingest_vault.py` | Indexes vault `.md` files into ChromaDB with incremental indexing. |
+| `engine/interfaces/cli.py` | CLI interface implementation. |
+| `engine/interfaces/voice.py` | Voice interface implementation (Whisper). |
+| `engine/interfaces/telegram.py` | Telegram interface implementation. |
 
 ### Workflows
 

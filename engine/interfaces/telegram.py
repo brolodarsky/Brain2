@@ -9,7 +9,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from telegram.constants import ParseMode
 from telegram.error import BadRequest
 from openai import OpenAI
-from main import execute_rag_query
+from agents.rag.agent import execute_rag_query
 
 # Load environment variables
 load_dotenv()

@@ -3,6 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.12.1] - 2026-05-07
+
+### Added
+- **Unified Engine Dispatcher:** Refactored `engine/main.py` into a central dispatcher that handles CLI, Voice, Telegram, and Ingestion via flags (`--voice`, `--telegram`, `--ingest`).
+- **Engine Interfaces Layer:** Created `engine/interfaces/` to isolate entry-point logic (`cli.py`, `voice.py`, `telegram.py`) from core agent logic.
+- **PowerShell Command Sync:** Added `brain-telegram` function and updated `ask-brain`, `brain-voice`, and `ingest-vault` in the Windows PowerShell profile to use the unified `main.py` entry point.
+
+### Changed
+- **Architectural Cleanup:** Deleted redundant root-level wrappers (`engine/ask_brain.py`, `engine/brain_voice.py`, `engine/brain_telegram.py`) in favor of the unified dispatcher.
+- **Agent Modularity:** Moved `execute_rag_query` and `run_ask_brain` from `engine/main.py` to `engine/agents/rag/agent.py`.
+- **Ingestion Refinement:** Updated `engine/agents/rag/ingest_vault.py` with a proper `main()` entry point and fixed internal module pathing for the new architecture.
+
+### Fixed
+- Corrected a module import shadowing issue in `ingest_vault.py` by using absolute package imports for RAG tools.
+
 ## [1.12.0] - 2026-05-07
 
 ### Added

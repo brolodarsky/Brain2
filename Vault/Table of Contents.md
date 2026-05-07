@@ -30,7 +30,7 @@ _Systemic foundations for mental clarity, resilience, long-term vision, and dail
 ## 1.2. Personal Knowledge Management (PKM)
 - **Brain 2.0 Meta:** How I tag, link, and maintain this system.
 - **Projects**
-	- **[[Project - Brain 2 Obsidian Functionality Upgrades]]:** Prioritized roadmap for system improvements.
+	- **[[Project - Brain 2 Non-Engine Functionality Upgrades]]:** Prioritized roadmap for system improvements.
 		- 1. **[[Workshop - Dashboard Option 1 Gameplan]]**
 	- **[[#6.1.2. Agentic R&D|Project - Brain 2 Agentic Engine]]:** Multi-agent LangGraph orchestration for vault intelligence.
 - **[[Template - New Note or Thought]]**
@@ -556,5 +556,3 @@ The dominant language for AI/ML and Agentic Workflows.
 - **Safety Guardrails:** Securing agentic workflows and prompt injection defense.
 - **Regulation:** Tracking the EU AI Act and global compliance.
 - 📁 **Sources**
-
-

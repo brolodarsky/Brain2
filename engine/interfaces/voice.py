@@ -6,7 +6,7 @@ import tempfile
 import threading
 from dotenv import load_dotenv
 from openai import OpenAI
-from main import run_ask_brain
+from agents.rag.agent import run_ask_brain
 
 # Load env variables (for OPENAI_API_KEY)
 load_dotenv()

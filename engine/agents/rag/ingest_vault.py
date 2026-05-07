@@ -18,7 +18,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 from core.constants import VAULT_PATH
 from agents.rag.constants import CHROMA_PATH
 from agents.rag.tools.chroma_tool import get_or_create_collection
-from tools.vault_walker import collect_markdown_files
+from agents.rag.tools.vault_walker import collect_markdown_files
 from agents.rag.tools.text_utils import split_by_headers, truncate_to_token_limit, make_id, parse_frontmatter
 from agents.rag.index_manifest import get_changed_files, save_manifest
 
@@ -132,6 +132,9 @@ def _find_orphans(collection, current_sources: set[str]) -> tuple[list[str], set
     return orphan_ids, orphan_sources
 
 
-if __name__ == "__main__":
+def main():
     force_flag = "--force" in sys.argv
     ingest(force=force_flag)
+
+if __name__ == "__main__":
+    main()
