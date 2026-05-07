@@ -41,6 +41,32 @@ Document: {doc[:1000]}"""
     
     return best_docs, best_sources
 
+def _build_where_clause(filters: dict) -> dict | None:
+    """
+    Convert user-friendly filter params into a ChromaDB 'where' clause.
+
+    Supported filters:
+        domain: exact match (e.g. "health", "career")
+        tag:    substring match via $contains (tags are comma-separated)
+        type:   exact match (e.g. "journal", "overview")
+    """
+    if not filters:
+        return None
+
+    conditions = []
+    if filters.get("domain"):
+        conditions.append({"domain": filters["domain"]})
+    if filters.get("tag"):
+        conditions.append({"tags": {"$contains": filters["tag"]}})
+    if filters.get("type"):
+        conditions.append({"type": filters["type"]})
+
+    if not conditions:
+        return None
+    if len(conditions) == 1:
+        return conditions[0]
+    return {"$and": conditions}
+
 def retrieve(state: AgentState) -> AgentState:
     """
     NODE 1: Semantic Retrieval — "What does my brain know about this?"
@@ -60,11 +86,18 @@ def retrieve(state: AgentState) -> AgentState:
     
     search_query = f"{query}\n\n{hypothetical_doc}"
 
-    results = collection.query(
-        query_texts=[search_query],
-        n_results=TOP_K,
-        include=["documents", "metadatas", "distances"],
-    )
+    # Build ChromaDB metadata filter from state
+    where_clause = _build_where_clause(state.get("filters", {}))
+
+    query_kwargs = {
+        "query_texts": [search_query],
+        "n_results": TOP_K,
+        "include": ["documents", "metadatas", "distances"],
+    }
+    if where_clause:
+        query_kwargs["where"] = where_clause
+
+    results = collection.query(**query_kwargs)
 
     raw_docs = results["documents"][0]
     raw_metadatas = results["metadatas"][0]

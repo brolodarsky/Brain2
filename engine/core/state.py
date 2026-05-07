@@ -8,3 +8,4 @@ class AgentState(TypedDict):
     messages: Annotated[list, add_messages]
     context: list[str]
     sources: list[str]
+    filters: dict  # Optional ChromaDB metadata filters (e.g. {"domain": "health"})

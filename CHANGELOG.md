@@ -3,6 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.11.5] - 2026-05-07
+
+### Added
+- **Incremental Indexing (Phase 8):** `engine/ingest_vault.py` now tracks file modification times via a JSON manifest (`.rag_index_manifest.json`) and only re-embeds files that have changed since the last run. Added `--force` flag for full re-indexing.
+- **Orphan Cleanup (Phase 8):** After each ingestion run, the system queries ChromaDB for entries whose source files no longer exist on disk and purges them automatically.
+- **Frontmatter Metadata Extraction (Phase 8):** Ingestion now parses YAML frontmatter (`tags`, `type`) and derives a `domain` category (health, career, tech, etc.) stored as ChromaDB filterable metadata on every chunk.
+- **Filtered Search (Phase 8):** `engine/main.py` now accepts `--domain`, `--tag`, and `--type` CLI flags that generate ChromaDB `where` clauses to constrain retrieval by metadata.
+- **Schema Foresight Audit (Phase 8):** Documented current metadata distribution (1,577 chunks, 60% domain-tagged) and evaluated future fields (`word_count`, `date_created`, `confidence`) with accept/defer/reject decisions.
+- **Phase 8.5 Tech Debt Tracked:** Flagged that ~60% of `engine/core/` and `engine/tools/` is RAG-specific code that should be scoped to `engine/agents/rag/` before building domain agent #2.
+
+### Changed
+- Replaced raw `sys.argv` parsing in `engine/main.py` with `argparse` for structured CLI flag support.
+- Moved index manifest logic to `engine/agents/rag/index_manifest.py` (RAG-scoped, not shared core).
+
+---
+
 ## [1.11.4] - 2026-05-06
 
 ### Added
