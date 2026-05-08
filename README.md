@@ -248,6 +248,9 @@ If you want to use this as a starting point for your own system:
 3. **Adapt the Skills & Workflows** (`.agents/skills/` and `.agents/workflows/`) to match your own domain context and personal rules.
 4. **Keep the Engine** and continue building out new deterministic tools or agentic workflows.
 
+> [!tip] The "Nested Heart" (Optional Private Versioning)
+> Because the `Vault/` folder is explicitly gitignored in this main repository, your personal notes will not have version history by default. If you want to version-control your private thoughts without risking exposing them in your public engine fork, you can initialize a *second, nested* Git repository directly inside the `Vault/` directory (`cd Vault; git init`) and push it to a separate private remote. This repository includes a `tools/sync_vault.py` script designed to help you commit to this nested private repo automatically without causing Git context-confusion.
+
 ---
 
 ## Vault Maintenance
