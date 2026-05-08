@@ -85,8 +85,8 @@ Deterministic scripts for vault and engine maintenance.
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files into structured Markdown. |
 | `resume_engine/` | Node.js (Playwright) for PDF rendering + Python (`python-docx`) for DOCX generation of the Master Resume. |
 | `engine/main.py` | Universal entry point & coordinator for the Agentic Engine. Features a persistent mission control menu with background Telegram bot support. |
-| `engine/agents/rag/agent.py` | Core RAG execution logic (LangGraph). |
-| `engine/agents/rag/ingest_vault.py` | Indexes vault `.md` files into ChromaDB with incremental indexing. |
+| `engine/agents/vault_reader/agent.py` | Core ReAct agent execution logic (LangGraph). |
+| `engine/tools/vault_tools.py` | Local filesystem LangChain tools for Vault navigation (`read_toc`, `read_note`, `search_vault`). |
 | `engine/interfaces/cli.py` | CLI interface implementation. |
 | `engine/interfaces/voice.py` | Voice interface implementation (Whisper). |
 | `engine/interfaces/telegram.py` | Telegram interface implementation. |
@@ -122,7 +122,7 @@ Cross-references Activities List, Date Ideas, and People Data to generate a mark
 Renders the Master Markdown Resume into a premium, professionally-styled PDF and DOCX.
 
 ### `ask_brain`
-Semantic vault search. Queries the ChromaDB index and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually or to supplement your own knowledge. Requires `engine/agents/rag/ingest_vault.py` to be run first.
+Agentic vault search. Uses a LangGraph ReAct agent to dynamically navigate the local filesystem and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually. No indexing required.
 
 ## Rules
 

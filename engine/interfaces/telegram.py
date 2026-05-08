@@ -8,7 +8,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from telegram.constants import ParseMode
 from telegram.error import BadRequest
-from agents.rag.agent import execute_rag_query
+from agents.vault_reader.agent import execute_vault_query
 from core.audio import transcribe_audio
 
 # Load environment variables
@@ -86,7 +86,7 @@ async def process_query(update: Update, query: str):
         # We run the synchronous RAG pipeline in the same thread for simplicity here.
         # This will block the event loop for the duration of the query,
         # but since it's a personal bot for one user, this is acceptable.
-        final_state = execute_rag_query(query, thread_id=str(update.message.chat_id))
+        final_state = execute_vault_query(query, thread_id=str(update.message.chat_id))
         response_text = format_telegram_response(final_state)
         
         # Try sending with Markdown parsing first

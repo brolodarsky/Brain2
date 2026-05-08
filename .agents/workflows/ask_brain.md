@@ -1,17 +1,10 @@
 ---
-description: Semantic vault search. Queries the ChromaDB index and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually. Requires `engine/agents/rag/ingest_vault.py` to be run first.
+description: Agentic vault search. Uses a LangGraph ReAct agent to dynamically navigate the local filesystem and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually. No indexing required.
 ---
 
 # Ask Brain (`/ask_brain`)
 
 Use this workflow whenever you (or an orchestrating agent) need to retrieve factual information from the vault without reading individual notes manually.
-
-> [!important] Prerequisite
-> The ChromaDB index (`.chroma_db/`) must exist before this workflow can run. If it doesn't, run `ingest_vault.py` first:
-> ```
-> .venv\Scripts\python.exe engine/agents/rag/ingest_vault.py
-> ```
-> Re-run it after adding significant new notes. It is safe to re-run at any time.
 
 ## When to Use This
 
@@ -33,9 +26,9 @@ Use this workflow whenever you (or an orchestrating agent) need to retrieve fact
    - Bad: `"health stuff"`
 
 2. **Run the Agent**
-   - Execute from the project root:
+   - Execute from the project root using the main engine CLI:
      ```
-     .venv\Scripts\python.exe engine/ask_brain.py "<your query>"
+     .venv\Scripts\python.exe engine/main.py "<your query>"
      ```
    - Or, if the user has the PowerShell alias configured:
      ```
@@ -45,7 +38,7 @@ Use this workflow whenever you (or an orchestrating agent) need to retrieve fact
 3. **Read the Output**
    - The agent returns a synthesized answer grounded in vault context.
    - Source note paths are printed at the bottom under `[Sources]`.
-   - If the agent says "I don't have that in my notes" — rephrase with more specificity or check if `ingest_vault.py` needs to be re-run.
+   - If the agent says "I don't have that in my notes" — rephrase with more specificity.
 
 4. **Use the Result**
    - Incorporate the retrieved fact into your current workflow.
@@ -59,7 +52,7 @@ Use this workflow whenever you (or an orchestrating agent) need to retrieve fact
 
 ## Integration Notes
 
-Per the Architecture Decisions in [[Project - Vault RAG Agent (ask_brain)]], this workflow is deliberately **bounded**:
+Per the Architecture Decisions in [[Project - Vault Reader Agent]], this workflow is deliberately **bounded**:
 - ✅ Called explicitly by `/analyze_health` (longitudinal context is essential)
 - ✅ Called explicitly by `/weekly_review` (project and task status)
 - ❌ NOT auto-called by every workflow (adds latency, cost, and fragility)

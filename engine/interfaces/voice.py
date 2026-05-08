@@ -5,7 +5,7 @@ import os
 import tempfile
 import threading
 from dotenv import load_dotenv
-from agents.rag.agent import run_ask_brain
+
 from core.audio import transcribe_audio
 
 # Load env variables (for OPENAI_API_KEY)
@@ -54,9 +54,10 @@ def record_audio(filename):
     wf.writeframes(b''.join(frames))
     wf.close()
 
-def main():
+def capture_voice_query():
     # Force UTF-8 output
-    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     
     temp_dir = tempfile.gettempdir()
     audio_path = os.path.join(temp_dir, "brain_query.wav")
@@ -65,7 +66,7 @@ def main():
         record_audio(audio_path)
     except Exception as e:
         print(f"Audio capture failed: {e}")
-        return
+        return None
 
     print("⏳ Transcribing with Whisper...")
     query = transcribe_audio(audio_path)
@@ -75,9 +76,19 @@ def main():
             
     if not query or query.strip() == "":
         print("No speech detected.")
-        return
+        return None
         
-    run_ask_brain(query)
+    return query
 
 if __name__ == "__main__":
-    main()
+    query = capture_voice_query()
+    if query:
+        from agents.vault_reader.agent import run_ask_brain
+        print(f"🧠 Querying Vault Agent: {query}")
+        print("Agent is reasoning and searching the vault...\n")
+        response = run_ask_brain(query)
+        print("\n" + "="*45)
+        print("🤖 Response:")
+        print("="*45)
+        print(response)
+        print("="*45 + "\n")

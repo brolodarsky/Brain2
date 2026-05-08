@@ -1,15 +1,11 @@
 import sys
 import argparse
-from agents.rag.agent import run_ask_brain
 
-def main():
+def parse_cli_args(args_list):
     """
-    CLI Interface for Brain 2.
+    Parses CLI arguments for the Brain 2 Engine.
+    Returns (query: str, filters: dict)
     """
-    # Force UTF-8 output
-    if hasattr(sys.stdout, 'reconfigure'):
-        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-
     parser = argparse.ArgumentParser(
         description="Brain 2 Engine",
         usage='python engine/main.py "your question" [--domain DOMAIN] [--tag TAG] [--type TYPE]',
@@ -22,7 +18,7 @@ def main():
     parser.add_argument("--type", type=str, default=None,
                         help="Filter by note type (e.g. 'journal', 'overview', 'workshop')")
 
-    args = parser.parse_args()
+    args = parser.parse_args(args_list)
     query = " ".join(args.query)
 
     filters = {}
@@ -33,7 +29,4 @@ def main():
     if args.type:
         filters["type"] = args.type
 
-    run_ask_brain(query, filters=filters if filters else None)
-
-if __name__ == "__main__":
-    main()
+    return query, filters if filters else None

@@ -181,7 +181,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 - `/distill_learning`: Breaks down a dense external source (article, paper, PDF, URL) into atomic, interlinked notes. Prioritizes augmenting existing Vault notes over creating duplicates to ensure knowledge synthesis.
 - `/ingest_medical_record`: Parse and ingest raw medical records (PDF, XML, Images) into the Vault.
 - `/plan_activity`: Cross-references Activities List, Date Ideas, and People Data notes to generate a structured markdown itinerary.
-- `/ask_brain`: Semantic vault search. Queries the ChromaDB index and returns grounded answers with source citations.
+- `/ask_brain`: Agentic vault search. Uses a LangGraph ReAct agent to dynamically navigate the local filesystem and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually. No indexing required.
 - `/render_resume`: Renders the Master Markdown Resume into a premium, professionally-styled PDF and DOCX.
 
 ### Deterministic Tools (Scripts)
@@ -197,8 +197,8 @@ This repository distinguishes between three types of "cognitive" capabilities th
 | `sync_vault.py` | Automatically commits the nested Vault repository (The Nested Heart). | `python tools/sync_vault.py` |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files to structured Markdown. | `python tools/medical_xml_parser.py <path> <output_dir>` |
 | `engine/main.py` | Universal coordinator for the Brain 2 Engine. Features a persistent mission control menu and background Telegram bot. | `python engine/main.py` |
-| `engine/agents/rag/ingest_vault.py` | Indexes Vault files into ChromaDB with incremental indexing. | `python engine/main.py --ingest` |
-| `engine/agents/rag/eval_rag.py` | LLM-as-a-judge evaluation framework for RAG quality. | `python engine/agents/rag/eval_rag.py` |
+| `engine/agents/vault_reader/agent.py` | Core ReAct agent execution logic (LangGraph). | `python engine/main.py <query>` |
+| `engine/tools/vault_tools.py` | Local filesystem LangChain tools for Vault navigation. | N/A |
 | `resume_engine/` | PDF and DOCX rendering for the Master Resume. | `node tools/resume_engine/render.js` |
 
 ### PowerShell Integration

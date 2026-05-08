@@ -9,15 +9,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - **Nested Heart Architecture (Item 23):** Created a private Git repository inside `Vault/` to track personal history without polluting the public engine repository.
 - **Nested Heart Tool:** Added `tools/sync_vault.py` to automate the context-switch required to commit to the nested Vault repository.
 - Created `Project - Vault Reader Agent.md` to chart the new Agentic File System (AFS) Navigator architecture, replacing standard ChromaDB RAG.
+- **Vault Reader Agent Implementation:** Built `engine/tools/vault_tools.py` (`read_toc`, `read_note`, `search_vault`) and the LangGraph ReAct agent (`engine/agents/vault_reader/agent.py`) to actively navigate the local filesystem.
 
 ### Changed
 - **Agent Rules:** Added Rule 11 to `AGENTS.md` explicitly instructing agents to ignore the `Vault/.git` directory.
 - Pivoted `/ask_brain` architecture from Vector RAG to Agentic Vault Reader to solve Context Fragmentation and preserve Zettelkasten hierarchy.
 - Archived `engine/agents/rag/` into `Vault/6. Forge/6.1. Projects/6.1.4. Script Attic/Legacy RAG Engine/`.
 - Updated `Project - Brain 2 Agentic Engine.md`, `Table of Contents.md`, and `To Do List.md` to reflect the pivot.
+- Updated `engine/main.py` dispatcher to point to the new Vault Reader agent for CLI text queries.
+- Updated `ask_brain` workflow documentation in `AGENTS.md` and `README.md` to reflect removal of vector indexing requirement.
+- **Presentation Layer Centralization:** Refactored `engine/main.py` to be the sole presentation layer (using a new `print_agent_response` helper). Stripped execution and printing logic from `engine/interfaces/cli.py` and `engine/interfaces/voice.py`, turning them into pure input parsers (`parse_cli_args`, `capture_voice_query`).
 
 ### Removed
 - Uninstalled `chromadb` and deleted `.chroma_db/` index and `.rag_index_manifest.json` as part of the pivot.
+- Removed `engine/agents/rag/ingest_vault.py` and `engine/agents/rag/eval_rag.py` from tool index.
 
 ## [1.13.0] - 2026-05-07
 
