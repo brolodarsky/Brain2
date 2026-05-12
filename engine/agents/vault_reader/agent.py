@@ -39,8 +39,7 @@ app = workflow.compile()
 
 def run_ask_brain(query: str, filters: dict = None) -> str:
     """
-    Entry point for the vault reader agent.
-    Replaces the old RAG system. Returns a string response.
+    Entry point for the vault reader agent. Returns a string response.
     """
     try:
         final_state = execute_vault_query(query)
