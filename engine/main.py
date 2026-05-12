@@ -5,11 +5,6 @@ import threading
 import logging
 import time
 
-# Add the engine directory to sys.path
-engine_dir = os.path.dirname(os.path.abspath(__file__))
-if engine_dir not in sys.path:
-    sys.path.append(engine_dir)
-
 from agents.vault_reader.agent import run_ask_brain
 
 # Disable noisy logs
