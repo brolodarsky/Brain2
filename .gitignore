@@ -1,4 +1,5 @@
 .DS_Store
+Brain2.code-workspace # User specific VScode workspace file
 
 # Python virtual environment
 .venv/
