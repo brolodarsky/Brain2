@@ -20,7 +20,7 @@ Notes follow the Zettelkasten methodology. Vault folder structure is defined in 
 | `Vault/Table of Contents.md` | Master index; source of truth for folder structure/brain structure |
 | `Vault/Audio/` | Generated MP3s (gitignored, synced via Syncthing) |
 | `tools/` | Python scripts for brain automation |
-| `engine/` | RAG agent engine — modular architecture (`main.py`, `core/`, `interfaces/`, `agents/`) |
+| `engine/` | Agent engine in development - modular architecture (`main.py`, `core/`, `interfaces/`, `agents/`) |
 | `requirements.txt` | Python dependencies |
 | `.venv/` | Virtual environment (gitignored) |
 | `.agents/skills/` | AI agent skill definitions |
