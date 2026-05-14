@@ -6,8 +6,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ## [1.14.1] - 2026-05-14
 
 ### Changed
-- **Agentic Instructions Enhancement:** Updated `generate_obsidian_note` skill to mandate a `list_dir` pattern check before proposing filenames to prevent hallucinated prefixes. Added physical folder structure priority rules to resolve discrepancies with logical nesting in `Table of Contents.md`.
-- **Workflow Chaining:** Updated `/audit_inbox` workflow to actively identify and chain specialized downstream workflows (e.g., `/add_job_requirement`, `/ingest_medical_record`, `/distill_learning`).
+- **Agentic Instructions Enhancement:** Updated `generate_obsidian_note` skill to mandate a `list_dir` pattern check before proposing filenames to prevent hallucinated prefixes. Added physical folder structure priority rules to resolve discrepancies with logical nesting in `Table of Contents.md`. Added mandatory **Localized Synthesis Check** rule instructing agents to scan target folders for local synthesis/hub notes and integrate external article findings into them.
+- **Workflow Chaining & Synthesis:** Updated `/audit_inbox` workflow to actively identify and chain specialized downstream workflows (e.g., `/add_job_requirement`, `/ingest_medical_record`, `/distill_learning`), and enforce Localized Synthesis Integration Checks when filing articles or external research.
 - **Resume Engine Refactor:** `render.js` now scans `3.1. Career Strategy & Revenue` and `3.1.3. Professional Portfolio & Evidence` for renderable markdown documents (resumes, cover letters, docs) and presents an interactive selection menu. Supports rendering one, multiple, or all documents in a single pass. Also accepts a CLI path argument for scripted/workflow use.
 - **DOCX Renderer:** `render_docx.py` now accepts an optional file path argument instead of hardcoding `Resume - Master.md`. Falls back to Master Resume when no argument is given.
 - **Obsidian Cleanup:** Both renderers now strip YAML frontmatter and Obsidian navigation links (`Back to:` lines) before rendering to PDF/DOCX.

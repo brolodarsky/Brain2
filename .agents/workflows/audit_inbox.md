@@ -16,6 +16,7 @@ This workflow automates the process of processing, structuring, and filing raw t
    - Cross-reference the identified subjects with `Vault/Table of Contents.md` to find the most appropriate destination (e.g., a fitness log belongs in `2.1. Fitness`, a new technical concept belongs in `6.2. Library & Learning`, a general idea might become an atomic note).
    - Prefer filing granular notes into the most relevant existing hub, MOC, project note, log, or folder instead of adding each item directly to `Vault/Table of Contents.md`.
    - *CRITICAL:* If an item is a task or to-do, recommend it goes to `1.1. Philosophy & Personal North Star/To Do List` or an appropriate project note.
+   - **Localized Synthesis Integration Check:** When filing articles, research, or industry news into a target folder, scan that folder to verify if it contains a **Localized Synthesis, Hub, or Map of Content (MOC)** note. If present, plan to review that synthesis note and directly integrate relevant findings, statistics, or counter-narratives into its body while appending the source citation link.
    - **Workflow Chaining:** Identify if any specialized downstream workflows apply to the item (e.g., `/add_job_requirement` for job descriptions, `/ingest_medical_record` for medical/health files, `/distill_learning` for dense source material) and integrate their execution into the plan.
 
 3. **Format Notes (Dry Run):**
