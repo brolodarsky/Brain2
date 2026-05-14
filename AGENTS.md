@@ -33,7 +33,7 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 <!-- AUTO-COMPILED BY maintain_project_docs. DO NOT EDIT DESCRIPTIONS MANUALLY -->
 
 ### `generate_obsidian_note`
-**Trigger:** When asked to create, move, format, or import a note into the Vault
+**Trigger:** How to generate, move, format, or import Obsidian notes into the Vault. Always use this skill whenever saving any content to Vault/ — whether creating a new note, reformatting an existing one, moving a file to a new location, or importing external content. You MUST use this skill before writing or moving any .md file into the Vault. Make sure to list_dir on the target folder first to mimic existing naming patterns and respect physical folder structures.
 
 ### `maintain_project_docs`
 **Trigger:** After `pip install`/`pip uninstall`, after adding/changing/removing tools, skills or rules.
@@ -104,7 +104,7 @@ Format, move, or clean up a raw capture note to serve as an inbox item for futur
 Agentic tool. Automates extracting skills from a job description (PDF/URL), appending it to `Employer Skill Requirements.md`, and regenerating the high-level AI Summary for Career Strategy.
 
 ### `audit_inbox`
-Agentic tool for reading and sorting raw notes and bullet points from the Brain Inbox and Quick Capture into the main Zettelkasten structure.
+Agentic tool for reading and sorting raw notes and bullet points from the Brain Inbox and Quick Capture into the main Zettelkasten structure. Identifies downstream workflows (e.g., /add_job_requirement, /ingest_medical_record, /distill_learning) and chains their execution. Use during weekly review or when processing captured thoughts.
 
 ### `create_project`
 Consolidates rough notes or ideas into a structured project note, complete with extracted tasks and materials appended to the bottom of the plan.
@@ -141,7 +141,7 @@ Agentic vault search. Uses a LangGraph ReAct agent to dynamically navigate the l
 | Individual note creation, edits, or deletions in `Vault/` | ❌ | ❌ | — |
 
 - **Key principles:** Git is solely for the **Engine** (tools, skills, workflows, project docs) and **Vault structure** (new sections — not individual notes). Individual notes/thoughts are encrypted and backed up locally — avoid micro-commits. If there's an existing changelog version on the same day, update the existing version unless the change is significant.
-5. **The TOC is the single source of truth** for Vault folder structure and the high-level concept of this entire project. Do not clutter the TOC with individual granular notes (e.g. single medical visits, individual articles, daily logs). Those should be linked and organized inside specialized "Hub" or "Map of Content" (MOC) notes (e.g., `Health Summary`, `Auto Knowledge Base`).
+5. **The TOC is the single source of truth** for Vault folder structure and the high-level concept of this entire project, but **Physical Folder Structure on Disk takes precedence** when resolving duplicate/split directory discrepancies to avoid breaking existing paths. Do not clutter the TOC with individual granular notes (e.g. single medical visits, individual articles, daily logs). Those should be linked and organized inside specialized "Hub" or "Map of Content" (MOC) notes (e.g., `Health Summary`, `Auto Knowledge Base`).
 6. **All notes must have YAML frontmatter** with `aliases`, `tags`, and `type` fields.
 7. **Audio files are gitignored** — they sync via Syncthing, not Git.
 8. **Keep AGENTS.md AND README.md updated.** If you make fundamental changes to the project/brain functionality, update these files to reflect the changes.

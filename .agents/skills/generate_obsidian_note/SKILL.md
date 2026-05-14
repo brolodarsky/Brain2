@@ -1,6 +1,6 @@
 ---
 name: generate_obsidian_note
-description: How to generate, move, format, or import Obsidian notes into the Vault. Always use this skill whenever saving any content to Vault/ — whether creating a new note, reformatting an existing one, moving a file to a new location, or importing external content. If you are about to write a .md file into the Vault, this skill applies.
+description: How to generate, move, format, or import Obsidian notes into the Vault. Always use this skill whenever saving any content to Vault/ — whether creating a new note, reformatting an existing one, moving a file to a new location, or importing external content. You MUST use this skill before writing or moving any .md file into the Vault. Make sure to list_dir on the target folder first to mimic existing naming patterns and respect physical folder structures.
 ---
 
 # Generating, Moving, or Importing Obsidian Notes
@@ -11,14 +11,16 @@ When asked to generate, move, format, or import a note/thought into the user's O
 
 ## 1. File Location & Verifying Folder Structure
 *   **CRITICAL RULE:** Do NOT assume folder names. Folder names must exactly match the H1 or H2 sections as defined in `Table of Contents.md`.
+*   **Physical Folder Priority:** If there is a discrepancy between the logical nesting in `Table of Contents.md` (e.g., listed as a bullet point under a section) and the actual physical folder structure on disk, you MUST prioritize the existing physical folder path on disk to avoid creating duplicate/split directories. Flag the discrepancy to the user.
 *   If the required folder does not currently match the `Table of Contents.md` structure, you MUST read the index to find the exact current name of the section header to use as the folder name.
 *   New notes should be placed in the appropriate subdirectory matching that exact header name.
 *   If a link exists in an index file (e.g., `[[Supervised Learning]]`), create the new file in the folder that corresponds to that header.
 
 ## 2. File Naming & Taxonomy
-*   **Selective Prefixes:** Use taxonomic prefixes *only* when a note is a specific instance of a broader category (e.g., `Project - Blower Motor Noise Fix`, `Protocol - Monthly Backup`, `Log - Maintenance`, `Workshop - Tailoring Resumes`, `Capture - YouTube Interview`, `Article - Andrew Ng on Machine Learning`, etc).
+*   **"Look Before You Leap" Mandatory Naming Check:** Before proposing or creating a new filename, you MUST use `list_dir` on the target directory to examine the existing files. You MUST mimic the exact naming convention/taxonomy already established in that specific folder (e.g., if files follow `[Job Title] - [Company].md`, do NOT invent a `Listing -` prefix).
+*   **Selective Prefixes:** Use taxonomic prefixes *only* when a note is a specific instance of a broader category (e.g., `Project - Blower Motor Noise Fix`, `Protocol - Monthly Backup`, `Log - Maintenance`, `Workshop - Tailoring Resumes`, `Capture - YouTube Interview`, `Article - Andrew Ng on Machine Learning`, etc) AND it aligns with the target folder's existing pattern.
 *   **Natural Names:** Broad concepts, standalone entities, or general reference lists should keep their natural names without prefixes (e.g., `Linear Algebra`, `Python`, `Car Info`, `Project Ideas`).
-*   *Note:* You are explicitly permitted to invent and use a new prefix if needed, but err on the side of natural names for general concepts.
+*   *Note:* You are explicitly permitted to invent and use a new prefix if needed, but err on the side of natural names for general concepts and NEVER violate an established folder pattern.
 *   The final filename must be what is specified in the index wiki-link.
 
 ## 3. Formatting and Structure (Modified Zettelkasten Protocol)
@@ -52,14 +54,15 @@ When asked to generate, move, format, or import a note/thought into the user's O
 
 ## 6. Workflow & Verification
 1.  **Analyze Request:** Understand the topic the user wants a note for.
-2.  **Verify Folder Structure:** Confirm the target folder exists. If missing, create it.
-3.  **Determine Location:** Find the best folder for this topic.
-4.  **Create File:** Create the `.md` file with the exact title.
-5.  **Draft Content:** Write the content following the formatting rules.
-6.  **Update Related Notes:** If this note was spawned from an existing "Project", "Protocol", or "Map of Content" note, you MUST open that parent note and insert a link to your newly created file.
-7.  **Table of Contents Integration:** You MUST link the new note FROM `Table of Contents.md`. Find the exact matching header in the index and add a bullet point for your new file.
-8.  **To Do List Registration:** If the new note uses the `Protocol -` or `Project -` prefix, follow the rules in **Section 7** below.
-9.  **Agent Affirmation:** When summarizing your work to the user at the end of your turn, you MUST explicitly list the file paths of all index/parent notes you modified to establish these inbound links. If you did not establish inbound links, you have failed this task.
+2.  **Determine Location:** Find the best folder for this topic by cross-referencing `Table of Contents.md` and the actual physical disk structure. Prioritize physical disk structure if discrepancies exist.
+3.  **Verify Folder Structure:** Confirm the target folder exists. If missing, create it.
+4.  **Examine Target Pattern:** Run `list_dir` on the target directory to verify existing naming conventions.
+5.  **Create File:** Create the `.md` file with the exact title matching the folder's pattern.
+6.  **Draft Content:** Write the content following the formatting rules. Include appending to any "Recent" or "Log" sections inside the parent Hub/MOC note if applicable.
+7.  **Update Related Notes:** If this note was spawned from an existing "Project", "Protocol", or "Map of Content" note, you MUST open that parent note and insert a link to your newly created file.
+8.  **Table of Contents Integration:** You MUST link the new note FROM `Table of Contents.md`. Find the exact matching header in the index and add a bullet point for your new file.
+9.  **To Do List Registration:** If the new note uses the `Protocol -` or `Project -` prefix, follow the rules in **Section 7** below.
+10. **Agent Affirmation:** When summarizing your work to the user at the end of your turn, you MUST explicitly list the file paths of all index/parent notes you modified to establish these inbound links. If you did not establish inbound links, you have failed this task.
 
 ## 7. To Do List Registration
 
