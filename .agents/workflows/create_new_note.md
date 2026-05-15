@@ -1,11 +1,7 @@
 ---
 description: End-to-end workflow for creating, moving, formatting, or importing an original note or internal thought into the Knowledge Base. Use this for notes you are writing yourself — not for saving external articles or URLs (use /capture_content) and not for breaking down a source into atomic notes (use /distill_learning).
 ---
-# Create, Move, or Import Note
-
-Use this workflow whenever you need to add, move, format, or import a note into the Knowledge Base.
-
-## Steps
+# Steps
 
 1. Identify the topic and which H1 section in `Vault/Table of Contents.md` it belongs to.
 If a new H1 section is needed, recommend to user and wait for approval.

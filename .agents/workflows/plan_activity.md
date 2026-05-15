@@ -2,11 +2,7 @@
 description: Cross-references Activities List, Date Ideas, and People Data to generate a markdown itinerary.
 ---
 
-# Workflow: Plan Activity (`/plan_activity`)
-
-This workflow reduces the cognitive load of social planning by dynamically building itineraries based on your stored ideas and the preferences of the people involved.
-
-## Steps
+# Steps
 
 1. Understand Parameters:
    - Ask the user for specific parameters if not provided: Who is attending? What's the budget? How much time do we have? Any specific vibe requested?

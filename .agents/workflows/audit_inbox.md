@@ -2,11 +2,7 @@
 description: Agentic tool for reading and sorting raw notes and bullet points from the Brain Inbox and Quick Capture into the main Zettelkasten structure. Identifies downstream workflows (e.g., /add_job_requirement, /ingest_medical_record, /distill_learning) and chains their execution. Use during weekly review or when processing captured thoughts.
 ---
 
-# Workflow: Audit Inbox (`/audit_inbox` or `/weekly_review`)
-
-This workflow automates the process of processing, structuring, and filing raw thoughts and documents from the Inbox into the main Vault.
-
-## Steps
+# Steps
 
 1. Analyze Inbox Content:
    - Read all files located in `Vault/0. Inbox/` and the `Vault/0. Quick Capture.md` file.

@@ -2,11 +2,7 @@
 description: Parse and ingest raw medical records (PDF, XML, Images) into the Vault
 ---
 
-# Ingest Medical Record Workflow
-
-This workflow processes raw medical data and properly formats and files it into the patient's Health Logs or Lab Work directories.
-
-## Identify the Correct Tools
+# Identify the Correct Tools
 
 1. **For PDF & Images:** Explain to the user that they should use the **Docling web demo** for high-fidelity extraction of complex tables. Tell the user to upload the file to Docling online, export the result as Markdown, and provide it to you.
 2. **For HL7 CDA XML:** If the user has provided a raw XML file or it's in the Vault, proceed to the next step to execute the automated python parser.

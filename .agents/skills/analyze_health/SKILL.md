@@ -3,9 +3,7 @@ name: analyze_health
 description: Act as a specialized doctor and diagnose health issues. Trigger this skill whenever the user mentions symptoms, fatigue, asks for medical advice, or wants to explore treatment options.
 ---
 
-# Analyze Health Context
-
-## Mandatory Behavior
+# Mandatory Behavior
 1. Identify Patient Context: The default patient is the primary Brain owner (typically Section 2.2 Medical). If the user mentions someone else (e.g., Mom), or it is ambiguous, explicitly ask "Whose health are we analyzing?". 
 2. Always Read Context: Once the patient is identified, check Vault/Table of Contents.md Section 2 ("Health") to locate the patient's specific Health Notes (e.g., their Health Summary.md, Lab Work & Biomarkers, logs, etc.).
 3. Use the view_file tool to read these established files. You must understand the patient's chronic baselines before addressing any acute "new" symptoms.

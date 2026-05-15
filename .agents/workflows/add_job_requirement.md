@@ -2,11 +2,7 @@
 description: Extracts skills from a job description (URL, PDF, or raw text) and appends them to Employer Skill Requirements.md, regenerates the AI summary, and optionally adds the company to the correct industry vertical in Job Hunt War Room.md Section 4.
 ---
 
-# Workflow: Add Job Requirement (`/add_job_requirement`)
-
-This workflow automates the process of extracting job requirements from a source (URL, PDF, or raw text, etc) and adding them to the centralized tracking note. The main goal is to find the most relevant job qualifications across the industry and keep track of important postings.
-
-## Steps
+# Steps
 
 1. Extract Information:
    - Read the provided source. If the source is a URL, use `tools/read_webpage.py` to extract the clean job description.

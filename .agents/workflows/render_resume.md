@@ -2,11 +2,7 @@
 description: Renders markdown documents (resumes, cover letters) from the Portfolio into professionally-styled PDF and DOCX files.
 ---
 
-# Workflow: Render Resume (`/render_resume`)
-
-This workflow uses the Resume Engine to render any renderable markdown document from the Career Strategy section into a premium PDF and clean DOCX.
-
-## Steps
+# Steps
 
 1. Run Rendering Engine:
    - Run the Node.js rendering script. It scans `3.1. Career Strategy & Revenue` and `3.1.3. Professional Portfolio & Evidence` for Resume, Cover Letter, and Doc markdown files, presents an interactive menu, and renders the selected document(s) to PDF (via Playwright) and DOCX (via python-docx):

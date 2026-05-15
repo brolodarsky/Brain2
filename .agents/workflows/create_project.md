@@ -2,11 +2,7 @@
 description: Consolidates project ideas into a structured project note, complete with extracted tasks and materials.
 ---
 
-# Workflow: Create Project (`/create_project`)
-
-This workflow takes rough notes or project ideas, structures them into an actionable project plan, and extracts a clear task list for execution.
-
-## Steps
+# Steps
 
 1. Ingest Source Material:
    - Read the provided source note or the natural language request describing the project idea (e.g., repairing a car part, building a new app feature).
