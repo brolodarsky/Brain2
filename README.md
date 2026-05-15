@@ -193,6 +193,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 | Tool | Purpose | Usage |
 |---|---|---|
 | `youtube_transcript.py` | Downloads YouTube transcripts to text files. | `python tools/youtube_transcript.py <url>` |
+| `read_webpage.py` | Extracts clean markdown content from single webpages via trafilatura. | `python tools/read_webpage.py <url> [-o output.md]` |
 | `generate_podcast.py` | Converts a specific markdown note to MP3 via edge-tts. | `python tools/generate_podcast.py <path> [--force]` |
 | `create_folders.py` | Idempotently creates the folder structure from TOC. | `python tools/create_folders.py` |
 | `check_folders.py` | Validates Vault structure against TOC (dry-run). | `python tools/check_folders.py` |

@@ -12,7 +12,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - **DOCX Renderer:** `render_docx.py` now accepts an optional file path argument instead of hardcoding `Resume - Master.md`. Falls back to Master Resume when no argument is given.
 - **Obsidian Cleanup:** Both renderers now strip YAML frontmatter and Obsidian navigation links (`Back to:` lines) before rendering to PDF/DOCX.
 - **Vault Reader Eval Framework:** Created `engine/evals/dataset.json` (Golden Dataset) with 12 real-world Q&A cases and `engine/evals/runner.py` for automated agent benchmarking and groundedness grading.
-- **Dependency Update:** Added `python-dotenv` to the project environment and updated `requirements.txt`.
+- **Dependency Update:** Added `python-dotenv`, `trafilatura`, and `lxml_html_clean` to the project environment and updated `requirements.txt`.
+- **New Tool: Webpage Reader:** Created `tools/read_webpage.py`, a lightweight, deterministic webpage scraper using `trafilatura`. Designed to provide clean markdown content for the Brain 2 Agentic Engine's content ingestion and career search pipelines.
 - **Workflow Update:** Updated `/render_resume` workflow to reflect the new interactive document picker and non-interactive CLI mode.
 - **Portfolio Restructure:** Created `Resumes/` and `Cover Letters/` subfolders inside `3.1.3. Professional Portfolio & Evidence`. Moved all resume and cover letter files (md, pdf, docx) into their respective folders. Updated `Table of Contents.md`, `render.js`, and `render_docx.py` scan paths accordingly.
 
