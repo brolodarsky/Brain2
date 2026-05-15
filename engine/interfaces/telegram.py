@@ -1,3 +1,7 @@
+"""
+telegram.py — Telegram bot interface for the Brain 2 Engine.
+Provides remote access to the Vault Reader agent via text and voice messages.
+"""
 import os
 import sys
 import logging

@@ -1,3 +1,7 @@
+"""
+agent.py — Core ReAct agent logic for the Vault Reader.
+Uses LangGraph to orchestrate a tool-calling loop that navigates the local Vault filesystem.
+"""
 import os
 import sys
 from typing import TypedDict, Annotated, Sequence

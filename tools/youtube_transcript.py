@@ -1,3 +1,7 @@
+"""
+youtube_transcript.py — YouTube transcript downloader for Brain 2.
+Downloads and formats transcripts from YouTube videos into Obsidian-ready markdown notes.
+"""
 import sys
 import os
 import datetime

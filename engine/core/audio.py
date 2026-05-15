@@ -1,3 +1,7 @@
+"""
+audio.py — Shared audio utilities for Brain 2.
+Provides universal Whisper transcription services for the local and remote interfaces.
+"""
 import os
 from openai import OpenAI
 from dotenv import load_dotenv

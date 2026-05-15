@@ -1,3 +1,7 @@
+"""
+voice.py — Local voice interface for the Brain 2 Engine.
+Captures microphone input and uses Whisper for hands-free vault queries.
+"""
 import sys
 import wave
 import pyaudio

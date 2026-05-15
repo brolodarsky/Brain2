@@ -1,3 +1,7 @@
+"""
+cli.py — Command-line interface parser for the Brain 2 Engine.
+Parses arguments for text queries and applies metadata filters for the Vault Reader agent.
+"""
 import sys
 import argparse
 

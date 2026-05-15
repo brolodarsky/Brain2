@@ -1,3 +1,7 @@
+"""
+email_tool.py — Core email fetching and parsing logic for the Brain 2 Engine.
+Provides functions to connect to IMAP mailboxes, list recent emails, and fetch content as Markdown.
+"""
 import imaplib
 import email as email_lib
 import email.header
@@ -26,12 +30,22 @@ class _HTMLStripper(HTMLParser):
         return "\n".join(self.text_parts)
 
 def _strip_html(html: str) -> str:
+    """Strips HTML tags from a string and returns plain text."""
     stripper = _HTMLStripper()
     stripper.feed(html)
     return stripper.get_text()
 
 # ── IMAP helpers ──────────────────────────────────────────────────────────────
 def _connect(secrets_dir: str) -> imaplib.IMAP4_SSL:
+    """
+    Establishes an IMAP SSL connection to the server using XOAUTH2.
+    
+    Args:
+        secrets_dir: Directory where credentials and tokens are stored.
+        
+    Returns:
+        An authenticated imaplib.IMAP4_SSL object.
+    """
     server = os.environ.get("IMAP_SERVER", "imap.gmail.com")
     port = int(os.environ.get("IMAP_PORT", 993))
     address = os.environ.get("EMAIL_ADDRESS")

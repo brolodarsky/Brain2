@@ -1,3 +1,7 @@
+"""
+main.py — Universal coordinator and Mission Control for the Brain 2 Engine.
+Handles CLI, Voice, and Telegram interfaces and provides an interactive management menu.
+"""
 import sys
 import os
 import argparse

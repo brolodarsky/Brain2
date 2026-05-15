@@ -1,3 +1,7 @@
+"""
+read_webpage.py — Lightweight webpage scraper for the Brain 2 Engine.
+Uses trafilatura to extract clean, boilerplate-free markdown content from URLs.
+"""
 import sys
 import argparse
 import trafilatura

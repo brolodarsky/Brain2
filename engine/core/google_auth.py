@@ -1,3 +1,7 @@
+"""
+google_auth.py — Centralized Google OAuth2 management for Brain 2.
+Handles token loading, refreshing, and browser-based authentication flows for Google services.
+"""
 import os
 import sys
 from google.auth.transport.requests import Request

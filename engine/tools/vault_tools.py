@@ -1,3 +1,7 @@
+"""
+vault_tools.py — Local filesystem LangChain tools for Vault navigation.
+Provides tools for reading the Table of Contents, reading notes, and searching the Vault.
+"""
 import os
 import sys
 from pathlib import Path
