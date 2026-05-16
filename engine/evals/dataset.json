@@ -1,8 +1,8 @@
 [
   {
-    "question": "What is the \"Bronx Fund\" and how much income consistency is targeted for it?",
-    "expected_answer": "The Bronx Fund is a \"Relocation Buffer\" for a future move out of Fort Lee. The target is a $750/week bridge income baseline (Tutoring/Freelance).",
-    "source_file": "Vault/2. Health/2.3. Psych/Goals.md"
+    "question": "What is called a \"major key\" in the objectives section of the agentic engine project?",
+    "expected_answer": "Human-In-The-Loop.",
+    "source_file": "Vault/6. Forge/6.1. Projects/6.1.2. Agentic R&D/Project - Brain 2 Agentic Engine/Project - Brain 2 Agentic Engine.md"
   },
   {
     "question": "When was the Timing Belt last changed on the Honda Pilot and at what mileage?",
@@ -10,9 +10,9 @@
     "source_file": "Vault/3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Maintenance Log.md"
   },
   {
-    "question": "What are the primary focus areas for professional development in 2026?",
-    "expected_answer": "AI Infrastructure, Agentic Workflows, or Cognitive Engineering (e.g., RAG Engineer, AI Reliability).",
-    "source_file": "Vault/2. Health/2.3. Psych/Goals.md"
+    "question": "What were the example places to play chess in parks from my activities list?",
+    "expected_answer": "Washington Square Park and Bryant Park.",
+    "source_file": "Vault/4. Playground/4.1. Social Life & Community/Activities List.md"
   },
   {
     "question": "What is the \"Sniper Protocol\" for job hunting?",
@@ -25,9 +25,9 @@
     "source_file": "Vault/2. Health/2.2. Medical/Health Summary.md"
   },
   {
-    "question": "What ignition system components were replaced during the April 2026 Pilot maintenance?",
-    "expected_answer": "6x Spark Plugs (NGK/Denso) and 6x Ignition Coils (OEM/Denso).",
-    "source_file": "Vault/3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Maintenance Log.md"
+    "question": "What was the name of my brother's girlfriends dog that stayed with us for a week?",
+    "expected_answer": "Magnolia",
+    "source_file": "Vault/1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Journal/2026 - Journal.md"
   },
   {
     "question": "What is the user's current checking account balance?",
