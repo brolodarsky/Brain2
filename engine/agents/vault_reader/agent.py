@@ -50,8 +50,16 @@ def log_query_run(query: str, final_state=None, error=None):
     from datetime import datetime
 
     timestamp = datetime.utcnow().isoformat() + "Z"
-    status = "error" if error else "success"
     error_str = str(error) if error else None
+
+    # Determine status: error > not_found > success
+    if error:
+        status = "error"
+    elif final_state and "messages" in final_state:
+        last_content = final_state["messages"][-1].content if final_state["messages"] else ""
+        status = "not_found" if "[Not Found]" in last_content else "success"
+    else:
+        status = "error"
 
     cited_sources = []
     tool_calls = []
@@ -89,6 +97,9 @@ def log_query_run(query: str, final_state=None, error=None):
                     for line in lines:
                         line = line.strip()
                         if not line:
+                            continue
+                        # Skip the "(none)" marker from [Not Found] responses
+                        if line.lower() == '(none)':
                             continue
                         # Remove markdown bullet points, e.g. -, *, 1.
                         line = re.sub(r'^[\-\*\+\d\.\s]+', '', line).strip()
