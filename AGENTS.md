@@ -56,6 +56,9 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 ### `career_counselor`
 **Trigger:** Act as a high-stakes career architect and strategic advisor. Provide advice on job hunt strategy, interview prep, compensation negotiation, and professional portfolio development. Trigger this skill whenever the user mentions job searching, career pivots, networking, resume updates, or professional growth.
 
+### `project_work`
+**Trigger:** Keep active project documents inside the Vault up to date whenever changes are planned, implemented, completed, or conceptually modified. Make sure to use this skill whenever you complete a task related to a project, plan modifications, create a new sub-project, or add/remove tasks conceptually from any Project - *.md file, even if the user does not explicitly request it.
+
 ### `skill_creator`
 **Trigger:** When asked to create a new skill from scratch, edit or optimize an existing skill, run evals to test a skill, benchmark skill performance, or improve a skill's triggering description.
 

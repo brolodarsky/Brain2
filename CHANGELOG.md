@@ -7,6 +7,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 - **New Tool: Phone Chat Ingestion (`ingest_phone.py`):** Universal ADB screen-scraper that captures conversations from any Android app (Google Messages, Tinder, Hinge, WhatsApp, Signal, Bumble, etc.) via `uiautomator dump` and saves structured Markdown notes to `Vault/0. Inbox/`. Features include: auto-scroll to bottom before capture, multi-screen scroll with deduplication, contact name detection from toolbar, sender alignment detection (me vs them), and timestamp divider rendering. Zero dependencies (pure stdlib), zero third-party phone apps required — only USB Debugging.
+- **New Skill: Project Work (`project_work`):** Enforces keeping active project notes in the vault up-to-date automatically whenever task lists are completed/modified or conceptual project plans change.
+
 
 ### Fixed
 - **Phone Chat Ingestion (`ingest_phone.py`):** Increased empty screen tolerance from 1 to 3 consecutive screens. This prevents the scraper from prematurely terminating when encountering long voice notes or large emoji reactions that register as zero text nodes in the UI hierarchy.
