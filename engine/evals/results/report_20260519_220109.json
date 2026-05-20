@@ -1,0 +1,129 @@
+[
+  {
+    "case_id": 1,
+    "question": "What is called a \"major key\" in the objectives section of the agentic engine project?",
+    "expected_answer": "Human-In-The-Loop.",
+    "actual_answer": "In the **Objectives** section of **Project - Brain 2 Agentic Engine**, a **major key** is:\n\n- **Human-In-The-Loop**\n\n[Sources]\n- 6. Forge/6.1. Projects/6.1.2. Agentic R&D/Project - Brain 2 Agentic Engine/Project - Brain 2 Agentic Engine.md",
+    "files_read": [
+      "6. Forge/6.2. Library & Learning/6.2.11. Intelligent Agents & Autonomy/Overview - AI Agents.md",
+      "6. Forge/6.1. Projects/Project - Brain 2 Agentic Engine.md",
+      "Table of Contents.md"
+    ],
+    "target_source": "Vault/6. Forge/6.1. Projects/6.1.2. Agentic R&D/Project - Brain 2 Agentic Engine/Project - Brain 2 Agentic Engine.md",
+    "duration_sec": 6.32,
+    "score": 10,
+    "reasoning": "The actual answer matches the expected answer exactly: the major key is 'Human-In-The-Loop.' It is also grounded in the claimed source file for the project objectives, with no evident hallucination.",
+    "grounded": true,
+    "status": "PASS"
+  },
+  {
+    "case_id": 2,
+    "question": "When was the Timing Belt last changed on the Honda Pilot and at what mileage?",
+    "expected_answer": "April 9, 2026, at 196,000 miles.",
+    "actual_answer": "The timing belt on the Honda Pilot was last changed on **2026-04-09** at **196,000 miles**.\n\n[Sources]\n- 3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Maintenance Log.md",
+    "files_read": [
+      "3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Project - Pilot Mechanical Rejuvenation.md",
+      "3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Auto Knowledge Base.md",
+      "Table of Contents.md",
+      "3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Car Info.md",
+      "3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Maintenance Log.md",
+      "3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/List - Pilot Remaining Maintenance.md"
+    ],
+    "target_source": "Vault/3. Operations & Wealth/3.3. Infrastructure & Logistics/3.3.3. Auto/Maintenance Log.md",
+    "duration_sec": 5.36,
+    "score": 10,
+    "reasoning": "The actual answer matches the expected answer exactly in substance: the timing belt was last changed on April 9, 2026 at 196,000 miles. It is grounded in the cited Maintenance Log file and introduces no unsupported facts.",
+    "grounded": true,
+    "status": "PASS"
+  },
+  {
+    "case_id": 3,
+    "question": "What were the example places to play chess in parks from my activities list?",
+    "expected_answer": "Washington Square Park and Bryant Park.",
+    "actual_answer": "The example places to play chess in parks from your activities list were:\n\n- Washington Square Park\n- Bryant Park\n\n[Sources]\n- 4. Playground/4.1. Social Life & Community/Activities List.md",
+    "files_read": [
+      "Table of Contents.md",
+      "4. Playground/4.1. Social Life & Community/Activities List.md"
+    ],
+    "target_source": "Vault/4. Playground/4.1. Social Life & Community/Activities List.md",
+    "duration_sec": 3.52,
+    "score": 10,
+    "reasoning": "The actual answer exactly matches the expected answer and is properly grounded in the cited file, Activities List.md. No hallucinations are present.",
+    "grounded": true,
+    "status": "PASS"
+  },
+  {
+    "case_id": 4,
+    "question": "What is the \"Sniper Protocol\" for job hunting?",
+    "expected_answer": "Identify key people (EM/Founder/PI), send a tailored narrative bridging AI Rating experience to their challenges, and provide proof of work (deployed projects).",
+    "actual_answer": "The vault uses \u201cSniper Protocol\u201d as a job-hunt outreach strategy aimed at high-leverage, targeted applications rather than mass applying.\n\nWhat I found in the notes:\n- It is tied to \u201cSuperagency\u201d / agentic roles and described as part of intensifying the job hunt.\n- It appears to mean focusing on specific target companies and doing direct, value-driven outreach.\n- The strategy emphasizes:\n  - using a strong \u201cProof of Work\u201d portfolio,\n  - warm contacts / CRM tracking,\n  - personalized outreach,\n  - and applying to roles that match the candidate\u2019s AI/agentic work.\n\nOne note about the broader approach says:\n- \u201cBuild a Deployed Portfolio to Bypass the Experience Trap\u201d\n- \u201cBroaden the Job Search (The \u2018Hidden\u2019 Market)\u201d\n- \u201cTarget High-Growth Sectors\u201d\n- \u201cMaster Personal Branding & Digital Presence\u201d\n\nA related job listing note explicitly says:\n- \u201cSniper Protocol Outreach: See [[Professional CRM]] for contacts\u201d\n- indicating it\u2019s an outreach workflow using contacts and direct follow-up.\n\nI did not find a single note that defines the full protocol step-by-step, but the vault consistently uses it to mean focused, high-intent, personalized job-search outreach built around proof-of-work and CRM-based targeting.\n\n[Sources]\n- 1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Journal/2026 - Journal.md\n- 2. Health/2.3. Psych/Profile & Maintenance - Job Search & Cognitive Load.md\n- 3. Operations & Wealth/3.1. Career Strategy & Revenue/3.1.1. Market Research & Future of Work/Synthesis - AI Superagency & The Future of Work.md\n- 3. Operations & Wealth/3.1. Career Strategy & Revenue/3.1.2. Interview Prep & Technical Depth/Summary - How To Stand Out To Employers Regardless of Experience.md\n- 3. Operations & Wealth/3.1. Career Strategy & Revenue/Saved Job Listings/Software Engineer (New Grads 2025-2026) - EliseAI.md",
+    "files_read": [
+      "1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Journal/2026 - Journal.md",
+      "2. Health/2.3. Psych/Profile & Maintenance - Job Search & Cognitive Load.md",
+      "Table of Contents.md",
+      "3. Operations & Wealth/3.1. Career Strategy & Revenue/Saved Job Listings/Software Engineer (New Grads 2025-2026) - EliseAI.md",
+      "3. Operations & Wealth/3.1. Career Strategy & Revenue/3.1.1. Market Research & Future of Work/Synthesis - AI Superagency & The Future of Work.md",
+      "3. Operations & Wealth/3.1. Career Strategy & Revenue/3.1.2. Interview Prep & Technical Depth/Summary - How To Stand Out To Employers Regardless of Experience.md"
+    ],
+    "target_source": "Vault/3. Operations & Wealth/3.1. Career Strategy & Revenue/Job Hunt War Room.md",
+    "duration_sec": 7.32,
+    "score": 9,
+    "reasoning": "The actual answer is strongly aligned with the expected answer: it identifies targeted people (via CRM/contacts), emphasizes personalized outreach, and highlights proof of work/deployed portfolio. These are the core elements of the expected definition. It also correctly frames the protocol as focused job-hunt outreach rather than mass applying. The only minor issue is that it adds some broader contextual wording ('Superagency', 'high-growth sectors') that is not part of the expected answer, but this does not materially contradict it and appears consistent with the cited files.",
+    "grounded": true,
+    "status": "PASS"
+  },
+  {
+    "case_id": 5,
+    "question": "What are the user's daily medications for allergies?",
+    "expected_answer": "Fexofenadine (Allegra) 180 mg daily and Dymista (Azelastine/Fluticasone) 1 spray each nostril 2x/day.",
+    "actual_answer": "The daily allergy medications listed in the vault are:\n\n- **Dymista** \u2014 1 spray in each nostril **2x/day**\n- **Allegra (fexofenadine)** \u2014 **180 mg once daily** / \u201c1 tablet daily as needed\u201d in the PCP note\n\nThe health summary also says the allergic rhinitis is \u201csignificantly suppressed by Dymista/Allegra.\u201d\n\n[Sources]\n- 2. Health/2.2. Medical/Health Summary.md\n- 2. Health/2.2. Medical/Health_Logs/Visit - 2026_04_02 - Allergist.md\n- 2. Health/2.2. Medical/Health_Logs/Visit - 2026_04_08 - PCP Followup.md",
+    "files_read": [
+      "Table of Contents.md",
+      "2. Health/2.2. Medical/Health_Logs/Visit - 2026_04_02 - Allergist.md",
+      "2. Health/2.2. Medical/Health Summary.md",
+      "2. Health/2.2. Medical/Health_Logs/Visit - 2026_04_08 - PCP Followup.md",
+      "2. Health/2.2. Medical/Prescriptions.md"
+    ],
+    "target_source": "Vault/2. Health/2.2. Medical/Health Summary.md",
+    "duration_sec": 6.19,
+    "score": 9,
+    "reasoning": "The answer is well grounded in the cited medical files and matches the expected medications: Dymista 1 spray each nostril twice daily and Allegra (fexofenadine) 180 mg daily. It also correctly references the relevant health summary and visit notes. The only minor issue is that it adds a bit of extra wording (\u201conce daily\u201d / \u201cas needed\u201d from the PCP note) that could be slightly confusing, but it does not materially change the core answer.",
+    "grounded": true,
+    "status": "PASS"
+  },
+  {
+    "case_id": 6,
+    "question": "What was the name of my brother's girlfriends dog that stayed with us for a week?",
+    "expected_answer": "Magnolia",
+    "actual_answer": "The dog was named **Magnolia**.\n\n[Sources]\n- 1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Journal/2026 - Journal.md\n- 1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Memories/Memories Log.md",
+    "files_read": [
+      "1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Journal/2026 - Journal.md",
+      "Table of Contents.md",
+      "1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Memories/Memories Log.md"
+    ],
+    "target_source": "Vault/1. The Core/1.1. Philosophy & Personal North Star/1.1.1. Personal Logs/Journal/2026 - Journal.md",
+    "duration_sec": 7.09,
+    "score": 10,
+    "reasoning": "The actual answer exactly matches the expected answer: Magnolia. It is concise, contains no extra unsupported claims, and is consistent with the cited journal/memories sources.",
+    "grounded": true,
+    "status": "PASS"
+  },
+  {
+    "case_id": 7,
+    "question": "What is the user's current checking account balance?",
+    "expected_answer": "I cannot find the specific checking account balance in the vault. The notes focus on financial strategy, savings targets (like the Bronx Fund), and recurring payments rather than real-time balances.",
+    "actual_answer": "[Not Found] I was unable to find information about the user's current checking account balance in the vault.\n\nI searched the following areas:\n- 3. Operations & Wealth/3.2. Wealth & Asset Management/Project - Personal Finance & Budgeting System.md\n- 3. Operations & Wealth/3.2. Wealth & Asset Management/Recurring Payments.md\n- 3. Operations & Wealth/3.2. Wealth & Asset Management/Master Framework.md\n- Vault-wide searches for: \"checking account\", \"balance\", \"bank\", \"account\", \"checking balance\", \"current balance\", \"balance is\", \"Chase checking\"\n\n[Sources]\n(none)",
+    "files_read": [
+      "3. Operations & Wealth/3.2. Wealth & Asset Management/Master Framework.md",
+      "Table of Contents.md",
+      "3. Operations & Wealth/3.2. Wealth & Asset Management/Recurring Payments.md",
+      "3. Operations & Wealth/3.2. Wealth & Asset Management/Project - Personal Finance & Budgeting System.md"
+    ],
+    "target_source": null,
+    "duration_sec": 6.21,
+    "score": 10,
+    "reasoning": "The actual answer matches the expected answer: it correctly states that the current checking account balance could not be found in the vault. It is grounded in the listed files, which focus on budgeting, recurring payments, and financial strategy rather than real-time account balances. No unsupported facts are added.",
+    "grounded": true,
+    "status": "PASS"
+  }
+]
