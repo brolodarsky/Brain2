@@ -1,8 +1,8 @@
 import os
 import re
 
-toc_path = r"c:\Users\Willi\Documents\Projects\Brain 2\Vault\Table of Contents.md"
-vault_path = r"c:\Users\Willi\Documents\Projects\Brain 2\Vault"
+toc_path = r"c:\Users\Willi\Documents\Projects\Nexus\Vault\Table of Contents.md"
+vault_path = r"c:\Users\Willi\Documents\Projects\Nexus\Vault"
 
 def sanitize(name):
     # Windows invalid chars: < > : " / \ | ? *

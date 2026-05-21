@@ -15,7 +15,7 @@ def backup(destination_root):
     
     # Create timestamped folder
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    backup_path = Path(destination_root) / f"Brain2_Backup_{timestamp}"
+    backup_path = Path(destination_root) / f"Nexus_Backup_{timestamp}"
     
     print(f"🚀 Starting backup to: {backup_path}")
     
@@ -58,7 +58,7 @@ def get_size_format(b, factor=1024, suffix="B"):
         b /= factor
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Backup Brain 2 Vault and Tools")
+    parser = argparse.ArgumentParser(description="Backup Nexus Vault and Tools")
     parser.add_argument("--dest", required=True, help="Destination directory (e.g., E:/Backups)")
     args = parser.parse_args()
     

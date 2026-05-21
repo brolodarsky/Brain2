@@ -1,5 +1,5 @@
 """
-cli.py — Command-line interface parser for the Brain 2 Engine.
+cli.py — Command-line interface parser for the Nexus Engine.
 Parses arguments for text queries and applies metadata filters for the Vault Reader agent.
 """
 import sys
@@ -7,11 +7,11 @@ import argparse
 
 def parse_cli_args(args_list):
     """
-    Parses CLI arguments for the Brain 2 Engine.
+    Parses CLI arguments for the Nexus Engine.
     Returns (query: str, filters: dict)
     """
     parser = argparse.ArgumentParser(
-        description="Brain 2 Engine",
+        description="Nexus Engine",
         usage='python engine/main.py "your question" [--domain DOMAIN] [--tag TAG] [--type TYPE]',
     )
     parser.add_argument("query", nargs="+", help="Your question for the brain")

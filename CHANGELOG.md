@@ -14,6 +14,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - **Token Usage Tracking:** Both `run_logs.jsonl` and `evals/runner.py` now extract `usage_metadata` from LangChain AI messages and log `prompt_tokens`, `completion_tokens`, and `total_tokens` per query. Eval summary prints aggregate token stats.
 
 ### Changed
+- **Global Paradigm Shift (Rename):** Renamed the "Brain 2" project to "Nexus" across all documentation, files, folders, and code interfaces. Ideological references to generic "Brain" remain intact.
 - **Librarian System Prompt Rewrite:** Enforces a "navigate-first, search-second" strategy. Step 1 is now "review the vault structure above" (pre-injected), followed by targeted drill-down and scoped grep. Full-vault search is an explicit last resort.
 - **Ignored Directories:** Added `.stfolder`, `.vscode`, `__pycache__` to `IGNORE_DIRS` in `constants.py`.
 - **Eval Runner Output:** Now displays per-case duration and token count, plus aggregate token stats in the summary (prompt/output/total tokens, avg tokens/query).
@@ -57,7 +58,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 - **New Tool: Email Reader:** Created `tools/read_email.py`, a lightweight IMAP email reader analogous to `read_webpage.py`. Fetches a single email by UID and outputs clean markdown (subject, from, date, body). Supports Gmail App Passwords via env vars (`EMAIL_ADDRESS`, `EMAIL_PASSWORD`, `IMAP_SERVER`). Includes a `--list-recent N` flag for browsing the inbox before fetching. No external deps beyond stdlib; `python-dotenv` used optionally for `.env` loading.
-- **New Tool: Webpage Reader:** Created `tools/read_webpage.py`, a lightweight, deterministic webpage scraper using `trafilatura`. Designed to provide clean markdown content for the Brain 2 Agentic Engine's content ingestion and career search pipelines.
+- **New Tool: Webpage Reader:** Created `tools/read_webpage.py`, a lightweight, deterministic webpage scraper using `trafilatura`. Designed to provide clean markdown content for the Nexus Agentic Engine's content ingestion and career search pipelines.
 - **Librarian Eval Framework:** Created `engine/evals/dataset.json` (Golden Dataset) with 12 real-world Q&A cases and `engine/evals/runner.py` for automated agent benchmarking and groundedness grading.
 - **Dependency Update:** Added `python-dotenv`, `trafilatura`, and `lxml_html_clean` to the project environment and updated `requirements.txt`.
 
@@ -85,7 +86,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - **Agent Rules:** Added Rule 11 to `AGENTS.md` explicitly instructing agents to ignore the `Vault/.git` directory.
 - Pivoted `/ask_brain` architecture from Vector RAG to Agentic Librarian to solve Context Fragmentation and preserve Zettelkasten hierarchy.
 - Archived `engine/agents/rag/` into `Vault/6. Forge/6.1. Projects/6.1.4. Script Attic/Legacy RAG Engine/`.
-- Updated `Project - Brain 2 Agentic Engine.md`, `Table of Contents.md`, and `To Do List.md` to reflect the pivot.
+- Updated `Project - Nexus Agentic Engine.md`, `Table of Contents.md`, and `To Do List.md` to reflect the pivot.
 - Updated `engine/main.py` dispatcher to point to the new Librarian agent for CLI text queries.
 - Updated `ask_brain` workflow documentation in `AGENTS.md` and `README.md` to reflect removal of vector indexing requirement.
 - **Presentation Layer Centralization:** Refactored `engine/main.py` to be the sole presentation layer (using a new `print_agent_response` helper). Stripped execution and printing logic from `engine/interfaces/cli.py` and `engine/interfaces/voice.py`, turning them into pure input parsers (`parse_cli_args`, `capture_voice_query`).

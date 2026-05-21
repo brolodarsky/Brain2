@@ -28,12 +28,12 @@ _Systemic foundations for mental clarity, resilience, long-term vision, and dail
 
 
 ## 1.2. Personal Knowledge Management (PKM)
-- **Brain 2.0 Meta:** How I tag, link, and maintain this system.
+- **Nexus.0 Meta:** How I tag, link, and maintain this system.
 - **Projects**
-	- **[[Project - Brain 2 Non-Engine Functionality Upgrades]]:** Prioritized roadmap for system improvements.
+	- **[[Project - Nexus Non-Engine Functionality Upgrades]]:** Prioritized roadmap for system improvements.
 		- 1. **[[Workshop - Dashboard Option 1 Gameplan]]**
 			- **[[Project - Section 6.2 Library Condensation]]**
-	- **[[#6.1.2. Agentic R&D|Project - Brain 2 Agentic Engine]]:** Multi-agent LangGraph orchestration for vault intelligence.
+	- **[[#6.1.2. Agentic R&D|Project - Nexus Agentic Engine]]:** Multi-agent LangGraph orchestration for vault intelligence.
 - **[[Template - New Note or Thought]]**
 - **[[Template - Capture]]** Used for capturing raw content (YouTube transcripts, podcasts, articles, etc.)
 - **[[Protocol - Brain Maintenance]]**
@@ -247,8 +247,8 @@ _Dedicated space for exploration, relationships, and pure interest._ Connection 
 # 5. Capture & Archive
 _The Content Log & Reference_
 ## 5.1. The Content Log (General)
-- **YouTube "Everything Else" List:** Videos unrelated to other Brain2 sections (entertainment, intrigue, rabbit holes, etc).
-- **Article & Web Archive:** Links unrelated to other Brain2 sections (entertainment, intrigue, rabbit holes, etc).
+- **YouTube "Everything Else" List:** Videos unrelated to other Nexus sections (entertainment, intrigue, rabbit holes, etc).
+- **Article & Web Archive:** Links unrelated to other Nexus sections (entertainment, intrigue, rabbit holes, etc).
 
 
 ## 5.2. Digital Inventory
@@ -276,12 +276,14 @@ _The Content Log & Reference_
 - **[Project MEM Billing](<file:///C:\Users\Willi\Documents\Projects\MEMBilling>):** Billing Automation. Scripts for LCSW medical billing efficiency.
 - **[[Project - Personal Portfolio Website]]**
 - **[[Project - Vault Renderer Engine]]:** Markdown-to-HTML rendering engine for premium Vault browsing.
-- **[Brain 2 Github](https://github.com/brolodarsky/Brain2)**
+- **[Nexus Github](https://github.com/brolodarsky/Nexus)**
 
 ### 6.1.2. Agentic R&D
 - Master roadmap for LangGraph agents (/ask_brain, doctor panel, routing).
-- **📁 [[Project - Brain 2 Agentic Engine|Brain 2 Agentic Engine]]**
-	- **[[Project - Librarian Agent]]**
+- **📁 [[Project - Nexus Agentic Engine|Nexus Agentic Engine]]**
+	1. **[[Project - Librarian Agent]]**
+	2. **[[Project - Engine Control Panel]]**
+	3. **[[Project - Persistent Engine Hosting]]**
 	- **[[Workshop - MCP Additions]]**
 	- **📁 Archive**
 - **[[Project - Inventory Replenishment Agent]]:** Agentic workflow to check and automate recommended inventory replenishment for eCommerce Silislick.com family business.
@@ -301,7 +303,7 @@ _The Content Log & Reference_
 
 ### 6.1.4. Script Attic
 - Inactive tools, experiments, and one-off Python scripts.
-- **📁 Legacy RAG Engine:** Archived vector RAG architecture for Brain 2.
+- **📁 Legacy RAG Engine:** Archived vector RAG architecture for Nexus.
 
 
 ## 6.2. Library & Learning
@@ -512,7 +514,7 @@ The dominant language for AI/ML and Agentic Workflows.
 
 ### 6.2.11. Intelligent Agents & Autonomy
 
-- **📁 [Course - AI Agents in LangGraph](<file:\\\C:\Users\Willi\Documents\Projects\Brain 2\Vault\6. Forge\6.2. Library & Learning\6.2.11. Intelligent Agents & Autonomy\Course - AI Agents in LangGraph>)**
+- **📁 [Course - AI Agents in LangGraph](<file:\\\C:\Users\Willi\Documents\Projects\Nexus\Vault\6. Forge\6.2. Library & Learning\6.2.11. Intelligent Agents & Autonomy\Course - AI Agents in LangGraph>)**
 	- **[[Course Overview- AI Agents In LangGraph]]**
 #### LLM-Based Agents
 - **[[Overview - AI Agents]]**

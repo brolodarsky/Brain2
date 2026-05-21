@@ -1,5 +1,5 @@
 """
-youtube_transcript.py — YouTube transcript downloader for Brain 2.
+youtube_transcript.py — YouTube transcript downloader for Nexus.
 Downloads and formats transcripts from YouTube videos into Obsidian-ready markdown notes.
 """
 import sys

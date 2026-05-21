@@ -1,5 +1,5 @@
 """
-main.py — Universal coordinator and Mission Control for the Brain 2 Engine.
+main.py — Universal coordinator and Mission Control for the Nexus Engine.
 Handles CLI, Voice, and Telegram interfaces and provides an interactive management menu.
 """
 import sys
@@ -31,7 +31,7 @@ def start_telegram_interface():
 def print_header():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("  " + "═" * 45)
-    print("  ║" + " " * 12 + "🧠 BRAIN 2.0 ENGINE" + " " * 13 + "║")
+    print("  ║" + " " * 12 + "🧠 Nexus.0 ENGINE" + " " * 13 + "║")
     print("  " + "═" * 45)
     status = "🟢 ONLINE" if BOT_ONLINE else "⏳ STARTING"
     print(f"  [ Telegram Bot: {status} ]\n")
@@ -54,7 +54,7 @@ def print_agent_response(query: str, filters: dict = None):
 
 def main():
     """
-    Enduring terminal menu coordinator for the Brain 2 Engine.
+    Enduring terminal menu coordinator for the Nexus Engine.
     """
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument('--no-bot', action='store_true')
@@ -96,7 +96,7 @@ def main():
             input("\n  Press Enter to return to menu...")
 
         elif choice == '3' or choice.lower() in ['exit', 'q', 'quit']:
-            print("\n  👋 Shutting down Brain 2.0. See you in the vault.")
+            print("\n  👋 Shutting down Nexus.0. See you in the vault.")
             time.sleep(1)
             break
         

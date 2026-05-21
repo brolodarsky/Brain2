@@ -1,5 +1,5 @@
 """
-audio.py — Shared audio utilities for Brain 2.
+audio.py — Shared audio utilities for Nexus.
 Provides universal Whisper transcription services for the local and remote interfaces.
 """
 import os

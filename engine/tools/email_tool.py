@@ -1,5 +1,5 @@
 """
-email_tool.py — Core email fetching and parsing logic for the Brain 2 Engine.
+email_tool.py — Core email fetching and parsing logic for the Nexus Engine.
 Provides functions to connect to IMAP mailboxes, list recent emails, and fetch content as Markdown.
 """
 import imaplib

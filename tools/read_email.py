@@ -1,5 +1,5 @@
 """
-read_email.py — Lightweight IMAP email reader for Brain 2 Engine.
+read_email.py — Lightweight IMAP email reader for Nexus Engine.
 Fetches a single email by UID from a configured IMAP mailbox and returns its content as clean markdown.
 
 Usage:
@@ -31,7 +31,7 @@ SECRETS_DIR = os.path.join(TOOLS_DIR, ".secrets")
 # ── CLI ───────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(
-        description="Lightweight IMAP email reader for Brain 2 Engine.",
+        description="Lightweight IMAP email reader for Nexus Engine.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             "Examples:\n"

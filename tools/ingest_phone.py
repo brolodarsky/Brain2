@@ -501,7 +501,7 @@ def main():
     if sys.stderr.encoding != 'utf-8':
         sys.stderr.reconfigure(encoding='utf-8')
 
-    print("🧠 Brain 2 — Phone Chat Ingestion")
+    print("🧠 Nexus — Phone Chat Ingestion")
     print("=" * 40)
 
     device = check_device(args.device)

@@ -1,5 +1,5 @@
 """
-google_auth.py — Centralized Google OAuth2 management for Brain 2.
+google_auth.py — Centralized Google OAuth2 management for Nexus.
 Handles token loading, refreshing, and browser-based authentication flows for Google services.
 """
 import os

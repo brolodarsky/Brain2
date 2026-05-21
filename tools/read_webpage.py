@@ -1,5 +1,5 @@
 """
-read_webpage.py — Lightweight webpage scraper for the Brain 2 Engine.
+read_webpage.py — Lightweight webpage scraper for the Nexus Engine.
 Uses trafilatura to extract clean, boilerplate-free markdown content from URLs.
 """
 import sys
@@ -34,7 +34,7 @@ def scrape_url(url: str, output_format: str = "markdown") -> Optional[str]:
         return None
 
 def main():
-    parser = argparse.ArgumentParser(description="Lightweight webpage reader for Brain 2 Engine.")
+    parser = argparse.ArgumentParser(description="Lightweight webpage reader for Nexus Engine.")
     parser.add_argument("url", help="The URL to scrape")
     parser.add_argument("-o", "--output", help="Path to save the output (optional)")
     parser.add_argument("-f", "--format", choices=["markdown", "txt", "json", "xml"], default="markdown", help="Output format (default: markdown)")

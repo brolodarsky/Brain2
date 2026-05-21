@@ -1,4 +1,4 @@
-# Brain 2: Agentic Knowledge OS & Personal Second Brain
+# Nexus: Agentic Knowledge OS & Personal Second Brain
 
 This is my personal "second brain" and knowledge management system. It acts as an agentic operating system that manages my notes, thoughts, projects, career strategy, health records, and learning materials.
 
@@ -33,7 +33,7 @@ While the current setup relies on Obsidian for viewing and an IDE for orchestrat
 ## Repository Structure
 
 ```
-Brain 2/
+Nexus/
 ├── .agents/                    # AI agent instructions
 │   ├── skills/                 # Mandatory behaviors
 │   │   ├── analyze_health/           # Health diagnostics & context check
@@ -64,7 +64,7 @@ Brain 2/
 │   ├── 1. The Core/                # Identity, governance, and foundations
 │   │   ├── 1.1. Philosophy & Personal North Star/    # Values, principles, and long-term vision
 │   │   │   └── Personal Logs/                        # Journal, Memories, and The Trophy Case
-│   │   ├── 1.2. Personal Knowledge Management (PKM)/ # Brain 2.0 meta and maintenance protocols
+│   │   ├── 1.2. Personal Knowledge Management (PKM)/ # Nexus.0 meta and maintenance protocols
 │   │   ├── 1.3. Security & Digital Sovereignty/      # Encryption, password strategy, and inheritance
 │   │   └── 1.4. Emergency & Survival/                # Crisis protocols and emergency contacts
 │   ├── 2. Health/                  # Physical and mental well-being
@@ -215,7 +215,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 | `sync_vault.py` | Automatically commits the nested Vault repository (The Nested Heart). | `python tools/sync_vault.py` |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files to structured Markdown. | `python tools/medical_xml_parser.py <path> <output_dir>` |
 | `ingest_phone.py` | Universal ADB screen-scraper for Android chat ingestion. Captures any app on screen. | `python tools/ingest_phone.py --screens 50` |
-| `engine/main.py` | Universal coordinator for the Brain 2 Engine. Features a persistent mission control menu and background Telegram bot. | `python engine/main.py` |
+| `engine/main.py` | Universal coordinator for the Nexus Engine. Features a persistent mission control menu and background Telegram bot. | `python engine/main.py` |
 | `engine/evals/runner.py` | Benchmarks the Librarian against the Golden Dataset. | `python -m engine.evals.runner` |
 | `engine/agents/librarian/agent.py` | Core ReAct agent execution logic (LangGraph). | `python engine/main.py <query>` |
 | `engine/tools/vault_tools.py` | Local filesystem LangChain tools for Vault navigation (`read_toc`, `read_note`, `search_vault`, `get_vault_structure`). Supports targeted subtree search and frontmatter tag filtering. | N/A |
@@ -238,7 +238,7 @@ For a more seamless experience on Windows, the following "global" commands are a
 
 ## Architectural Methods
 
-Brain 2 relies on several specific architectural patterns to maintain a clean boundary between the "Engine" (public) and the "Vault" (private).
+Nexus relies on several specific architectural patterns to maintain a clean boundary between the "Engine" (public) and the "Vault" (private).
 
 ### 1. Engine + Vault Separation
 The repository is split into two layers:
@@ -285,4 +285,4 @@ Whenever the `Table of Contents.md` STRUCTURE is modified, run `tools/create_fol
 
 Point Obsidian at the **`Vault/`** subfolder, not the repo root.
 
-> Settings → About → Vault path → `…/Brain 2/Vault`
+> Settings → About → Vault path → `…/Nexus/Vault`

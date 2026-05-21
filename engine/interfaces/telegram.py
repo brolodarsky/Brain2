@@ -1,5 +1,5 @@
 """
-telegram.py — Telegram bot interface for the Brain 2 Engine.
+telegram.py — Telegram bot interface for the Nexus Engine.
 Provides remote access to the Vault Reader agent via text and voice messages.
 """
 import os
@@ -109,7 +109,7 @@ async def process_query(update: Update, query: str):
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not await auth_middleware(update):
         return
-    await update.message.reply_text("🧠 Brain 2 Agentic Engine is online. Send me a text or voice message to query your vault.")
+    await update.message.reply_text("🧠 Nexus Agentic Engine is online. Send me a text or voice message to query your vault.")
 
 def main():
     if not TELEGRAM_BOT_TOKEN:
