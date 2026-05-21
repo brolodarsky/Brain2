@@ -12,6 +12,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
   - New `_parse_frontmatter_tags()` and `_build_tree()` helpers in `vault_tools.py`.
 - **Dynamic Structure Injection:** `execute_vault_query()` now calls `get_vault_structure()` programmatically at query time and injects the live folder tree into the system prompt via `{vault_structure}` placeholder. Eliminates one LLM round-trip per query while staying fresh after vault restructures.
 - **Token Usage Tracking:** Both `run_logs.jsonl` and `evals/runner.py` now extract `usage_metadata` from LangChain AI messages and log `prompt_tokens`, `completion_tokens`, and `total_tokens` per query. Eval summary prints aggregate token stats.
+- **Resume Engine Page Metrics:** `render.js` now measures rendered content height via Playwright after every PDF generation and outputs a structured `📐 PAGE METRICS` summary with: page count, last page fill %, verdict (`UNDERFILL`/`ROOM`/`GOOD FIT`/`TIGHT FIT`/`OVERFLOW`), approximate bullet points remaining, and a machine-readable `[METRICS_JSON]` line for agent consumption. Agents can now make data-driven add/trim decisions to optimize page utilization.
+- **Extended Resume Version:** Created `Resume - Master (Extended).md` — a multi-page "wishful thinking" resume with 7 Nexus bullets (content ingestion, architectural evolution narrative), full work experience detail, and expanded technical skills.
 
 ### Changed
 - **Global Paradigm Shift (Rename):** Renamed the "Brain 2" project to "Nexus" across all documentation, files, folders, and code interfaces. Ideological references to generic "Brain" remain intact.
@@ -19,9 +21,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - **Ignored Directories:** Added `.stfolder`, `.vscode`, `__pycache__` to `IGNORE_DIRS` in `constants.py`.
 - **Eval Runner Output:** Now displays per-case duration and token count, plus aggregate token stats in the summary (prompt/output/total tokens, avg tokens/query).
 - **Eval Runner Output:** Restructured `report_*.json` output to include a top-level `summary` object containing aggregate token stats, scores, and runtimes, alongside the `results` array.
+- **Resume Overhaul:** Upgraded all Nexus bullet points across `Resume - Master.md` to surface previously undersold technical accomplishments: dynamic prompt injection, LLM-as-a-Judge eval pipeline, JSONL observability, 11-platform ADB scraper, dual-format resume engine, compiled meta-skills, content ingestion infrastructure. Added `LangChain`, `LangSmith`, `Whisper`, `ADB/Android`, `Telegram Bot API`, `IMAP/OAuth2` to technical skills. Compressed Handshake and VRMC sections. Tightened cover letters (Agentic AI: replaced "Project Feeder" with eval/observability story; Java: generalized addressee).
+- **Render Resume Workflow:** Updated `/render_resume` workflow to document the page metrics feedback loop, agent decision rules (UNDERFILL → add content, OVERFLOW → trim), and the two-version resume strategy (Master 1-page + Extended).
 
 ### Fixed
 - **YAML Frontmatter & Link Stripping:** Updated frontmatter and navigation link parsing regexes across the resume engine (`render.js`, `render_docx.py`), podcast generator (`generate_podcast.py`), and vault tools (`vault_tools.py`) to support Windows CRLF (`\r\n`) line endings, preventing frontmatter leak into rendered output.
+
 
 ## [1.16.0] - 2026-05-19
 

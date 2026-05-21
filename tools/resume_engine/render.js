@@ -85,7 +85,16 @@ async function promptFileSelection(files) {
 }
 
 // ---------------------------------------------------------------------------
-// Render a single markdown file to PDF
+// Page measurement constants
+// Letter size at 96 DPI: 8.5" x 11" = 816px x 1056px
+// CSS @page margin: 0.3in on all sides = 28.8px each
+// Usable content height per page: 1056 - (2 * 28.8) = 998.4px
+// ---------------------------------------------------------------------------
+const PAGE_HEIGHT_PX = 998;
+const PAGE_MARGIN_PX = 29; // 0.3in at 96 DPI
+
+// ---------------------------------------------------------------------------
+// Render a single markdown file to PDF and return page metrics
 // ---------------------------------------------------------------------------
 async function renderToPdf(mdPath, browser) {
     const cssPath = path.resolve(__dirname, 'style.css');
@@ -125,7 +134,15 @@ async function renderToPdf(mdPath, browser) {
     `;
 
     const page = await browser.newPage();
+
+    // Set viewport to match Letter width minus horizontal margins for accurate measurement
+    const usableWidth = 816 - (2 * PAGE_MARGIN_PX); // Letter width at 96 DPI minus margins
+    await page.setViewportSize({ width: usableWidth, height: 1056 });
+
     await page.setContent(fullHtml, { waitUntil: 'networkidle' });
+
+    // Measure content height before generating PDF
+    const contentHeight = await page.evaluate(() => document.body.scrollHeight);
 
     await page.pdf({
         path: outputPath,
@@ -134,6 +151,32 @@ async function renderToPdf(mdPath, browser) {
     });
 
     await page.close();
+
+    // Calculate page metrics
+    const totalPages = Math.ceil(contentHeight / PAGE_HEIGHT_PX);
+    const lastPageUsed = contentHeight - ((totalPages - 1) * PAGE_HEIGHT_PX);
+    const lastPageFillPct = Math.round((lastPageUsed / PAGE_HEIGHT_PX) * 100);
+    const roomRemainingPx = (totalPages * PAGE_HEIGHT_PX) - contentHeight;
+    // Approximate: 1 bullet point ≈ 45px at 0.8rem body + 1.0 line-height + margins
+    const approxBulletsRemaining = Math.floor(roomRemainingPx / 45);
+
+    let verdict;
+    if (lastPageFillPct < 60) verdict = 'UNDERFILL';
+    else if (lastPageFillPct <= 80) verdict = 'ROOM';
+    else if (lastPageFillPct <= 95) verdict = 'GOOD FIT';
+    else if (lastPageFillPct <= 100) verdict = 'TIGHT FIT';
+    else verdict = 'OVERFLOW';
+
+    const metrics = {
+        file: baseName,
+        pages: totalPages,
+        contentHeightPx: contentHeight,
+        pageHeightPx: PAGE_HEIGHT_PX,
+        lastPageFillPct,
+        roomRemainingPx,
+        approxBulletsRemaining,
+        verdict,
+    };
 
     // Copy to Downloads folder
     try {
@@ -145,7 +188,7 @@ async function renderToPdf(mdPath, browser) {
         console.log(`  PDF: ${outputPath}`);
     }
 
-    return outputPath;
+    return metrics;
 }
 
 // ---------------------------------------------------------------------------
@@ -194,17 +237,43 @@ async function main() {
     console.log(`\n  Rendering ${selected.length} document(s)...\n`);
 
     const browser = await chromium.launch();
+    const allMetrics = [];
 
     for (const file of selected) {
         const baseName = path.basename(file, '.md');
         console.log(`  --- ${baseName} ---`);
 
-        await renderToPdf(file, browser);
+        const metrics = await renderToPdf(file, browser);
+        allMetrics.push(metrics);
         renderToDocx(file);
         console.log('');
     }
 
     await browser.close();
+
+    // Print page metrics summary
+    console.log('  ' + '═'.repeat(60));
+    console.log('  📐 PAGE METRICS');
+    console.log('  ' + '═'.repeat(60));
+    for (const m of allMetrics) {
+        const icon = m.verdict === 'GOOD FIT' ? '✅' :
+                     m.verdict === 'TIGHT FIT' ? '🎯' :
+                     m.verdict === 'ROOM' ? '📝' :
+                     m.verdict === 'UNDERFILL' ? '⚠️' : '🔴';
+        console.log(`  ${icon} ${m.file}`);
+        console.log(`     Pages: ${m.pages} | Last page fill: ${m.lastPageFillPct}% | Verdict: ${m.verdict}`);
+        if (m.approxBulletsRemaining > 0) {
+            console.log(`     Room: ~${m.approxBulletsRemaining} bullet points remaining (~${m.roomRemainingPx}px)`);
+        } else if (m.lastPageFillPct > 100) {
+            const overflowPx = m.contentHeightPx - (m.pages * m.PAGE_HEIGHT_PX);
+            console.log(`     Over by ~${Math.abs(m.roomRemainingPx)}px — trim ~${Math.ceil(Math.abs(m.roomRemainingPx) / 45)} bullet points`);
+        }
+    }
+    console.log('  ' + '─'.repeat(60));
+
+    // Output machine-readable JSON for agent consumption
+    console.log(`  [METRICS_JSON] ${JSON.stringify(allMetrics)}`);
+    console.log('');
     console.log('  Done.');
 }
 

@@ -89,7 +89,7 @@ Deterministic scripts for vault and engine maintenance.
 | `sync_vault.py` | Automatically commits the nested Vault repository (The Nested Heart). |
 | `medical_xml_parser.py` | Parses HL7 CDA medical XML files into structured Markdown. |
 | `ingest_phone.py` | Universal ADB screen-scraper for Android chat ingestion. Captures conversations from any app (Google Messages, Tinder, Hinge, WhatsApp, Signal, etc.) via `uiautomator dump` and saves structured Markdown to `0. Inbox/`. Supports multi-screen scroll capture. |
-| `resume_engine/` | Node.js (Playwright) for PDF rendering + Python (`python-docx`) for DOCX generation. Interactive document picker scans `3.1.3. Professional Portfolio & Evidence/Resumes/` and `Cover Letters/` for renderable markdown documents. Also accepts a CLI path argument for scripted use. |
+| `resume_engine/` | Node.js (Playwright) for PDF rendering + Python (`python-docx`) for DOCX generation. Interactive document picker scans `3.1.3. Professional Portfolio & Evidence/Resumes/` and `Cover Letters/` for renderable markdown documents. Outputs page fill metrics (fill %, verdict, room remaining) after every render so agents can add/trim content to optimize page utilization. Also accepts a CLI path argument for scripted use. |
 | `engine/main.py` | Universal entry point & coordinator for the Agentic Engine. Features a persistent mission control menu with background Telegram bot support. |
 | `engine/evals/runner.py` | Benchmarks the Librarian against the Golden Dataset using 12 real-world Q&A cases. |
 | `engine/agents/librarian/agent.py` | Core ReAct agent execution logic (LangGraph). |
@@ -128,7 +128,7 @@ Parse and ingest raw medical records (PDF, XML, Images) into the Vault following
 Cross-references Activities List, Date Ideas, and People Data to generate a markdown itinerary.
 
 ### `render_resume`
-Renders markdown documents (resumes, cover letters) from the Portfolio into professionally-styled PDF and DOCX files.
+Renders markdown documents (resumes, cover letters) from the Portfolio into professionally-styled PDF and DOCX files. Outputs page fill metrics so agents can determine if content needs to be added or trimmed to fill the page optimally.
 
 ### `ask_brain`
 Agentic vault search. Uses a LangGraph ReAct agent to dynamically navigate the local filesystem and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually. No indexing required.

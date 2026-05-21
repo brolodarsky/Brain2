@@ -198,7 +198,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 - `/ingest_medical_record`: Parse and ingest raw medical records (PDF, XML, Images) into the Vault.
 - `/plan_activity`: Cross-references Activities List, Date Ideas, and People Data notes to generate a structured markdown itinerary.
 - `/ask_brain`: Agentic vault search. Uses a LangGraph ReAct agent to dynamically navigate the local filesystem and returns a grounded answer with source citations. Use when you need facts from your notes without reading files manually. No indexing required.
-- `/render_resume`: Renders the Master Markdown Resume into a premium, professionally-styled PDF and DOCX.
+- `/render_resume`: Renders markdown documents (resumes, cover letters) into premium PDF and DOCX. Outputs page fill metrics (fill %, verdict, room remaining) so agents can add/trim content to optimize page utilization.
 
 ### Deterministic Tools (Scripts)
 
@@ -219,7 +219,7 @@ This repository distinguishes between three types of "cognitive" capabilities th
 | `engine/evals/runner.py` | Benchmarks the Librarian against the Golden Dataset. | `python -m engine.evals.runner` |
 | `engine/agents/librarian/agent.py` | Core ReAct agent execution logic (LangGraph). | `python engine/main.py <query>` |
 | `engine/tools/vault_tools.py` | Local filesystem LangChain tools for Vault navigation (`read_toc`, `read_note`, `search_vault`, `get_vault_structure`). Supports targeted subtree search and frontmatter tag filtering. | N/A |
-| `resume_engine/` | PDF and DOCX rendering for the Master Resume. | `node tools/resume_engine/render.js` |
+| `resume_engine/` | PDF and DOCX rendering with page fill metrics. Outputs fill %, verdict, and room remaining after every render. | `node tools/resume_engine/render.js` |
 
 ### PowerShell Integration
 
