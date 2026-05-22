@@ -41,6 +41,9 @@ These are located in `.agents/skills/` and define rules you **must** follow.
 ### `conventional_commits`
 **Trigger:** On every `git commit`
 
+### `log_llm_conversation`
+**Trigger:** Log design discussions, brainstorming sessions, and key technical decisions at the end of a conversation or pair programming session. Make sure to trigger this skill whenever the user mentions saving a chat log, logging a conversation, journaling a decision, or at the end of any complex session where important architectural, project, or code decisions were made, even if the user does not explicitly request it.
+
 ### `cleanup_orphans`
 **Trigger:** When asked to "clean the vault", "find orphans", or perform Zettelkasten maintenance
 

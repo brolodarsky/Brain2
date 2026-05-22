@@ -38,11 +38,14 @@ Nexus/
 │   ├── skills/                 # Mandatory behaviors
 │   │   ├── analyze_health/           # Health diagnostics & context check
 │   │   ├── analyze_psych/            # Psych support & cognitive architecture
+│   │   ├── archive_project/          # Archive completed projects
 │   │   ├── career_counselor/         # Career architecture & strategic advice
 │   │   ├── cleanup_orphans/          # Zettelkasten maintenance (links/folders)
 │   │   ├── conventional_commits/     # Commit message format rules
 │   │   ├── generate_obsidian_note/   # How to create new notes
+│   │   ├── log_llm_conversation/     # Log LLM conversation history
 │   │   ├── maintain_project_docs/    # Keep README & requirements.
+│   │   ├── project_work/             # Maintain active project notes
 │   │   ├── skill_creator/            # Create & improve agent skills
 │   │   └── workflow_creator/         # Create & improve agent workflows
 │   └── workflows/              # Structured procedures (slash commands)
@@ -180,11 +183,14 @@ This repository distinguishes between three types of "cognitive" capabilities th
 |---|---|
 | `analyze_health` | When asked about symptoms, medical conditions, or health advice |
 | `analyze_psych` | When asked about emotional processing |
+| `archive_project` | When asked to archive a project, mark it as done, or complete a project |
 | `career_counselor` | When asked for career advice, job hunt strategy, or professional optimization |
-| `generate_obsidian_note` | When asked to create a new note or integrate new notes/thoughts into the vault |
-| `maintain_project_docs` | Keep README.md, AGENTS.md, CHANGELOG.md and requirements.txt up to date |
-| `conventional_commits` | On every `git commit` |
 | `cleanup_orphans` | When asked to "clean the vault" or perform maintenance |
+| `conventional_commits` | On every `git commit` |
+| `generate_obsidian_note` | When asked to create a new note or integrate new notes/thoughts into the vault |
+| `log_llm_conversation` | Log design discussions and decisions in Log - LLM Conversations.md at the end of a conversation |
+| `maintain_project_docs` | Keep README.md, AGENTS.md, CHANGELOG.md and requirements.txt up to date |
+| `project_work` | Keep active project notes in the Vault up to date when tasks or plans change |
 | `skill_creator` | When asked to create, edit, evaluate, or optimize a skill |
 | `workflow_creator` | When asked to create, edit, or improve a workflow |
 

@@ -3,6 +3,13 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.17.1] - 2026-05-22
+
+### Added
+- **LLM Conversation Logger Skill (`log_llm_conversation`):**
+  - New agentic skill to automatically summarize and log design discussions, architectural decisions, and key technical trade-offs at the end of AI conversations.
+  - Target journal note created at [Log - LLM Conversations.md](file:///c:/Users/Willi/Documents/Projects/Nexus/Vault/1.%20The%20Core/1.1.%20Philosophy%20&%20Personal%20North%20Star/1.1.1.%20Personal%20Logs/Journal/Log%20-%20LLM%20Conversations.md) to serve as a running history of cognitive system evolution.
+
 ## [1.17.0] - 2026-05-21
 
 ### Added
