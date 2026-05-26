@@ -3,6 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [2.0.0] - 2026-05-26
+
+### Added
+- **Nexus Engine Control Panel — Phase 1 (Full-Stack Foundation):**
+  - **FastAPI Backend (`engine/api/`):** New HTTP bridge layer between the Next.js GUI and the Python engine. Includes CORS middleware, health check endpoint, agent status registry (6 agents), real `ask_librarian()` integration, vault structure/note/search endpoints.
+  - **Next.js Frontend (`gui/`):** Scaffolded with TypeScript, Tailwind CSS v4, App Router. Premium dark-mode design system with deep space palette, glassmorphism cards, glowing status pills, staggered entrance animations, and gradient text.
+  - **Mission Control Dashboard (`/`):** Real-time agent fleet overview with summary stat cards (engine status, active agents, pending HITL, errors), agent cards populated from the live API with 15-second polling, and quick-launch action buttons.
+  - **Ask Brain Chat Interface (`/ask`):** Conversational page wired to the Librarian agent via `POST /api/agents/ask`. Features message history, example queries, typing indicator, and responsive layout.
+  - **Typed API Client (`gui/src/lib/api.ts`):** Centralized fetch wrapper with full TypeScript types for all backend endpoints.
+  - **Sidebar Navigation:** Logo, active-link highlighting, disabled items for future phases (Vault Explorer, HITL Queue, Audit Log), live system status indicator.
+- **Dependency:** Added `fastapi` and `starlette` to `.venv` and `requirements.txt`.
+
+### Changed
+- **`.gitignore`:** Added `gui/node_modules/`, `gui/.next/`, `gui/out/` exclusions for the frontend build artifacts.
+
 ## [1.17.2] - 2026-05-23
 
 ### Changed

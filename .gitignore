@@ -8,6 +8,14 @@ client_secret*.json
 .venv/
 
 # ─────────────────────────────────────────────────
+# GUI Frontend — build artifacts and dependencies
+# ─────────────────────────────────────────────────
+gui/node_modules/
+gui/.next/
+gui/out/
+
+
+# ─────────────────────────────────────────────────
 # Vault Content — local only, never pushed to GitHub
 # ─────────────────────────────────────────────────
 # Ignore ALL files inside Vault/ at every nesting level.
