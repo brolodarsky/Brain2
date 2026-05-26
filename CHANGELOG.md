@@ -18,6 +18,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 ### Changed
 - **`.gitignore`:** Added `gui/node_modules/`, `gui/.next/`, `gui/out/` exclusions for the frontend build artifacts.
 
+### Fixed
+- **`start.ps1` Encoding:** Saved `start.ps1` with UTF-8 BOM encoding to prevent PowerShell 5.1 from misinterpreting Unicode characters (such as emojis and boxes) as ANSI smart quotes, resolving the script parsing and launch errors.
+
 ## [1.17.2] - 2026-05-23
 
 ### Changed

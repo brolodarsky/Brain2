@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Launches the Nexus Engine Control Panel (backend + frontend).
 .DESCRIPTION
