@@ -57,6 +57,7 @@ brain-key.key
 # ChromaDB vector index (generated)
 .chroma_db/
 .rag_index_manifest.json
+.podcast_history.json
 
 # Local query run logs
 engine/logs/

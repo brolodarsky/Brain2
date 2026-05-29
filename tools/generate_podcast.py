@@ -20,8 +20,7 @@ EDGE_TTS_BIN = str(_VENV_BIN if _VENV_BIN.exists() else _ACTIVE_BIN)
 REPO_DIR = Path(__file__).parent.parent
 # The Obsidian vault lives in the Vault subfolder
 KB_DIR = REPO_DIR / "Vault"
-AUDIO_DIR = KB_DIR / "Audio"  # Stored inside Vault/ alongside the notes
-HISTORY_FILE = AUDIO_DIR / "podcast_history.json"
+HISTORY_FILE = REPO_DIR / "tools" / ".podcast_history.json"
 
 # You can change the voice. Some natural choices:
 # en-US-AriaNeural (Female, natural)
@@ -29,10 +28,6 @@ HISTORY_FILE = AUDIO_DIR / "podcast_history.json"
 # en-US-ChristopherNeural (Male, serious)
 # en-GB-SoniaNeural (UK Female)
 VOICE = "en-US-AriaNeural" 
-
-def init_audio_dir():
-    if not AUDIO_DIR.exists():
-        AUDIO_DIR.mkdir()
 
 def load_history():
     if HISTORY_FILE.exists():
@@ -81,11 +76,18 @@ def clean_markdown_for_tts(content):
     
     return content.strip()
 
+import tempfile
+
 def generate_mp3(text, output_path):
+    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", delete=False) as tmp:
+        tmp.write(text)
+        tmp_path = tmp.name
+
     cmd = [
-        EDGE_TTS_BIN,
+        sys.executable,
+        "-m", "edge_tts",
         "--voice", VOICE,
-        "--text", text,
+        "--file", tmp_path,
         "--write-media", str(output_path)
     ]
     try:
@@ -98,6 +100,11 @@ def generate_mp3(text, output_path):
     except subprocess.CalledProcessError as e:
         print(f"\n[!] Error generating MP3: {e.stderr.decode('utf-8')}")
         return False
+    finally:
+        try:
+            os.remove(tmp_path)
+        except OSError:
+            pass
 
 def main():
     if len(sys.argv) < 2:
@@ -115,7 +122,6 @@ def main():
         print(f"Error: File {input_path} is not a markdown file.")
         sys.exit(1)
 
-    init_audio_dir()
     history = load_history()
     
     try:
@@ -140,7 +146,7 @@ def main():
         # Gently announce the title at the beginning
         final_text = f"Reading Note: {input_path.stem}.\n\n" + clean_text
         
-        output_mp3 = AUDIO_DIR / f"{input_path.stem}.mp3"
+        output_mp3 = input_path.with_suffix(".mp3")
         
         if generate_mp3(final_text, output_mp3):
             history[file_id] = mtime

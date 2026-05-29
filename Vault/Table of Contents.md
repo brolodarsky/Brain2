@@ -22,13 +22,14 @@ _Systemic foundations for mental clarity, resilience, long-term vision, and dail
 ### 1.1.1. Personal Logs
 - **📁 [Journal](obsidian://search?vault=Vault&query=path%3AJournal)**
 	- **[[2026 - Journal]]**: Technical progress, career strategy, and tactical "Engine" development.
+	- **[[Log - LLM Conversations]]**: Brainstorming, architectural decisions, and key insights from AI dialogues.
 - **[[Memories Log]]**: Personal milestones, social wins, and life highlights.
 	- **📁 [Memories Log Images](obsidian://search?vault=Vault&query=path%3AMemories_Log_Images)**
 - **The Trophy Case:** Screenshots of wins, kind words from others, and completed major projects.
 
 
 ## 1.2. Personal Knowledge Management (PKM)
-- **Nexus.0 Meta:** How I tag, link, and maintain this system.
+- **Brain Meta:** How I tag, link, and maintain this system.
 - **Projects**
 	- **[[Project - Nexus Non-Engine Functionality Upgrades]]:** Prioritized roadmap for system improvements.
 		- 1. **[[Workshop - Dashboard Option 1 Gameplan]]**
@@ -134,14 +135,13 @@ _Financial and logistical systems to support a life of freedom._ The "Engine"
 
 ### 3.1.3. Professional Portfolio & Evidence
 - **[[Portfolio Hub]]:** Project pitches and evidence locker.
+- **[[Platform Profiles]]:** Copy deck for LinkedIn, Handshake, and other career platforms with character limits.
 - **📁 Resumes**
 	- **[[Resume - Master|Resume - Master - Markdown]]:** The source-of-truth CV.
-		- **[[Resume - William Volodarsky.pdf|Resume - Master - PDF]]:** Exported PDF output.
-	- **[[Resume - PowerMarket]]**
+		- **[[Resume - Master.pdf]]:** Exported PDF output.
 - **📁 Cover Letters**
 	- **[[Cover Letter - Agentic AI Focus]]**
 	- **[[Cover Letter - Java Dev Focus]]**
-	- **[[Cover Letter - PowerMarket]]**
 - **[[Doc - Fordham University eDiploma.pdf]]**
 - **[[Doc - Fordham University Transcript.pdf]]**
 
@@ -282,8 +282,10 @@ _The Content Log & Reference_
 - Master roadmap for LangGraph agents (/ask_brain, doctor panel, routing).
 - **📁 [[Project - Nexus Agentic Engine|Nexus Agentic Engine]]**
 	1. **[[Project - Librarian Agent]]**
-	2. **[[Project - Engine Control Panel]]**
-	3. **[[Project - Persistent Engine Hosting]]**
+	2. **[[Project - Basic Engine Control Panel]]**
+	3. **[[Project - Career Agent]]**
+	4. **[[Project - Persistent Engine Hosting]]**
+	5. **[[Project - Agent Context Optimization & Changeset Automation]]**
 	- **[[Workshop - MCP Additions]]**
 	- **📁 Archive**
 - **[[Project - Inventory Replenishment Agent]]:** Agentic workflow to check and automate recommended inventory replenishment for eCommerce Silislick.com family business.

@@ -38,6 +38,15 @@ export interface NoteContentResponse {
   content: string;
 }
 
+export interface VaultEntry {
+  name: string;
+  path: string;
+  type: "file" | "directory";
+  size?: number;
+  mtime?: number;
+  has_audio: boolean;
+}
+
 // ── Helpers ───────────────────────────────────────────────────
 
 async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
@@ -109,4 +118,20 @@ export async function approveHitl(id: number): Promise<{status: string, message:
 
 export async function rejectHitl(id: number): Promise<{status: string, message: string}> {
   return apiFetch<{status: string, message: string}>(`/api/hitl/${id}/reject`, { method: "POST" });
+}
+
+export async function listVault(path?: string): Promise<VaultEntry[]> {
+  const params = path ? `?path=${encodeURIComponent(path)}` : "";
+  return apiFetch<VaultEntry[]>(`/api/vault/list${params}`);
+}
+
+export async function generatePodcast(path: string, force: boolean = false): Promise<any> {
+  return apiFetch<any>("/api/vault/podcast/generate", {
+    method: "POST",
+    body: JSON.stringify({ path, force }),
+  });
+}
+
+export function getPodcastAudioUrl(path: string): string {
+  return `${API_BASE}/api/vault/podcast/download?path=${encodeURIComponent(path)}`;
 }

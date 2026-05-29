@@ -12,6 +12,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
   - **Librarian Integration:** The existing Librarian Agent (`engine/agents/librarian/`) now serves as the cross-domain search escalation service, callable as a tool by the Career Agent for queries outside its domain folder.
   - **End-to-End Orchestration:** The Router's `career_agent` node invokes the real Career Agent subgraph (replacing the Step 1 placeholder), enabling a full pipeline: raw content → classification → domain-specific analysis with live vault context → optional cross-domain retrieval → structured response.
 - **Direct Execution Fix:** Added `sys.path` bootstrapping to both `router/agent.py` and `career/agent.py` so they can be run directly from the project root (`python engine/agents/router/agent.py`) without `ModuleNotFoundError`.
+- **Vault Explorer & Podcast Studio:**
+  - Implemented `gui/src/app/vault/page.tsx` offering a dual-pane layout with an interactive tree browser and markdown preview.
+  - Added visual badges (`🎧`) to markdown files indicating ready-to-play generated audio.
+  - Created a 1-click generation Podcast Studio in the frontend with a dark-mode friendly HTML5 audio player for in-browser playback.
+- **Podcast Vault Endpoints:** Added `/api/vault/list`, `/api/vault/podcast/generate`, and `/api/vault/podcast/download` endpoints to the FastAPI backend to safely bridge the GUI to the local filesystem.
+- **Typed API Client (`gui/src/lib/api.ts`):** Added `VaultEntry` interfaces and methods for the new Vault endpoints.
+
+### Changed
+- **Podcast Generation Tool (`tools/generate_podcast.py`):**
+  - Refactored to save generated `.mp3` files directly alongside the source `.md` files instead of a central `Audio/` folder.
+  - Migrated history tracking to `.podcast_history.json`.
+  - Fixed Windows CLI character limits and `edge-tts.exe` crashes by writing text to a temporary file and invoking `python -m edge_tts --file`.
 
 
 
