@@ -24,6 +24,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
   - Refactored to save generated `.mp3` files directly alongside the source `.md` files instead of a central `Audio/` folder.
   - Migrated history tracking to `.podcast_history.json`.
   - Fixed Windows CLI character limits and `edge-tts.exe` crashes by writing text to a temporary file and invoking `python -m edge_tts --file`.
+- **Developer Agent Constitution Refactor (`AGENTS.md`):**
+  - Slimmed down `AGENTS.md` by >70%, removing redundant verbatim listings of skills, workflows, and tools that are already managed by the platform or documented in `README.md`.
+  - Added explicit Meta-Boundary guidelines separating the external Developer Agent from the internal Nexus Agentic Engine.
+  - Added explicit authorization for developer agents to read and use `Vault/` files for personal domain context and run `tools/` and `engine/` scripts.
+  - Summarized the 4 core engine architectural principles (Agentic File System, Folder-Mapped Swarm, Pre-flight Hydration, and HITL Queue) that developer agents must respect when editing engine code.
+  - Simplified the `maintain_project_docs` skill rules to remove the obsolete "Compiler Pattern" for auto-generating `AGENTS.md`.
 
 
 

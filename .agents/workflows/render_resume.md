@@ -1,5 +1,5 @@
 ---
-description: Renders markdown documents (resumes, cover letters) from the Portfolio into professionally-styled PDF and DOCX files. Outputs page fill metrics so agents can determine if content needs to be added or trimmed to fill the page optimally.
+description: Render markdown resumes/letters to PDF/DOCX and output page fill metrics.
 ---
 
 # Steps
