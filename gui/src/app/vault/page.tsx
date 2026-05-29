@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { VaultEntry, listVault, generatePodcast, getPodcastAudioUrl, getNote, NoteContentResponse } from "@/lib/api";
 
-export default function VaultExplorerPage() {
+export default function BrainExplorerPage() {
   const [currentPath, setCurrentPath] = useState<string>("");
   const [entries, setEntries] = useState<VaultEntry[]>([]);
   const [loadingList, setLoadingList] = useState(true);
@@ -78,7 +78,7 @@ export default function VaultExplorerPage() {
       {/* ── Left Sidebar (Explorer) ────────────────────────── */}
       <div className="w-80 border-r border-border-subtle flex flex-col bg-bg-secondary/40">
         <div className="p-4 border-b border-border-subtle shrink-0">
-          <h2 className="font-semibold text-lg text-text-primary tracking-tight">Vault Explorer</h2>
+          <h2 className="font-semibold text-lg text-text-primary tracking-tight">Brain Explorer</h2>
           <div className="text-xs text-text-muted mt-1 font-mono truncate">
             {currentPath ? `Vault/${currentPath}` : "Vault Root"}
           </div>
