@@ -19,7 +19,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
 
 # Import the core logic from engine
-from engine.tools.email_tool import fetch_email_by_uid, list_recent_emails
+from engine.agents.email.tools import fetch_email_by_uid, list_recent_emails
 
 # Load environment variables
 load_dotenv()

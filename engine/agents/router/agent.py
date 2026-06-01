@@ -19,7 +19,9 @@ if ENGINE_DIR not in sys.path:
 
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langgraph.graph import StateGraph, END, START
+from langgraph.prebuilt import ToolNode
 from langchain_openai import ChatOpenAI
+from langchain_core.tools import tool
 
 from core.constants import AI_MODEL
 from agents.router.prompts import ROUTER_SYSTEM_PROMPT
@@ -39,7 +41,17 @@ class RouterState(TypedDict):
 
 # ── LLM Setup ────────────────────────────────────────────────────────────────
 
+@tool
+def fetch_emails(query: str) -> str:
+    """If the user asks to check their email, read a recent email, or mentions an email, use this tool to retrieve the email data."""
+    from agents.email.agent import fetch_emails as _fetch
+    return _fetch(query)
+
+tools = [fetch_emails]
+tool_node = ToolNode(tools)
+
 llm = ChatOpenAI(model=AI_MODEL, temperature=0.0)
+llm_with_tools = llm.bind_tools(tools)
 
 
 # ── Graph Nodes ──────────────────────────────────────────────────────────────
@@ -47,52 +59,68 @@ llm = ChatOpenAI(model=AI_MODEL, temperature=0.0)
 def classify_content(state: RouterState) -> dict:
     """
     Calls the LLM to classify the incoming content into a domain.
-    Parses the structured JSON response and updates state.
+    If the LLM needs email data, it will emit a tool call.
+    Parses the structured JSON response and updates state if no tool calls.
     """
     raw_content = state["raw_content"]
+    messages = list(state.get("messages", []))
+    
+    if not messages:
+        messages = [
+            SystemMessage(content=ROUTER_SYSTEM_PROMPT),
+            HumanMessage(content=raw_content),
+        ]
 
-    messages = [
-        SystemMessage(content=ROUTER_SYSTEM_PROMPT),
-        HumanMessage(content=raw_content),
-    ]
+    # If we just executed a tool, remind the LLM to output ONLY JSON
+    if len(messages) > 0 and hasattr(messages[-1], "type") and messages[-1].type == "tool":
+        messages.append(SystemMessage(content="You have retrieved the necessary data. Now, you MUST return ONLY a valid JSON object containing your final routing decision (domain, summary, confidence, reasoning). No conversational text."))
 
-    response = llm.invoke(messages)
-    response_text = response.content.strip()
+    response = llm_with_tools.invoke(messages)
 
-    # Parse the JSON response from the LLM
-    try:
-        # Handle potential markdown code fences
-        if response_text.startswith("```"):
-            response_text = response_text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-        classification = json.loads(response_text)
-    except json.JSONDecodeError:
-        # Fallback: if the LLM didn't return clean JSON, default to general
-        classification = {
-            "domain": "general",
-            "summary": "Could not parse classification — defaulting to general.",
-            "confidence": 0.0,
-            "reasoning": f"JSON parse error. Raw LLM output: {response_text[:200]}",
-        }
+    domain = None
+    summary = None
+    confidence = None
+    reasoning = None
+
+    if not response.tool_calls:
+        response_text = response.content.strip()
+        try:
+            # Handle potential markdown code fences
+            if response_text.startswith("```"):
+                response_text = response_text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+            classification = json.loads(response_text)
+            domain = classification.get("domain", "general")
+            summary = classification.get("summary", "")
+            confidence = classification.get("confidence", 0.0)
+            reasoning = classification.get("reasoning", "")
+        except json.JSONDecodeError:
+            # Fallback: if the LLM didn't return clean JSON, default to general
+            domain = "general"
+            summary = "Could not parse classification — defaulting to general."
+            confidence = 0.0
+            reasoning = f"JSON parse error. Raw LLM output: {response_text[:200]}"
 
     return {
         "messages": [response],
-        "domain": classification.get("domain", "general"),
-        "summary": classification.get("summary", ""),
-        "confidence": classification.get("confidence", 0.0),
-        "reasoning": classification.get("reasoning", ""),
+        "domain": domain,
+        "summary": summary,
+        "confidence": confidence,
+        "reasoning": reasoning,
     }
 
 
-def route_to_domain(state: RouterState) -> Literal["career_agent", "general_response"]:
+def route_after_classify(state: RouterState) -> Literal["tools", "career_agent", "general_response"]:
     """
-    Conditional edge: routes to the appropriate domain agent based on classification.
-    Currently supports 'career' as the implemented domain agent.
-    Health and general fall through to a placeholder response.
+    Conditional edge: routes to tools if tool call made, else to appropriate domain agent.
     """
+    messages = state["messages"]
+    last_message = messages[-1]
+    if hasattr(last_message, "tool_calls") and last_message.tool_calls:
+        return "tools"
+        
     domain = state.get("domain", "general")
     if domain == "career":
         return "career_agent"
-    # health and general are not yet implemented as full agents
     return "general_response"
 
 
@@ -123,8 +151,16 @@ def run_career_agent_node(state: RouterState) -> dict:
 
     raw_content = state.get("raw_content", "")
     summary = state.get("summary", "")
+    
+    # Also pass context from messages if emails were fetched
+    context_str = ""
+    for msg in state.get("messages", []):
+        if hasattr(msg, "name") and msg.name == "fetch_emails" and msg.content:
+            context_str += f"\n[Fetched Email Data]:\n{msg.content}\n"
+            
+    final_content = raw_content + "\n" + context_str if context_str else raw_content
 
-    response_text = run_career_agent(content=raw_content, summary=summary)
+    response_text = run_career_agent(content=final_content, summary=summary)
 
     return {"messages": [HumanMessage(content=response_text)]}
 
@@ -135,12 +171,14 @@ workflow = StateGraph(RouterState)
 
 # Nodes
 workflow.add_node("classify", classify_content)
+workflow.add_node("tools", tool_node)
 workflow.add_node("career_agent", run_career_agent_node)
 workflow.add_node("general_response", general_response)
 
 # Edges
 workflow.add_edge(START, "classify")
-workflow.add_conditional_edges("classify", route_to_domain)
+workflow.add_conditional_edges("classify", route_after_classify)
+workflow.add_edge("tools", "classify")
 workflow.add_edge("career_agent", END)
 workflow.add_edge("general_response", END)
 
@@ -186,36 +224,19 @@ def route_content(content: str) -> dict:
 if __name__ == "__main__":
     print("=" * 60)
     print("  NEXUS 3-AGENT PIPELINE: END-TO-END TEST")
-    print("  Router → Career Agent (DPFH) → Librarian (if needed)")
+    print("  Router (Email Subgraph) -> Career Agent (DPFH) -> Librarian (if needed)")
     print("=" * 60)
 
-    test_job_email = """\
-Hi Will,
+    test_query = "check my email for any recent job messages or recruiter outreach"
 
-We're hiring a Senior AI Engineer to build multi-agent systems using
-LangGraph and LangChain. Requirements include:
-- 3+ years Python experience
-- Experience with LLM orchestration frameworks
-- Familiarity with RAG pipelines and vector databases
-- Strong evaluation and testing methodology
-- Knowledge of prompt engineering and context optimization
-
-Nice to have:
-- Kubernetes / Docker deployment experience
-- React/Next.js for internal tooling
-- GraphRAG or knowledge graph experience
-
-Please apply at careers@techstartup.com
-"""
-
-    print(f"\n📨 INPUT: Job description email (Senior AI Engineer)\n")
+    print(f"\n📨 INPUT: {test_query}\n")
     print("-" * 60)
 
-    result = route_content(test_job_email)
+    result = route_content(test_query)
 
     print(f"\n🔀 ROUTER CLASSIFICATION:")
     print(f"   Domain:     {result['domain']}")
-    print(f"   Confidence: {result['confidence']:.0%}")
+    print(f"   Confidence: {result['confidence']}")
     print(f"   Summary:    {result['summary']}")
     print(f"   Reasoning:  {result['reasoning']}")
     print(f"\n{'='*60}")

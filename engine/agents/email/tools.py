@@ -1,6 +1,6 @@
 """
-email_tool.py — Core email fetching and parsing logic for the Nexus Engine.
-Provides functions to connect to IMAP mailboxes, list recent emails, and fetch content as Markdown.
+tools.py — Core email fetching and parsing logic for the Nexus Engine's Email Agent.
+Provides functions to connect to IMAP mailboxes, search emails, and fetch content.
 """
 import imaplib
 import email as email_lib
@@ -9,9 +9,10 @@ import os
 import sys
 from typing import Optional
 from html.parser import HTMLParser
+from langchain_core.tools import tool
 
 # Add engine root to sys.path for internal imports
-ENGINE_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ENGINE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if ENGINE_ROOT not in sys.path:
     sys.path.insert(0, ENGINE_ROOT)
 
@@ -19,10 +20,10 @@ from core.google_auth import get_google_credentials
 
 # Full IMAP permissions scope for Google Accounts
 SCOPES = ['https://mail.google.com/']
+SECRETS_DIR = os.path.join(ENGINE_ROOT, "..", "tools", ".secrets")
 
 # ── HTML → plain text stripper ────────────────────────────────────────────────
 class _HTMLStripper(HTMLParser):
-    """Minimal HTML → plain text converter. No external deps."""
     def __init__(self):
         super().__init__()
         self.text_parts = []
@@ -34,22 +35,12 @@ class _HTMLStripper(HTMLParser):
         return "\n".join(self.text_parts)
 
 def _strip_html(html: str) -> str:
-    """Strips HTML tags from a string and returns plain text."""
     stripper = _HTMLStripper()
     stripper.feed(html)
     return stripper.get_text()
 
 # ── IMAP helpers ──────────────────────────────────────────────────────────────
-def _connect(secrets_dir: str) -> imaplib.IMAP4_SSL:
-    """
-    Establishes an IMAP SSL connection to the server using XOAUTH2.
-    
-    Args:
-        secrets_dir: Directory where credentials and tokens are stored.
-        
-    Returns:
-        An authenticated imaplib.IMAP4_SSL object.
-    """
+def _connect() -> imaplib.IMAP4_SSL:
     server = os.environ.get("IMAP_SERVER", "imap.gmail.com")
     port = int(os.environ.get("IMAP_PORT", 993))
     address = os.environ.get("EMAIL_ADDRESS")
@@ -57,8 +48,7 @@ def _connect(secrets_dir: str) -> imaplib.IMAP4_SSL:
     if not address:
         raise ValueError("EMAIL_ADDRESS environment variable must be set.")
 
-    # Automatically fetch or silently extend the valid access token
-    creds = get_google_credentials(SCOPES, secrets_dir)
+    creds = get_google_credentials(SCOPES, SECRETS_DIR)
     auth_string = f"user={address}\x01auth=Bearer {creds.token}\x01\x01"
 
     mail = imaplib.IMAP4_SSL(server, port)
@@ -67,13 +57,13 @@ def _connect(secrets_dir: str) -> imaplib.IMAP4_SSL:
     except Exception as exc:
         raise ConnectionError(f"Google OAuth2 authentication step rejected: {exc}")
 
-    folder = os.environ.get("IMAP_FOLDER", "INBOX")
+    # Use the "Jobs" folder as requested
+    folder = os.environ.get("IMAP_FOLDER", "Jobs")
     mail.select(f'"{folder}"')
     return mail
 
 def _decode_header(raw_header: str) -> str:
-    """Decode RFC-2047 encoded email header values."""
-    parts = email.header.decode_header(raw_header or "")
+    parts = email_lib.header.decode_header(raw_header or "")
     decoded = []
     for part, charset in parts:
         if isinstance(part, bytes):
@@ -83,7 +73,6 @@ def _decode_header(raw_header: str) -> str:
     return " ".join(decoded)
 
 def _extract_body(msg: email_lib.message.Message) -> str:
-    """Walk the MIME tree and return the best plain-text body available."""
     plain_parts = []
     html_parts = []
     if msg.is_multipart():
@@ -116,11 +105,12 @@ def _extract_body(msg: email_lib.message.Message) -> str:
         return _strip_html("\n".join(html_parts)).strip()
     return "(No readable body found)"
 
-# ── Public API ────────────────────────────────────────────────────────────────
-def fetch_email_by_uid(uid: str, secrets_dir: str) -> Optional[str]:
+# ── Public API / Tools ────────────────────────────────────────────────────────
+@tool
+def fetch_email_by_uid(uid: str) -> Optional[str]:
     """Fetch a single email by IMAP UID and return it as a markdown string."""
     try:
-        mail = _connect(secrets_dir)
+        mail = _connect()
         status, data = mail.uid("fetch", uid, "(RFC822)")
         if status != "OK" or not data or data[0] is None:
             mail.logout()
@@ -143,13 +133,13 @@ def fetch_email_by_uid(uid: str, secrets_dir: str) -> Optional[str]:
         )
         return md
     except Exception as exc:
-        print(f"Exception while reading email UID {uid}: {exc}", file=sys.stderr)
-        return None
+        return f"Exception while reading email UID {uid}: {exc}"
 
-def list_recent_emails(count: int, secrets_dir: str) -> list[dict]:
-    """List the most recent `count` emails."""
+@tool
+def list_recent_emails(count: int = 5) -> list[dict]:
+    """List the most recent `count` emails. Returns metadata, no body."""
     try:
-        mail = _connect(secrets_dir)
+        mail = _connect()
         status, data = mail.uid("search", None, "ALL")
         if status != "OK":
             mail.logout()
@@ -172,5 +162,33 @@ def list_recent_emails(count: int, secrets_dir: str) -> list[dict]:
         mail.logout()
         return results
     except Exception as exc:
-        print(f"Exception while listing emails: {exc}", file=sys.stderr)
-        return []
+        return [{"error": f"Exception while listing emails: {exc}"}]
+
+@tool
+def search_emails(query: str, count: int = 5) -> list[dict]:
+    """Search the mailbox using IMAP search syntax (e.g. SUBJECT "offer" or FROM "google"). Returns metadata of matching emails."""
+    try:
+        mail = _connect()
+        status, data = mail.uid("search", None, query)
+        if status != "OK":
+            mail.logout()
+            return []
+        uids = data[0].split()
+        recent_uids = uids[-count:][::-1]
+        results = []
+        for uid in recent_uids:
+            uid_str = uid.decode()
+            status, data = mail.uid("fetch", uid_str, "(BODY.PEEK[HEADER.FIELDS (FROM SUBJECT DATE)])")
+            if status != "OK" or not data or data[0] is None:
+                continue
+            msg = email_lib.message_from_bytes(data[0][1])
+            results.append({
+                "uid": uid_str,
+                "subject": _decode_header(msg.get("Subject", "(No Subject)")),
+                "sender": _decode_header(msg.get("From", "(Unknown)")),
+                "date": msg.get("Date", ""),
+            })
+        mail.logout()
+        return results
+    except Exception as exc:
+        return [{"error": f"Exception while searching emails: {exc}"}]
